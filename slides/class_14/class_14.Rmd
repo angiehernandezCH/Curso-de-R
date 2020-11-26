@@ -383,7 +383,7 @@ Ejemplo con distribución normal:
 
 .pull-left[
 ```{r}
-x <- runif(n=10^5, min=0, max=100)
+x <- runif(n=10^3, min=0, max=100)
 x %>% matrix(ncol = 1)
 ```
 ]
@@ -405,7 +405,7 @@ x %>% as_tibble() %>%
 
 .pull-left[
 ```{r}
-x <- rbinom(n=10^5,size=1,p=0.7)
+x <- rbinom(n=10^3,size=1,p=0.7)
 x %>% matrix(ncol = 1)
 ```
 ]
@@ -427,7 +427,7 @@ x %>% as_tibble() %>%
 
 .pull-left[
 ```{r}
-x <- rbinom(n=10^5, size=10, p=0.7)
+x <- rbinom(n=10^3, size=10, p=0.7)
 x %>% matrix(ncol = 1)
 ```
 ]
@@ -449,7 +449,7 @@ x %>% as_tibble() %>%
 
 .pull-left[
 ```{r}
-x <- rnorm(n=10^5, mean=10, sd=3)
+x <- rnorm(n=10^3, mean=10, sd=3)
 x %>% matrix(ncol = 1)
 ```
 ]
@@ -503,7 +503,7 @@ concurso <- function(x) {
  return(premio) 
 }
 
-premios <- replicate(n=10^5,concurso() ); head(premios)
+premios <- replicate(n=10^3,concurso() ); head(premios)
 ```
 
 --
