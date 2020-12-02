@@ -1,0 +1,67 @@
+---
+title: "SOC4001 Procesamiento avanzado de bases de datos en R"
+author: "Tarea 5"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r, echo=FALSE, message=F}
+# Escribir install.packages("tinytex") en la consola para instalar "tinytex"
+# Carga "tinytex" para compilar PDF
+library("tinytex")
+library("tidyverse")
+library("viridis")
+library("ggdark")
+```
+
+Ponderación: 12% de la nota final del curso
+
+Entrega: Desde el momento de entrega, los estudiantes tienen plazo hasta el domingo 29 de Noviembre a las 23:59pm para completar esta tarea. 
+
+Formato: Desarrollar esta tarea en un RScript, agregando comentarios cuando sea necesario. 
+
+
+1) Carga la base de datos sobre Covid-19 usados en clase: [link ](https://github.com/mebucca/dar_soc4001/blob/master/slides/class_12/covid_data.csv)
+
+Referencia: Hasell, J., Mathieu, E., Beltekian, D. et al. A cross-country database of COVID-19 testing. Sci Data 7, 345 (2020). https://doi.org/10.1038/s41597-020-00688-8 y utilizad
+
+
+```{r, echo=F, message=FALSE, warning=FALSE}
+library("tidyverse")
+library("wesanderson")
+library("cowplot")
+library("lubridate")
+library("viridis")
+
+
+setwd(
+  "~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_data_analysis_r/repo/slides/class_12/")
+
+# leer archivo csv
+covid_data <- read_delim("covid_data.csv", delim=";")
+```
+
+Los datos deben verse así:
+
+```{r, echo=F}
+covid_data  %>% glimpse()
+```
+
+2) Produce un gráfico lo más parecido posible a la figura mostrada a continuación. Usa un `theme` y una paleta de colores de tu preferencia.
+
+Pista: mi paleta de colores está definida por la siguiente linea de código: `scale_color_viridis(trans = "date", option = "plasma")` y mi theme es `dark_theme_gray()`, del paquete `library("ggdark")`.
+
+
+```{r, message=F,warning=F}
+plot <- covid_data  %>% filter(continent=="Europe") %>%
+  ggplot(aes(x=new_cases_smoothed_per_million, y=new_deaths_smoothed_per_million, colour=date)) + 
+  geom_point(alpha=0.1) +
+  scale_x_log10() +  scale_y_log10() +
+  dark_theme_gray() +
+  scale_color_viridis(trans = "date", option = "plasma") +
+  labs(x="New cases smoothed per million", y="New deaths smoothed per million", title="Covid-19 in Europe")
+
+print(plot)
+```
