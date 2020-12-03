@@ -63,4 +63,4 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 #### Trabajo Final
 
-- 26/11, Asignación Trabajo final:
+- 26/11, Asignación Trabajo final: [`[PDF]`](homework/tf.pdf)[`[Reporte]`](homework/tf_reporte.pdf)
