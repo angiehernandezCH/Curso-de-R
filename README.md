@@ -1,15 +1,3 @@
-
-|   |   1|   2|   3|   4|   5|   6|   7|   8|   9|  10|
-|:--|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|1  | 787| 680| 527| 313| 275| 191| 144|  93|  60|  37|
-|2  | 967| 857| 850| 740| 628| 493| 446| 344| 215| 163|
-|3  | 551| 764| 802| 794| 732| 698| 618| 467| 273| 214|
-|4  | 667| 738| 792| 808| 822| 844| 803| 776| 438| 321|
-|5  | 338| 504| 546| 604| 622| 650| 712| 677| 432| 319|
-|6  | 170| 228| 319| 374| 447| 463| 545| 585| 494| 475|
-|7  | 186| 235| 283| 371| 423| 500| 644| 740| 768| 957|
-|55 |   6|  10|  11|   8|   4|   8|   3|   4|   3|   7|
-
 # SOC4001 Procesamiento avanzado de bases de datos en `R`
 Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado de Bases de Datos en R, dictado el segundo semestre 2020 por el Departamento de Sociología de la Universidad Católica de Chile a estudiantes de educación continua. Para mayores detalles ver el [`[programa]`](files/syllabus_soc4001.pdf) del curso.
 
