@@ -12,7 +12,9 @@ library("stargazer")
 library("knitr")
 library("viridis")
 library("xtable")
-
+library("rmarkdown")
+library("tinytex")
+library("Grmd")
 
 ################################################# Directorios #################################################
 
@@ -30,10 +32,8 @@ dirresults  <- paste0(folder,"results/");  dirresults
 
 
 # Set working directory
-getwd()
-setwd(dirdata)
-getwd()
 
+setwd(dirdata)
 essdata <- read_dta("ESS8_subset.dta"); essdata
 
 
@@ -74,13 +74,27 @@ for (i in paises) {
 
 cat("================ ANÁLISIS DATOS ",i, " ==================") # Debugging flags
 
-
+	# Análisis por país
 	essdata_sub_cntry <- essdata_sub %>% filter(cntry == i)
 	
 	setwd(dircode)
 	source("5_analyses_bycountry.R")
 
+	# Reporte por país
+
+	setwd(dircode)
+  	render(input = "6_reportes.Rmd",
+         output_file=paste0(dirresults,"reporte_", i, ".docx"),
+         params=list(new_title=paste("Reporte ", i))
+         )
 }
+
+
+############################################## Reporte por paises #################################################
+
+
+
+
 
 
 
