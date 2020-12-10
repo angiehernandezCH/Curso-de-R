@@ -8,13 +8,12 @@ rm(list = ls())
 # Carga paquetes
 library("haven")
 library("tidyverse")
-library("stargazer")
 library("knitr")
 library("viridis")
-library("xtable")
 library("rmarkdown")
+library("stargazer")
+library("xtable")
 library("tinytex")
-library("Grmd")
 
 ################################################# Directorios #################################################
 
@@ -24,8 +23,8 @@ library("Grmd")
 folder <- "/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_data_analysis_r/repo/slides/class_16/workflow_adv/"
 
 dircode     <- paste0(folder,"code/") 
-dirdata 	  <- paste0(folder,"data/") 
-dirresults  <- paste0(folder,"results/");  dirresults
+dirdata 	<- paste0(folder,"data/") 
+dirresults  <- paste0(folder,"results/")
 
 
 ############################################# Importar datos ################################################# 
@@ -34,7 +33,7 @@ dirresults  <- paste0(folder,"results/");  dirresults
 # Set working directory
 
 setwd(dirdata)
-essdata <- read_dta("ESS8_subset.dta"); essdata
+essdata <- read_dta("ESS8_subset.dta")
 
 
 ########################################## Exploración de datos ##############################################
@@ -54,7 +53,6 @@ source("2_exploration.R")
 
 # Establece el directorio de trabajo correspondiente
 setwd(dircode)
-
 source("3_recoding.R")
 
 
@@ -87,11 +85,12 @@ cat("================ ANÁLISIS DATOS ",i, " ==================") # Debugging fl
          output_file=paste0(dirresults,"reporte_", i, ".docx"),
          params=list(new_title=paste("Reporte ", i))
          )
+
+
 }
 
 
 ############################################## Reporte por paises #################################################
-
 
 
 

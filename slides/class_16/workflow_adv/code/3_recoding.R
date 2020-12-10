@@ -8,14 +8,12 @@ essdata_sub <-  essdata %>% select(idno,cntry,gndr,yrbrn,eisced,hinctnta)
 # filtra filas que cumplen condición lógica 
 
 
-essdata_sub <- essdata_sub %>% filter(cntry!="AT")
+essdata_sub <- essdata_sub %>% filter(cntry!="AT", yrbrn>1910)
 
 
 # crea nueva variable
 
 essdata_sub <- essdata_sub %>% mutate(age = 2019 - yrbrn)
-
-
 
 
 

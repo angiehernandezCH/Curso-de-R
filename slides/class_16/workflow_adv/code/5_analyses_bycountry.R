@@ -27,12 +27,13 @@ essdata_sub_cntry %>%
 
 jitter <- position_jitter(width = 1, height = 0.5)
 
+titulo <- paste0("Relación entre año de nacimento y educación en ",i)
 
 mi_figura <- essdata_sub_cntry %>% filter(age>30) %>% ggplot(aes(x=yrbrn, y=eisced, colour=gndr_string)) +
 	geom_point(alpha=0.2, position = jitter) +
 	geom_smooth(method="lm",se=F) + 
   	scale_color_viridis(discrete=TRUE, option="plasma") +
-    labs(x="año de nacimento", y="máxima educación alcanzada", colour="genero")
+    labs(x="año de nacimento", y="máxima educación alcanzada", colour="genero", title=titulo)
 
 
 filename <- paste0(dirresults,"mi_figura_",i,".pdf") 
@@ -56,10 +57,10 @@ model2 <- update(model1, . ~ . + factor(gndr_string)*age); model2
 
 # exportar resultados a una tabla latex
 
-filename <- paste0(dirresults,"mi_tablareg_",i,".txt")
+filename <- paste0(dirresults,"mi_tablareg_",i,".tex")
 
 
-stargazer(model1, model2, type="text",
+stargazer(model1, model2, type="latex",
           covariate.labels=c("Age","Gender (Male=1)", "Gender*Age","Intercepto"),
           dep.var.labels=c("Education","Education"),
           out=filename)
