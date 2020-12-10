@@ -46,9 +46,13 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 - Clase 14: 26/11, 18:00 a 20:50, **Simulación e inferencia estadística**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_14/class_14#1) [`[.Rmd]`](slides/class_14/class_14.Rmd) [`[RScript]`](slides/class_14/class_14.R)[`[Grabación]`](https://zoom.us/rec/play/SAO8nTjklHsct7jb_JFZ78ZmuxCmiVCZsq8Z6MHVliDM8c7jD2TG0VFXeFFtIV5FWstwp5ZRcXFQAJJA.2vh5f54Vcrt5Uk6a?continueMode=true&_x_zm_rtaid=BW0qC406S7Ws_8SJzUGgnA.1606477636165.5c354b378add2fd06676ba3f49c4043b&_x_zm_rhtaid=339)
 
+  - Cápsula 05: Inferencia via simulación en `R`: [`[Link]`](https://www.youtube.com/watch?v=n0BRgvhbX_g&feature=youtu.be) 
+
 
 - Clase 15: 03/12, 18:00 a 20:50, **Reportes automatizados**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_15/class_15#1) [`[.Rmd]`](slides/class_15/class_15.Rmd) [`[Template Rmd]`](slides/class_15/class_15_template.Rmd)[`[Grabación]`](https://zoom.us/rec/play/R1i6Q4sEdkWYtZnhtCq4iWvMrr478a5DwXUGvXAPtk9yxAvC00ygkr2cPQ54JrYZ4GMoX7IqMn4PtDzE.qf7eaS_J8GukiPZM?continueMode=true&_x_zm_rtaid=vdTC7cQMRkiaC1hwQMo4MQ.1607043057813.84debaaa61f3ada433fef5cc9c560d6c&_x_zm_rhtaid=984)
 
+
+- Clase 16: 10/12, 18:00 a 20:50, **Taller #4 Workflow avanzado**: [`[Código]`](slides/class_16/workflow_adv.zip)
 
 
 ### Evaluaciones 
