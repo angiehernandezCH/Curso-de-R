@@ -10,10 +10,16 @@ setwd(
 data_casen_csv <- read_csv("sample_casen2017.csv")
 
 data_casen_csv <- data_casen_csv %>% mutate(y = log(ytotcor)) %>% drop_na(y)
+
 # media y sd en muestra
 stats <- c(mu= mean(data_casen_csv$y), sd= sd(data_casen_csv$y)); stats
 
 n = length(data_casen_csv$y)
+
+# sd of mu_hat  = sigma/sqrt(n)
+sd_mu_hat; stats["sd"]/sqrt(n)
+
+
 
 set.seed(13232)
 
@@ -50,5 +56,5 @@ abline(v = mean(mues_hat), col="red", lwd=3, lty=2)
 # 95% confidence interval
 
 quantile(mues_hat, p=c(0.025,0.975))
-ci = stats["mu"] + c(-1.96,1.96)*se; ci
+ci = stats["mu"] + c(-1.96,1.96)*(stats["sd"]/sqrt(n)); ci
 

@@ -1,0 +1,86 @@
+
+################################################## Preámbulo #################################################
+
+# Limpiar pantalla y remover objetos existentes
+cat("\014") 
+rm(list = ls())
+
+# Carga paquetes
+library("haven")
+library("tidyverse")
+library("stargazer")
+library("knitr")
+library("viridis")
+library("xtable")
+
+
+################################################# Directorios #################################################
+
+
+# Change the line below to set your own working directory
+
+folder <- "/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_data_analysis_r/repo/slides/class_16/workflow_adv/"
+
+dircode     <- paste0(folder,"code/") 
+dirdata 	  <- paste0(folder,"data/") 
+dirresults  <- paste0(folder,"results/");  dirresults
+
+
+############################################# Importar datos ################################################# 
+
+
+# Set working directory
+getwd()
+setwd(dirdata)
+getwd()
+
+essdata <- read_dta("ESS8_subset.dta"); essdata
+
+
+########################################## Exploración de datos ##############################################
+
+
+# Llama otro R script que contiene análisis. 
+# Organizar el trabajo de esta manera permite que el código sea más legible y manejable.
+
+
+# Establece el directorio de trabajo correspondiente
+setwd(dircode)
+source("2_exploration.R")
+
+
+############################################ Recodificación #################################################
+
+
+# Establece el directorio de trabajo correspondiente
+setwd(dircode)
+
+source("3_recoding.R")
+
+
+############################################## Data analysis #################################################
+
+
+setwd(dircode)
+source("4_analyses.R")
+
+
+
+# Análisis por país
+
+paises <- unique(essdata_sub$cntry)
+
+for (i in paises) {
+
+cat("================ ANÁLISIS DATOS ",i, " ==================") # Debugging flags
+
+
+	essdata_sub_cntry <- essdata_sub %>% filter(cntry == i)
+	
+	setwd(dircode)
+	source("5_analyses_bycountry.R")
+
+}
+
+
+
