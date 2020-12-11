@@ -52,7 +52,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 - Clase 15: 03/12, 18:00 a 20:50, **Reportes automatizados**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_15/class_15#1) [`[.Rmd]`](slides/class_15/class_15.Rmd) [`[Template Rmd]`](slides/class_15/class_15_template.Rmd)[`[PDF Template Rmd]`](slides/class_15/class_15_template.pdf)[`[Grabación]`](https://zoom.us/rec/play/R1i6Q4sEdkWYtZnhtCq4iWvMrr478a5DwXUGvXAPtk9yxAvC00ygkr2cPQ54JrYZ4GMoX7IqMn4PtDzE.qf7eaS_J8GukiPZM?continueMode=true&_x_zm_rtaid=vdTC7cQMRkiaC1hwQMo4MQ.1607043057813.84debaaa61f3ada433fef5cc9c560d6c&_x_zm_rhtaid=984)
 
 
-- Clase 16: 10/12, 18:00 a 20:50, **Taller #4 Workflow avanzado**: [`[Código]`](slides/class_16/workflow_adv.zip)
+- Clase 16: 10/12, 18:00 a 20:50, **Taller #4 Workflow avanzado**: [`[Código]`](slides/class_16/workflow_adv.zip)[`[Grabación]`](https://zoom.us/rec/play/-iirjYKr4fRyyjlXHdfvNIkA3mHcRu3UtZ7Bqx1VemV0y55EoDfHA_NplvyOvPRFoAT0Bt4poA-50Q0T.YVeM22YqtqMpn01t?continueMode=true&_x_zm_rtaid=EDl-EG3SRmSYX_RXjyNn0w.1607702715516.4d6d2bf99b9c4eba56fca4c115cab9d8&_x_zm_rhtaid=294)
 
 
 ### Evaluaciones 
