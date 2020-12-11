@@ -49,7 +49,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
   - Cápsula 05: Inferencia via simulación en `R`: [`[Link]`](https://www.youtube.com/watch?v=n0BRgvhbX_g&feature=youtu.be) 
 
 
-- Clase 15: 03/12, 18:00 a 20:50, **Reportes automatizados**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_15/class_15#1) [`[.Rmd]`](slides/class_15/class_15.Rmd) [`[Template Rmd]`](slides/class_15/class_15_template.Rmd)[`[Grabación]`](https://zoom.us/rec/play/R1i6Q4sEdkWYtZnhtCq4iWvMrr478a5DwXUGvXAPtk9yxAvC00ygkr2cPQ54JrYZ4GMoX7IqMn4PtDzE.qf7eaS_J8GukiPZM?continueMode=true&_x_zm_rtaid=vdTC7cQMRkiaC1hwQMo4MQ.1607043057813.84debaaa61f3ada433fef5cc9c560d6c&_x_zm_rhtaid=984)
+- Clase 15: 03/12, 18:00 a 20:50, **Reportes automatizados**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_15/class_15#1) [`[.Rmd]`](slides/class_15/class_15.Rmd) [`[Template Rmd]`](slides/class_15/class_15_template.Rmd)[`[PDF Template Rmd]`](slides/class_15/class_15_template.pdf)[`[Grabación]`](https://zoom.us/rec/play/R1i6Q4sEdkWYtZnhtCq4iWvMrr478a5DwXUGvXAPtk9yxAvC00ygkr2cPQ54JrYZ4GMoX7IqMn4PtDzE.qf7eaS_J8GukiPZM?continueMode=true&_x_zm_rtaid=vdTC7cQMRkiaC1hwQMo4MQ.1607043057813.84debaaa61f3ada433fef5cc9c560d6c&_x_zm_rhtaid=984)
 
 
 - Clase 16: 10/12, 18:00 a 20:50, **Taller #4 Workflow avanzado**: [`[Código]`](slides/class_16/workflow_adv.zip)
