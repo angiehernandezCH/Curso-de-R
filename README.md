@@ -54,7 +54,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 - Clase 16: 10/12, 18:00 a 20:50, **Taller #4 Workflow avanzado**: [`[Código]`](slides/class_16/workflow_adv.zip)[`[Grabación]`](https://zoom.us/rec/play/-iirjYKr4fRyyjlXHdfvNIkA3mHcRu3UtZ7Bqx1VemV0y55EoDfHA_NplvyOvPRFoAT0Bt4poA-50Q0T.YVeM22YqtqMpn01t?continueMode=true&_x_zm_rtaid=EDl-EG3SRmSYX_RXjyNn0w.1607702715516.4d6d2bf99b9c4eba56fca4c115cab9d8&_x_zm_rhtaid=294)
 
-- Clase 17: 12/12, 09:00 a 11:50, **Recapitulación**: [`[Grabación]`](https://zoom.us/rec/play/kJgWi1MS29342bvdIHZBaF6pd8UEjqVWViCL6UQz968ls_H0CO-xZ30PQUkKvdRuwvmaFghYPRm9SxBc.1tahNNnVBsezYF0W?continueMode=true&_x_zm_rtaid=Z9sPseTiR3Kz3lSXPhLa4g.1607806822160.f8a1e9591d6a9f1969a57280d8dc211d&_x_zm_rhtaid=393)
+- Clase 17: 12/12, 09:00 a 11:50, **Recapitulación**: [`[RScript]`](slides/class_17/class_17.R)[`[Grabación]`](https://zoom.us/rec/play/kJgWi1MS29342bvdIHZBaF6pd8UEjqVWViCL6UQz968ls_H0CO-xZ30PQUkKvdRuwvmaFghYPRm9SxBc.1tahNNnVBsezYF0W?continueMode=true&_x_zm_rtaid=Z9sPseTiR3Kz3lSXPhLa4g.1607806822160.f8a1e9591d6a9f1969a57280d8dc211d&_x_zm_rhtaid=393)
 
 
 
