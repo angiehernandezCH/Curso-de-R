@@ -76,4 +76,4 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 #### Lectura recomendada
 
-- **R for Data Science** (Hadley Wickham & Garrett Grolemund) [`[e-Book]`](https://r4ds.had.co.nz/)https://r4ds.had.co.nz/)
+- **R for Data Science** (Hadley Wickham & Garrett Grolemund) [`[e-Book]`](https://r4ds.had.co.nz/)
