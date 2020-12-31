@@ -73,3 +73,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 #### Trabajo Final
 
 - 26/11, Asignación Trabajo final: [`[PDF]`](homework/tf.pdf)[`[Reporte]`](homework/tf_reporte.pdf)
+
+#### Lectura recomendada
+
+- **R for Data Science** (Hadley Wickham & Garrett Grolemund) [`[e-Book]`](https://r4ds.had.co.nz/)
