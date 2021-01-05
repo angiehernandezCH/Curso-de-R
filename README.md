@@ -56,6 +56,11 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 - Clase 17: 12/12, 09:00 a 11:50, **Recapitulación**: [`[RScript]`](slides/class_17/class_17.R)[`[Grabación]`](https://zoom.us/rec/play/kJgWi1MS29342bvdIHZBaF6pd8UEjqVWViCL6UQz968ls_H0CO-xZ30PQUkKvdRuwvmaFghYPRm9SxBc.1tahNNnVBsezYF0W?continueMode=true&_x_zm_rtaid=Z9sPseTiR3Kz3lSXPhLa4g.1607806822160.f8a1e9591d6a9f1969a57280d8dc211d&_x_zm_rhtaid=393)
 
+- **Herramientas adicionales**:
+
+  - Cápsula 06: Sublime Text (editor de texto) [`[Link]`](https://www.youtube.com/watch?v=tt45lKL_P2g&feature=youtu.be) 
+
+  - Cápsula 07: Overleaf (Latex): [`[Link]`](https://www.youtube.com/watch?v=fMsJwB7VY_U&feature=youtu.be) 
 
 
 ### Evaluaciones 
