@@ -58,9 +58,9 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 - **Herramientas adicionales**:
 
-  - Cápsula 06: Overleaf (Latex):  [`[Link]`](https://www.youtube.com/watch?v=tt45lKL_P2g&feature=youtu.be) 
+  - Cápsula 06: Sublime Text (editor de texto): [`[Link]`](https://www.youtube.com/watch?v=fMsJwB7VY_U&feature=youtu.be) 
 
-  - Cápsula 07: Sublime Text (editor de texto): [`[Link]`](https://www.youtube.com/watch?v=fMsJwB7VY_U&feature=youtu.be) 
+  - Cápsula 07: Overleaf (Latex):  [`[Link]`](https://www.youtube.com/watch?v=tt45lKL_P2g&feature=youtu.be) 
 
 
 ### Evaluaciones 
