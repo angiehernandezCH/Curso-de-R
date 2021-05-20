@@ -15,7 +15,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 [`[Grabación 1]`](https://zoom.us/rec/share/NwMr0g9prA89k96xrxTlbvgmoCLyoyvuLSQbAtS-BSHKD7yLuTKXfDIayUGXA_gx.7yC_36slEur4IZc9?startTime=1602190820000)
 
 
-- Clase 05: 15/10, 18:00 a 20:50, **Manipulación de bases de datos con tidyverse (1)**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_5/class_5#1) [`[.Rmd]`](slides/class_5/class_5.Rmd) [`[RScript]`](slides/class_5/class_5.R)
+- Clase 05: 15/10, 18:00 a 20:50, **Tidyverse: importar datos, tibbles, ordenar, seleccionar y filtrar con dplyr**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_5/class_5#1) [`[.Rmd]`](slides/class_5/class_5.Rmd) [`[RScript]`](slides/class_5/class_5.R)
 
 - Clase 06: 22/10, 18:00 a 20:50, **Manipulación de bases de datos con tidyverse (2)**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_6/class_6#1) [`[.Rmd]`](slides/class_6/class_6.Rmd) [`[RScript]`](slides/class_6/class_6.R)
  
