@@ -33,8 +33,6 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 - Clase 13: 21/11, 09:00 a 11:50, **Iteración y automatización**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_13/class_13#1) [`[.Rmd]`](slides/class_13/class_13.Rmd) [`[RScript]`](slides/class_13/class_13.R)
 
-- Clase 14: 26/11, 18:00 a 20:50, **Simulación e inferencia estadística**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_14/class_14#1) [`[.Rmd]`](slides/class_14/class_14.Rmd) [`[RScript]`](slides/class_14/class_14.R)
-
 - Clase 15: 03/12, 18:00 a 20:50, **Reportes automatizados**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_15/class_15#1) [`[.Rmd]`](slides/class_15/class_15.Rmd) [`[Template Rmd]`](slides/class_15/class_15_template.Rmd)[`[PDF Template Rmd]`](slides/class_15/class_15_template.pdf)
 
 - Clase 16: 10/12, 18:00 a 20:50, **Taller #4 Workflow avanzado**: [`[Código]`](slides/class_16/workflow_adv.zip)
