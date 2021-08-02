@@ -70,7 +70,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 | sesion| dia| mes|tipo     |contenido                                                           |paquetes_comandos                                                   |evaluaciones |
 |------:|---:|---:|:--------|:-------------------------------------------------------------------|:-------------------------------------------------------------------|:------------|
-|      1|  24|   8|teórica  |Introducción a R y Rstudio                                          |install.packages(), library(), setwd(), c(), seq(), rep(), sample() |             |
+|      1|  24|   8|teórica  |Introducción a R y Rstudio                                          |`install.packages()`, library(), setwd(), c(), seq(), rep(), sample() |             |
 |      2|  26|   8|práctica |Introducción a R y Rstudio                                          |install.packages(), library(), setwd(), c(), seq(), rep(), sample() |             |
 |      3|  31|   8|teórica  |Introducción a bases de datos en R                                  |data.frame(), list(), summary(), table(), for(), plot()             |             |
 |      4|   2|   9|práctica |Introducción a bases de datos en R (CASEN 2020)                     |data.frame(), list(), summary(), table(), for(), plot()             |             |
