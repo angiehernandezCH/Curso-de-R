@@ -1,6 +1,7 @@
 # SOC4001 Procesamiento avanzado de bases de datos en `R`
 Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado de Bases de Datos en R, dictado el segundo semestre 2021 por el Departamento de Sociología de la Universidad Católica de Chile a estudiantes de educación continua como parte del [`[Diplomado en WebScraping y visualización de datos sociales en R]`](https://educacioncontinua.uc.cl/43873-ficha-diplomado-en-webscraping-y-visualizacion-de-datos-sociales-en-r). Para mayores detalles ver el [`[programa]`](files/syllabus_soc4001.pdf) del curso.
 
+---
 ## Calendario
 
 | sesion| dia| mes|tipo     |contenido                                                             |funciones                                                                         |evaluaciones |zoom                                            |
@@ -29,6 +30,8 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 |     22|   4|  11|práctica |Reportes automatizados con `rmarkdown` y `knitr`                      |Todo lo anterior                                                                  |             |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |
 |     23|   9|  11|teórica  |Recapitulación                                                        |Todo lo anterior                      
 
+
+---
 
 ## Material del curso
 
@@ -66,15 +69,15 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 - Clase 17: 12/12, 09:00 a 11:50, **Recapitulación**: [`[RScript]`](slides/class_17/class_17.R)
 
-
 - **Herramientas adicionales**:
 
   - Sublime Text (editor de texto)
 
   - Overleaf (editor Latex online)
 
+---
 
-### Evaluaciones 
+## Evaluaciones 
 
 #### Tareas 
 
@@ -88,6 +91,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 #### Trabajo Final
 
 - 26/11, Asignación Trabajo final: [`[PDF]`](homework/tf.pdf)[`[Reporte]`](homework/tf_reporte.pdf)[`[Solución]`](homework/tf_answers.zip)  
+
 
 #### Lectura recomendada
 
