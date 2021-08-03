@@ -66,28 +66,28 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 
 
-| sesion| dia| mes|tipo     |contenido                                                           |paquetes_comandos                                                   |evaluaciones |
-|------:|---:|---:|:--------|:-------------------------------------------------------------------|:-------------------------------------------------------------------|:------------|
-|      1|  24|   8|teórica  |Introducción a R y Rstudio                                          |`install.packages()`, library(), setwd(), c(), seq(), rep(), sample() |             |
-|      2|  26|   8|práctica |Introducción a R y Rstudio                                          |install.packages(), library(), setwd(), c(), seq(), rep(), sample() |             |
-|      3|  31|   8|teórica  |Introducción a bases de datos en R                                  |data.frame(), list(), summary(), table(), for(), plot()             |             |
-|      4|   2|   9|práctica |Introducción a bases de datos en R (CASEN 2020)                     |data.frame(), list(), summary(), table(), for(), plot()             |             |
-|      5|   7|   9|teórica  |Workflow                                                            |Todo lo anterior                                                    |Tarea 1      |
-|      6|   9|   9|práctica |Workflow                                                            |Todo lo anterior                                                    |             |
-|      7|  14|   9|teórica  |Tidyverse, pipes y funciones básicas en dplyr                       |tidyverse, readr(), tibble(), %>%, arrange(), select(), filter()    |Tarea 2      |
-|      8|  16|   9|práctica |Tidyverse, pipes y funciones básicas en dplyr                       |tidyverse, readr(), tibble(), %>%, arrange(), select(), filter()    |             |
-|      9|  21|   9|teórica  |Creación y transformación de variables en dplyr                     |dplyr, mutate(), group_by(), if_else(), case_when()                 |             |
-|     10|  23|   9|práctica |Creación y transformación de variables en dplyr                     |dplyr, mutate(), group_by(), if_else(), case_when()                 |             |
-|     11|  28|   9|teórica  |Resumen de datos agupados y combinación de bases de datos con dyplr |summarise(), group_by, _join()                                      |Tarea 3      |
-|     12|  30|   9|práctica |Resumen de datos agupados y combinación de bases de datos con dyplr |summarise(), group_by, _join()                                      |             |
-|     13|   5|  10|teórica  |Transformación de datos anchos y largos con dyplr                   |tidyr, pivot_longer(), pivot_wider()                                |             |
-|     14|   7|  10|práctica |Transformación de datos anchos y largos con dyplr                   |tidyr, pivot_longer(), pivot_wider()                                |             |
-|     15|  12|  10|teórica  |Datos faltantes con dyplr                                           |tidyr, complete(), fill(), drop_na(), replace_na()                  |             |
-|     16|  14|  10|práctica |Datos faltantes con dyplr                                           |tidyr, complete(), fill(), drop_na(), replace_na()                  |             |
-|     17|  19|  10|teórica  |Visualización de datos con ggplot (1)                               |ggplot, aes(), geom_()                                              |Tarea 4      |
-|     18|  21|  10|práctica |Visualización de datos con ggplot (2)                               |ggplot, aes(), geom_()                                              |             |
-|     19|  26|  10|teórica  |Iteración y automatización                                          |for(), purrr, map                                                   |Tarea 5      |
-|     20|  28|  10|práctica |Iteración y automatización                                          |for(), purrr, map                                                   |             |
-|     21|   2|  11|teórica  |Reportes automatizados                                              |Rmarkdown, knitr                                                    |             |
-|     22|   4|  11|práctica |Reportes automatizados                                              |Rmarkdown, knitr                                                    |             |
-|     23|   9|  11|teórica  |Recapitulación                                                      |Todo lo anterior                                                    |             |
+| sesion| dia| mes|tipo     |contenido                                                           |paquetes_comandos                                                                 |evaluaciones |zoom                                         |
+|------:|---:|---:|:--------|:-------------------------------------------------------------------|:---------------------------------------------------------------------------------|:------------|:--------------------------------------------|
+|      1|  24|   8|teórica  |Introducción a R y Rstudio                                          |`install.packages()`, `library()`, `setwd()`, `c()`, `seq()`, `rep()`, `sample()` |             |[`[Link]`]()                                 |
+|      2|  26|   8|práctica |Introducción a R y Rstudio                                          |`install.packages()`, `library()`, `setwd()`, `c()`, `seq()`, `rep()`, `sample()` |             |[`[Link 1]`]() [`[Link 2]`]() [`[Link 3]`]() |
+|      3|  31|   8|teórica  |Introducción a bases de datos en R                                  |`data.frame()`, `list()`, `summary()`, `table()`, `for()`, `plot()`               |             |[`[Link]`]()                                 |
+|      4|   2|   9|práctica |Introducción a bases de datos en R (CASEN 2020)                     |`data.frame()`, `list()`, `summary()`, `table()`, `for()`, `plot()`               |             |[`[Link 1]`]() [`[Link 2]`]() [`[Link 3]`]() |
+|      5|   7|   9|teórica  |Workflow                                                            |Todo lo anterior                                                                  |Tarea 1      |[`[Link]`]()                                 |
+|      6|   9|   9|práctica |Workflow                                                            |Todo lo anterior                                                                  |             |[`[Link 1]`]() [`[Link 2]`]() [`[Link 3]`]() |
+|      7|  14|   9|teórica  |Tidyverse, pipes y funciones básicas en dplyr                       |`tidyverse`, `readr()`, `tibble()`, `%>%`, `arrange()`, `select()`, `filter()`    |Tarea 2      |[`[Link]`]()                                 |
+|      8|  16|   9|práctica |Tidyverse, pipes y funciones básicas en dplyr                       |`tidyverse`, `readr()`, `tibble()`, `%>%`, `arrange()`, `select()`, `filter()`    |             |[`[Link 1]`]() [`[Link 2]`]() [`[Link 3]`]() |
+|      9|  21|   9|teórica  |Creación y transformación de variables en dplyr                     |`dplyr`, `mutate()`, `group_by()`, `if_else()`, `case_when()`                     |             |[`[Link]`]()                                 |
+|     10|  23|   9|práctica |Creación y transformación de variables en dplyr                     |`dplyr`, `mutate()`, `group_by()`, `if_else()`, `case_when()`                     |             |[`[Link 1]`]() [`[Link 2]`]() [`[Link 3]`]() |
+|     11|  28|   9|teórica  |Resumen de datos agupados y combinación de bases de datos con dyplr |`summarise()`, `group_by()`, `_join()`                                            |Tarea 3      |[`[Link]`]()                                 |
+|     12|  30|   9|práctica |Resumen de datos agupados y combinación de bases de datos con dyplr |`summarise()`, `group_by()`, `_join()`                                            |             |[`[Link 1]`]() [`[Link 2]`]() [`[Link 3]`]() |
+|     13|   5|  10|teórica  |Transformación de datos anchos y largos con dyplr                   |`tidyr`, `pivot_longer()`, `pivot_wider()`                                        |             |[`[Link]`]()                                 |
+|     14|   7|  10|práctica |Transformación de datos anchos y largos con dyplr                   |`tidyr`, `pivot_longer()`, `pivot_wider()`                                        |             |[`[Link 1]`]() [`[Link 2]`]() [`[Link 3]`]() |
+|     15|  12|  10|teórica  |Datos faltantes con dyplr                                           |`tidyr`, `complete()`, `fill()`, `drop_na()`, `replace_na()`                      |             |[`[Link]`]()                                 |
+|     16|  14|  10|práctica |Datos faltantes con dyplr                                           |`tidyr`, `complete()`, `fill()`, `drop_na()`, `replace_na()`                      |             |[`[Link 1]`]() [`[Link 2]`]() [`[Link 3]`]() |
+|     17|  19|  10|teórica  |Visualización de datos con ggplot (1)                               |`ggplot`, `aes()`, `geom_()`                                                      |Tarea 4      |[`[Link]`]()                                 |
+|     18|  21|  10|práctica |Visualización de datos con ggplot (2)                               |`ggplot`, `aes()`, `geom_()`                                                      |             |[`[Link 1]`]() [`[Link 2]`]() [`[Link 3]`]() |
+|     19|  26|  10|teórica  |Iteración y automatización                                          |`for()`, `purrr`, `map()`                                                         |Tarea 5      |[`[Link]`]()                                 |
+|     20|  28|  10|práctica |Iteración y automatización                                          |`for()`, `purrr`, `map()`                                                         |             |[`[Link 1]`]() [`[Link 2]`]() [`[Link 3]`]() |
+|     21|   2|  11|teórica  |Reportes automatizados                                              |`Rmarkdown`, `knitr`                                                              |             |[`[Link]`]()                                 |
+|     22|   4|  11|práctica |Reportes automatizados                                              |`Rmarkdown`, `knitr`                                                              |             |[`[Link 1]`]() [`[Link 2]`]() [`[Link 3]`]() |
+|     23|   9|  11|teórica  |Recapitulación                                                      |Todo lo anterior                     
