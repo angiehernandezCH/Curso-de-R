@@ -28,9 +28,39 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 |     20|  28|  10|práctica |Iteración y automatización con `purrr`                                |`for()`, `map()`                                                                  |             |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |
 |     21|   2|  11|teórica  |Reportes automatizados con `rmarkdown` y `knitr`                      |Todo lo anterior                                                                  |             |[`[Link]`]()                                    |
 |     22|   4|  11|práctica |Reportes automatizados con `rmarkdown` y `knitr`                      |Todo lo anterior                                                                  |             |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |
-|     23|   9|  11|teórica  |Recapitulación                                                        |Todo lo anterior                      
+|     23|   9|  11|teórica  |Recapitulación                                                        |Todo lo anterior                                                                  |             |[`[Link]`]()                                    |
+> 
+> # Material
+> 
+> calendar <- calendar |> mutate(zoom = if_else(tipo=="teórica", "[`[Presentación]`][`[.Rmd]`]","[`[RScript]`]" )) 
+> kable(calendar)
 
 
+| sesion| dia| mes|tipo     |contenido                                                             |funciones                                                                         |evaluaciones |zoom                         |
+|------:|---:|---:|:--------|:---------------------------------------------------------------------|:---------------------------------------------------------------------------------|:------------|:----------------------------|
+|      1|  24|   8|teórica  |Introducción a R y Rstudio                                            |`install.packages()`, `library()`, `setwd()`, `c()`, `seq()`, `rep()`, `sample()` |             |[`[Presentación]`][`[.Rmd]`] |
+|      2|  26|   8|práctica |Introducción a R y Rstudio                                            |`install.packages()`, `library()`, `setwd()`, `c()`, `seq()`, `rep()`, `sample()` |             |[`[RScript]`]                |
+|      3|  31|   8|teórica  |Introducción a bases de datos en R                                    |`data.frame()`, `list()`, `summary()`, `table()`, `for()`, `plot()`               |             |[`[Presentación]`][`[.Rmd]`] |
+|      4|   2|   9|práctica |Introducción a bases de datos en R (CASEN 2020)                       |`data.frame()`, `list()`, `summary()`, `table()`, `for()`, `plot()`               |             |[`[RScript]`]                |
+|      5|   7|   9|teórica  |Workflow                                                              |Todo lo anterior                                                                  |Tarea 1      |[`[Presentación]`][`[.Rmd]`] |
+|      6|   9|   9|práctica |Workflow                                                              |Todo lo anterior                                                                  |             |[`[RScript]`]                |
+|      7|  14|   9|teórica  |`tidyverse`, pipes y funciones básicas en `dplyr`                     |`readr()`, `tibble()`, `%>%`, `arrange()`, `select()`, `filter()`                 |Tarea 2      |[`[Presentación]`][`[.Rmd]`] |
+|      8|  16|   9|práctica |`tidyverse`, pipes y funciones básicas en `dplyr`                     |`readr()`, `tibble()`, `%>%`, `arrange()`, `select()`, `filter()`                 |             |[`[RScript]`]                |
+|      9|  21|   9|teórica  |Creación y transformación de variables en `dplyr`                     |`mutate()`, `group_by()`, `if_else()`, `case_when()`                              |             |[`[Presentación]`][`[.Rmd]`] |
+|     10|  23|   9|práctica |Creación y transformación de variables en `dplyr`                     |`mutate()`, `group_by()`, `if_else()`, `case_when()`                              |             |[`[RScript]`]                |
+|     11|  28|   9|teórica  |Resumen de datos agupados y combinación de bases de datos con `dyplr` |`summarise()`, `group_by()`, `_join()`                                            |Tarea 3      |[`[Presentación]`][`[.Rmd]`] |
+|     12|  30|   9|práctica |Resumen de datos agupados y combinación de bases de datos con `dyplr` |`summarise()`, `group_by()`, `_join()`                                            |             |[`[RScript]`]                |
+|     13|   5|  10|teórica  |Transformación de datos anchos y largos con `tidyr`                   |`pivot_longer()`, `pivot_wider()`                                                 |             |[`[Presentación]`][`[.Rmd]`] |
+|     14|   7|  10|práctica |Transformación de datos anchos y largos con `tidyr`                   |`pivot_longer()`, `pivot_wider()`                                                 |             |[`[RScript]`]                |
+|     15|  12|  10|teórica  |Datos faltantes con `tidyr`                                           |`complete()`, `fill()`, `drop_na()`, `replace_na()`                               |             |[`[Presentación]`][`[.Rmd]`] |
+|     16|  14|  10|práctica |Datos faltantes con `tidyr`                                           |`complete()`, `fill()`, `drop_na()`, `replace_na()`                               |             |[`[RScript]`]                |
+|     17|  19|  10|teórica  |Visualización de datos con `ggplot` (1)                               |`aes()`, `geom_()`                                                                |Tarea 4      |[`[Presentación]`][`[.Rmd]`] |
+|     18|  21|  10|práctica |Visualización de datos con `ggplot` (2)                               |`aes()`, `geom_()`                                                                |             |[`[RScript]`]                |
+|     19|  26|  10|teórica  |Iteración y automatización con `purrr`                                |`for()`, `map()`                                                                  |Tarea 5      |[`[Presentación]`][`[.Rmd]`] |
+|     20|  28|  10|práctica |Iteración y automatización con `purrr`                                |`for()`, `map()`                                                                  |             |[`[RScript]`]                |
+|     21|   2|  11|teórica  |Reportes automatizados con `rmarkdown` y `knitr`                      |Todo lo anterior                                                                  |             |[`[Presentación]`][`[.Rmd]`] |
+|     22|   4|  11|práctica |Reportes automatizados con `rmarkdown` y `knitr`                      |Todo lo anterior                                                                  |             |[`[RScript]`]                |
+|     23|   9|  11|teórica  |Recapitulación                                                        |Todo lo anterior                   
 ---
 
 ## Material del curso
