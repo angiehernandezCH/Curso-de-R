@@ -4,6 +4,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 ---
 ## Calendario
 
+clase tipo: T (téorica), P (práctica)
 
 | dia| mes|tipo |contenido                                                             |funciones                                                                                                      |zoom                                            |material                    |
 |---:|---:|:----|:---------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|:-----------------------------------------------|:---------------------------|
