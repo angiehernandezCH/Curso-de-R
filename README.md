@@ -6,7 +6,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 clase tipo: T (téorica), P (práctica)
 
-| dia| mes|tipo |contenido                                                             |funciones                                                                                                      |zoom                                            |material                    |
+| Día| Mes| Tipo | Contenido                                                             | Funciones                                                                                                      | Zoom                                            | Material                    |
 |---:|---:|:----|:---------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|:-----------------------------------------------|:---------------------------|
 |  24|   8|T    |Introducción a R y Rstudio                                            |`install.packages()` `library()` `setwd()` `c()` `seq()` `rep()` `sample()`                                    |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
 |  26|   8|P    |Introducción a R y Rstudio                                            |`install.packages()` `library()` `setwd()` `c()` `seq()` `rep()` `sample()`                                    |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
