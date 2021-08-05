@@ -32,7 +32,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 |   9|  11|T    |Reportes automatizados con `rmarkdown` y `knitr`                      |Todo lo anterior                                                                                               |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
 |  11|  11|P    |Reportes automatizados con `rmarkdown` y `knitr`                      |Todo lo anterior                                                                                               |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
 |  16|  11|T    |Recapitulación                                                        |Todo lo anterior                                                                                               |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
-|  12|  12|P    |NA                                                                    |NA                                                                                                             |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|  12|  12|P    |                                                                    |                                                                                                             |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
 
 ---
 
