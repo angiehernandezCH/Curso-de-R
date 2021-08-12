@@ -1,55 +1,44 @@
 # SOC4001 Procesamiento avanzado de bases de datos en `R`
-Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado de Bases de Datos en R, dictado el segundo semestre 2020 por el Departamento de Sociología de la Universidad Católica de Chile a estudiantes de educación continua. Para mayores detalles ver el [`[programa]`](files/syllabus_soc4001.pdf) del curso.
+Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado de Bases de Datos en R, dictado el segundo semestre 2021 por el Departamento de Sociología de la Universidad Católica de Chile a estudiantes de educación continua como parte del [`[Diplomado en WebScraping y visualización de datos sociales en R]`](https://educacioncontinua.uc.cl/43873-ficha-diplomado-en-webscraping-y-visualizacion-de-datos-sociales-en-r). Para mayores detalles ver el [`[programa]`](files/syllabus_soc4001.pdf) del curso.
 
-## Material del curso
+---
+## Calendario
 
-### Clases
-
-- Clase 01: 26/09, 09:00 a 12:00, **Introducción a R y Rstudio**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_1/class_1#1) [`[.Rmd]`](slides/class_1/class_1.Rmd) [`[RScript]`](slides/class_1/class_1.R) 
-
-- Clase 02: 01/10, 18:00 a 20:50, **Introducción a bases de datos en R**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_2/class_2#1) [`[.Rmd]`](slides/class_2/class_2.Rmd) [`[RScript]`](slides/class_2/class_2.R) 
-
-- Clase 03: 03/10, 09:00 a 11:50, **Taller #1 Primer acercamiento a bases de datos en R, CASEN 2017**: [`[RScript]`](slides/class_3/class_3.R) 
-
-- Clase 04: 08/10, 18:00 a 20:50, **Taller #2 Workflow**: [`[Código]`](slides/class_4/workflow.zip)
-[`[Grabación 1]`](https://zoom.us/rec/share/NwMr0g9prA89k96xrxTlbvgmoCLyoyvuLSQbAtS-BSHKD7yLuTKXfDIayUGXA_gx.7yC_36slEur4IZc9?startTime=1602190820000)
+clase tipo: T (téorica), P (práctica)
 
 
-- Clase 05: 15/10, 18:00 a 20:50, **Tidyverse: importar datos, tibbles, ordenar, seleccionar y filtrar con dplyr**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_5/class_5#1) [`[.Rmd]`](slides/class_5/class_5.Rmd) [`[RScript]`](slides/class_5/class_5.R)
+| dia| mes|tipo |contenido                                                              |funciones                                                                                                      |entrega |zoom                                            |material                    |
+|---:|---:|:----|:----------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|:-------|:-----------------------------------------------|:---------------------------|
+|  24|   8|T    |Introducción a R y Rstudio                                             |`install.packages()` `library()` `setwd()` `c()` `seq()` `rep()` `sample()`                                    |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|  26|   8|P    |Introducción a R y Rstudio                                             |`install.packages()` `library()` `setwd()` `c()` `seq()` `rep()` `sample()`                                    |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|  31|   8|T    |Introducción a bases de datos en R                                     |`data.frame()` `list()` `summary()` `table()` `for()` `plot()`                                                 |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|   2|   9|P    |Introducción a bases de datos en R (CASEN 2020)                        |`data.frame()` `list()` `summary()` `table()` `for()` `plot()`                                                 |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|   7|   9|T    |Workflow                                                               |Todo lo anterior                                                                                               |T1      |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|   9|   9|P    |Workflow                                                               |Todo lo anterior                                                                                               |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|  14|   9|T    |`tidyverse`, pipes y funciones básicas con `dplyr`                     |`readr()` `tibble()` `%>%` `arrange()` `select()` `filter()`                                                   |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|  16|   9|P    |No hay clases                                                          |No hay clases                                                                                                  |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|  21|   9|T    |Creación y transformación de variables con `dplyr`                     |`mutate()` `group_by()` `if_else()` `case_when()`                                                              |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|  23|   9|P    |Creación y transformación de variables con `dplyr`                     |`readr()` `tibble()` `%>%` `arrange()` `select()` `filter()` `mutate()` `group_by()` `if_else()` `case_when()` |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|  28|   9|T    |Resumen de datos agrupados y combinación de bases de datos con `dyplr` |`summarise()` `group_by()` `_join()`                                                                           |T2      |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|  30|   9|P    |Resumen de datos agrupados y combinación de bases de datos con `dyplr` |`summarise()` `group_by()` `_join()`                                                                           |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|   5|  10|T    |Transformación de datos anchos y largos con `tidyr`                    |`pivot_longer()` `pivot_wider()`                                                                               |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|   7|  10|P    |Transformación de datos anchos y largos con `tidyr`                    |`pivot_longer()` `pivot_wider()`                                                                               |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|  12|  10|T    |Datos faltantes con `tidyr`                                            |`complete()` `fill()` `drop_na()` `replace_na()`                                                               |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|  14|  10|P    |Datos faltantes con `tidyr`                                            |`complete()` `fill()` `drop_na()` `replace_na()`                                                               |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|  19|  10|T    |Visualización de datos con `ggplot`                                    |`aes()` `geom_()`                                                                                              |T3      |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|  21|  10|P    |Visualización de datos con `ggplot`                                    |`theme()` `facet_()` `labs()`                                                                                  |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|  26|  10|T    |Visualización de datos con `ggplot`                                    |`aes()` `geom_()` `theme()` `facet_()` `labs()`                                                                |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|  28|  10|P    |No hay clases                                                          |No hay clases                                                                                                  |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|   2|  11|T    |Iteración y automatización con `purrr`                                 |`for()` `map()`                                                                                                |T4      |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|   4|  11|P    |Iteración y automatización con `purrr`                                 |`for()` `map()`                                                                                                |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|   9|  11|T    |Reportes automatizados con `rmarkdown` y `knitr`                       |Todo lo anterior                                                                                               |T5      |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|  11|  11|P    |Reportes automatizados con `rmarkdown` y `knitr`                       |Todo lo anterior                                                                                               |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|  16|  11|T    |Recapitulación                                                         |Todo lo anterior                                                                                               |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
+|  12|  12|P    |NA                                                                     |NA                                                                                                             |TF      |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
 
-- Clase 06: 22/10, 18:00 a 20:50, **Manipulación de bases de datos con tidyverse (2)**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_6/class_6#1) [`[.Rmd]`](slides/class_6/class_6.Rmd) [`[RScript]`](slides/class_6/class_6.R)
- 
-- Clase 07: 24/10, 18:00 a 20:50, **Manipulación de bases de datos con tidyverse (3)**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_7/class_7#1) [`[.Rmd]`](slides/class_7/class_7.Rmd) [`[RScript]`](slides/class_7/class_7.R)
+---
 
-- Clase 08: 29/10, 18:00 a 20:50, **Taller #3 Manipulación de bases de datos con tidyverse (4)**: [`[RScript]`](slides/class_8/class_8.R)
-
-- Clase 09: 05/11, 18:00 a 20:50, **Manipulación de bases de datos con tidyverse (5)**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_9/class_9#1) [`[.Rmd]`](slides/class_9/class_9.Rmd) [`[RScript]`](slides/class_9/class_9.R) 
-
-- Clase 10: 07/11, 09:00 a 11:50, **Manipulación de bases de datos con tidyverse (6)**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_10/class_10#1) [`[.Rmd]`](slides/class_10/class_10.Rmd) [`[RScript]`](slides/class_10/class_10.R) 
-
-- Clase 11: 12/11, 18:00 a 20:50, **Visualización de datos con ggplot (1)**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_11/class_11#1) [`[.Rmd]`](slides/class_11/class_11.Rmd) [`[RScript]`](slides/class_11/class_11.R)
-
-- Clase 12: 19/11, 18:00 a 20:50, **Visualización de datos con ggplot (2)**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_12/class_12#1) [`[.Rmd]`](slides/class_12/class_12.Rmd) [`[RScript]`](slides/class_12/class_12.R)
-
-- Clase 13: 21/11, 09:00 a 11:50, **Iteración y automatización**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_13/class_13#1) [`[.Rmd]`](slides/class_13/class_13.Rmd) [`[RScript]`](slides/class_13/class_13.R)
-
-- Clase 14: 26/11, 18:00 a 20:50, **Simulación e inferencia estadística**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_14/class_14#1) [`[.Rmd]`](slides/class_14/class_14.Rmd) [`[RScript]`](slides/class_14/class_14.R)
-
-- Clase 15: 03/12, 18:00 a 20:50, **Reportes automatizados**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_15/class_15#1) [`[.Rmd]`](slides/class_15/class_15.Rmd) [`[Template Rmd]`](slides/class_15/class_15_template.Rmd)[`[PDF Template Rmd]`](slides/class_15/class_15_template.pdf)
-
-- Clase 16: 10/12, 18:00 a 20:50, **Taller #4 Workflow avanzado**: [`[Código]`](slides/class_16/workflow_adv.zip)
-
-- Clase 17: 12/12, 09:00 a 11:50, **Recapitulación**: [`[RScript]`](slides/class_17/class_17.R)
-
-
-- **Herramientas adicionales**:
-
-  - Sublime Text (editor de texto)
-
-  - Overleaf (editor Latex online)
-
-
-### Evaluaciones 
+## Evaluaciones 
 
 #### Tareas 
 
@@ -64,6 +53,10 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 - 26/11, Asignación Trabajo final: [`[PDF]`](homework/tf.pdf)[`[Reporte]`](homework/tf_reporte.pdf)[`[Solución]`](homework/tf_answers.zip)  
 
+
 #### Lectura recomendada
 
 - **R for Data Science** (Hadley Wickham & Garrett Grolemund) [`[e-Book]`](https://r4ds.had.co.nz/)
+
+
+
