@@ -43,6 +43,8 @@ clase tipo: T (téorica), P (práctica)
 
 ## Grupos
 
+[`[Codigo]`](https://mebucca.github.io/dar_soc4001/files/students2ta.R)
+
 | Grupo|Ayudante |Estudiante                        |
 |-----:|:--------|:---------------------------------|
 |     1|Roberto  |María De Los Ángeles García Matte |
