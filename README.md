@@ -1,16 +1,17 @@
 # SOC4001 Procesamiento avanzado de bases de datos en `R`
-Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado de Bases de Datos en R, dictado el segundo semestre 2021 por el Departamento de Sociología de la Universidad Católica de Chile a estudiantes de educación continua como parte del [`[Diplomado en WebScraping y visualización de datos sociales en R]`](https://educacioncontinua.uc.cl/43873-ficha-diplomado-en-webscraping-y-visualizacion-de-datos-sociales-en-r). Para mayores detalles ver el [`[programa]`](files/syllabus_soc4001.pdf) del curso. Encuentra aquí una [`[presentación]`](https://mebucca.github.io/cda_soc3070/slides/presentation/presentation#1) sobre el rol de `R` como *lingua franca* de la ciencia de datos. 
+Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado de Bases de Datos en R, dictado el segundo semestre 2021 por el Departamento de Sociología de la Universidad Católica de Chile a estudiantes de educación continua como parte del [`[Diplomado en Procesamiento y Análisis de Datos Sociales]`](https://educacioncontinua.uc.cl/41343-ficha-diplomado-en-procesamiento-y-analisis-de-datos-sociales) y del nuevo [`[Diplomado en WebScraping y visualización de datos sociales en R]`](https://educacioncontinua.uc.cl/43873-ficha-diplomado-en-webscraping-y-visualizacion-de-datos-sociales-en-r). Para mayores detalles ver el [`[programa]`](files/syllabus_soc4001.pdf) del curso.
+
+Encuentra también aquí una presentación sobre el rol de `R` como *lingua franca* de la ciencia de datos: [`[Slides]`](https://mebucca.github.io/dar_soc4001/slides/presentation/presentation#1) [`[.Rmd]`](slides/presentation/presentation.Rmd). 
 
 ---
 ## Calendario
 
 clase tipo: T (téorica), P (práctica)
 
-
 | dia| mes|tipo |contenido                                                              |funciones                                                                                                      |entrega |zoom                                            |material                    |
 |---:|---:|:----|:----------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|:-------|:-----------------------------------------------|:---------------------------|
-|  24|   8|T    |Introducción a R y Rstudio                                             |`install.packages()` `library()` `setwd()` `c()` `seq()` `rep()` `sample()`                                    |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
-|  26|   8|P    |Introducción a R y Rstudio                                             |`install.packages()` `library()` `setwd()` `c()` `seq()` `rep()` `sample()`                                    |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
+|  24|   8|T    |Introducción a R y Rstudio                                             |`install.packages()` `library()` `setwd()` `c()` `seq()` `rep()` `sample()`                                    |        |[`[Link]`](https://www.emol.com/)                                    |[`[Slides]`](https://mebucca.github.io/dar_soc4001/slides/class_1/class_1#1) [`[.Rmd]`](slides/class_1/class_1.Rmd) |
+|  26|   8|P    |Introducción a R y Rstudio                                             |`install.packages()` `library()` `setwd()` `c()` `seq()` `rep()` `sample()`                                    |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`](slides/class_1/class_1.R)             |
 |  31|   8|T    |Introducción a bases de datos en R                                     |`data.frame()` `list()` `summary()` `table()` `for()` `plot()`                                                 |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
 |   2|   9|P    |Introducción a bases de datos en R (CASEN 2020)                        |`data.frame()` `list()` `summary()` `table()` `for()` `plot()`                                                 |        |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
 |   7|   9|T    |Workflow                                                               |Todo lo anterior                                                                                               |T1      |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
@@ -36,22 +37,69 @@ clase tipo: T (téorica), P (práctica)
 |  16|  11|T    |Recapitulación                                                         |Todo lo anterior                                                                                               |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
 |  12|  12|P    |                                                                     |                                                                                                             |TF      |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
 
+
+
+---
+
+## Grupos
+
+[`[Codigo]`](https://mebucca.github.io/dar_soc4001/files/students2ta.R)
+
+| Grupo|Ayudante |Estudiante                        |
+|-----:|:--------|:---------------------------------|
+|     1|Roberto  |María De Los Ángeles García Matte |
+|     1|Roberto  |Hernán Gianini Vivado             |
+|     1|Roberto  |Maite Begoña González Yáñez       |
+|     1|Roberto  |Lorena Andrea Loyola Canales      |
+|     1|Roberto  |Roxana Lorena Muñoz Marchan       |
+|     1|Roberto  |Anakena Orrego López              |
+|     1|Roberto  |Constanza Ortega Gunckel          |
+|     1|Roberto  |Javiera Fernanda Perez Canio      |
+|     1|Roberto  |Gabriela Fernanda Peters Riveros  |
+|     1|Roberto  |Lourdes Soledad Velez Burneo      |
+|     1|Roberto  |Mario Sainz Martínez              |
+|     1|Roberto  |Recaredo Alberto Gálvez Carrasco  |
+|     2|Martín   |Esteban Alejandro Burgos Ruiz     |
+|     2|Martín   |Matías Deneken Uribe              |
+|     2|Martín   |Felipe Guzmán Aravena             |
+|     2|Martín   |Andrés Esteban Lazcano Astorga    |
+|     2|Martín   |Catalina Andrea Ossa Concha       |
+|     2|Martín   |Felipe Alejandro Peters Riveros   |
+|     2|Martín   |Felipe Quintana Saez              |
+|     2|Martín   |Felipe Alfredo Rivas Cifuentes    |
+|     2|Martín   |Jorge Andres Vega López           |
+|     2|Martín   |Josefa Paz Hernández Aguirre      |
+|     2|Martín   |Ignacio Rodriguez Zúñiga          |
+|     2|Martín   |Verónica Gonzalez Acevedo         |
+|     3|Felipe   |Simon Esteu Aranda Rojas          |
+|     3|Felipe   |Piero Alexander Beroiza Saldivia  |
+|     3|Felipe   |Isaac Andrés Galassi Oyarzun      |
+|     3|Felipe   |Daniel Alonso González Álvarez    |
+|     3|Felipe   |Natalia Guerrero Torres           |
+|     3|Felipe   |Valentina Sofia Proust Iligaray   |
+|     3|Felipe   |Bárbara Paz Ramos Mesías          |
+|     3|Felipe   |Jacinta Antonia Rodriguez Pavani  |
+|     3|Felipe   |Jorge Urzua Urzua Faune           |
+|     3|Felipe   |Andrea Velásquez Velásquez        |
+|     3|Felipe   |Valeria Alejandra Illanes Aedo    |
+|     3|Felipe   |Francisco Fuentes Ortega          |
+
 ---
 
 ## Evaluaciones 
 
 #### Tareas 
 
-- 01/10, Asignación Tarea 1: [`[PDF]`](homework/t_1.pdf)[`[Solución]`](homework/t_1_answers.pdf)
-- 08/10, Asignación Tarea 2: [`[PDF]`](homework/t_2.pdf)[`[Solución]`](homework/t2_answers.zip)  
-- 22/10, Asignación Tarea 3: [`[PDF]`](homework/t_3.pdf)[`[Solución]`](homework/t_3_answers.pdf)
-- 07/11, Asignación Tarea 4: [`[PDF]`](homework/t_4.pdf)[`[Solución]`](homework/t_4_answers.pdf)
-- 07/11, Asignación Tarea 5: [`[PDF]`](homework/t_5.pdf)[`[Datos]`](slides/class_12/covid_data.csv)[`[Solución]`](homework/t_5_answers.pdf)
+- 01/10, Asignación Tarea 1: 
+- 08/10, Asignación Tarea 2:  
+- 22/10, Asignación Tarea 3: 
+- 07/11, Asignación Tarea 4: 
+- 07/11, Asignación Tarea 5: 
 
 
 #### Trabajo Final
 
-- 26/11, Asignación Trabajo final: [`[PDF]`](homework/tf.pdf)[`[Reporte]`](homework/tf_reporte.pdf)[`[Solución]`](homework/tf_answers.zip)  
+- 26/11, Asignación Trabajo final: 
 
 
 #### Lectura recomendada
