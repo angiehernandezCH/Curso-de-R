@@ -96,16 +96,16 @@ clase tipo: T (téorica), P (práctica)
 
 #### Tareas 
 
-- 01/10, Asignación Tarea 1: 
-- 08/10, Asignación Tarea 2:  
-- 22/10, Asignación Tarea 3: 
-- 07/11, Asignación Tarea 4: 
-- 07/11, Asignación Tarea 5: 
+- 31/08, Asignación Tarea 1: 
+- 21/09, Asignación Tarea 2:  
+- 12/10, Asignación Tarea 3: 
+- 26/10, Asignación Tarea 4: 
+- 02/11, Asignación Tarea 5: 
 
 
 #### Trabajo Final
 
-- 26/11, Asignación Trabajo final: 
+- 16/11, Asignación Trabajo final: 
 
 
 #### Lectura recomendada
