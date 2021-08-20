@@ -15,5 +15,4 @@ listado_estudiantes <- read_excel(path) %>%
   arrange(Grupo) %>%
   select(Grupo,Ayudante,Estudiante)
 
-kable(listado_estudiantes)
 
