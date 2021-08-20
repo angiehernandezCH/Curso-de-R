@@ -49,7 +49,7 @@ clase tipo: T (téorica), P (práctica)
 
 ## Grupos
 
-El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentras aquí: [`[Codigo]`](https://mebucca.github.io/dar_soc4001/files/student2ta.R)
+El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentras aquí: [`[Codigo]`](dar_soc4001/files/student2ta.R)
 
 | Grupo|Ayudante |Estudiante                        |
 |-----:|:--------|:---------------------------------|
