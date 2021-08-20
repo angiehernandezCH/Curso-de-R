@@ -37,6 +37,51 @@ clase tipo: T (téorica), P (práctica)
 |  16|  11|T    |Recapitulación                                                         |Todo lo anterior                                                                                               |        |[`[Link]`]()                                    |[`[Slides]`]() [`[.Rmd]`]() |
 |  12|  12|P    |                                                                     |                                                                                                             |TF      |[`[Link G1]`]() [`[Link G2]`]() [`[Link G3]`]() |[`[RScript]`]()             |
 
+
+
+---
+
+## Grupos
+
+| Grupo|Ayudante |Estudiante                        |
+|-----:|:--------|:---------------------------------|
+|     1|Roberto  |María De Los Ángeles García Matte |
+|     1|Roberto  |Hernán Gianini Vivado             |
+|     1|Roberto  |Maite Begoña González Yáñez       |
+|     1|Roberto  |Lorena Andrea Loyola Canales      |
+|     1|Roberto  |Roxana Lorena Muñoz Marchan       |
+|     1|Roberto  |Anakena Orrego López              |
+|     1|Roberto  |Constanza Ortega Gunckel          |
+|     1|Roberto  |Javiera Fernanda Perez Canio      |
+|     1|Roberto  |Gabriela Fernanda Peters Riveros  |
+|     1|Roberto  |Lourdes Soledad Velez Burneo      |
+|     1|Roberto  |Mario Sainz Martínez              |
+|     1|Roberto  |Recaredo Alberto Gálvez Carrasco  |
+|     2|Martín   |Esteban Alejandro Burgos Ruiz     |
+|     2|Martín   |Matías Deneken Uribe              |
+|     2|Martín   |Felipe Guzmán Aravena             |
+|     2|Martín   |Andrés Esteban Lazcano Astorga    |
+|     2|Martín   |Catalina Andrea Ossa Concha       |
+|     2|Martín   |Felipe Alejandro Peters Riveros   |
+|     2|Martín   |Felipe Quintana Saez              |
+|     2|Martín   |Felipe Alfredo Rivas Cifuentes    |
+|     2|Martín   |Jorge Andres Vega López           |
+|     2|Martín   |Josefa Paz Hernández Aguirre      |
+|     2|Martín   |Ignacio Rodriguez Zúñiga          |
+|     2|Martín   |Verónica Gonzalez Acevedo         |
+|     3|Felipe   |Simon Esteu Aranda Rojas          |
+|     3|Felipe   |Piero Alexander Beroiza Saldivia  |
+|     3|Felipe   |Isaac Andrés Galassi Oyarzun      |
+|     3|Felipe   |Daniel Alonso González Álvarez    |
+|     3|Felipe   |Natalia Guerrero Torres           |
+|     3|Felipe   |Valentina Sofia Proust Iligaray   |
+|     3|Felipe   |Bárbara Paz Ramos Mesías          |
+|     3|Felipe   |Jacinta Antonia Rodriguez Pavani  |
+|     3|Felipe   |Jorge Urzua Urzua Faune           |
+|     3|Felipe   |Andrea Velásquez Velásquez        |
+|     3|Felipe   |Valeria Alejandra Illanes Aedo    |
+|     3|Felipe   |Francisco Fuentes Ortega          |
+
 ---
 
 ## Evaluaciones 
