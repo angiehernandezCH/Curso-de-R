@@ -43,7 +43,7 @@ clase tipo: T (téorica), P (práctica)
 
 ## Cápsulas
 
-- Descargar e instalar R: [`[Grabación]`]() 
+- Descargar e instalar R: [`[Grabación]`](https://www.youtube.com/watch?v=bwxUdV1JBiA) 
 
 ---
 
