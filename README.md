@@ -41,6 +41,12 @@ clase tipo: T (téorica), P (práctica)
 
 ---
 
+## Cápsulas
+
+- Descargar e instalar R: [`[Grabación]`]() 
+
+---
+
 ## Grupos
 
 [`[Codigo]`](https://mebucca.github.io/dar_soc4001/files/students2ta.R)
