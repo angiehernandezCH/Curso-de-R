@@ -120,7 +120,6 @@ sample(1:50,5)
 sample(1:50,5)
 
 
-
 ## Operaciones con vectores:
 
 x <- c(1,5,2)
@@ -129,23 +128,11 @@ y <- c(1,2,3)
 # adición
 x + y
 
-# multiplicación/division por una contante
+# multiplicación/division por una contante (elemento-por-elemento)
 y/2
 
-# multiplicación/division por otro vector
+# multiplicación/division por otro vector (elemento-por-elemento)
 x*y
-
-
-## Operaciones con vectores (algebra lineal)
-
-# transposición
-t(x)
-
-# producto punto
-dot <- t(x)%*%y; dot
-
-# producto diadico
-outer <--x%o%y; outer
 
 
 ## Matrices: juntando vectores con igual dimensión
@@ -155,7 +142,6 @@ cbind(x,y)   # matriz 3 x 2
 
 # row-bind
 rbind(x,y)   # matriz 2 x 3
-
 
 
 ## Matrices: función 'matrix'

@@ -4,6 +4,7 @@
     <title>Procesamiento avanzado de Bases de Datos en R</title>
     <meta charset="utf-8" />
     <meta name="author" content="  Mauricio Bucca  Profesor Asistente, Sociología UC" />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="gentle-r.css" type="text/css" />
@@ -317,9 +318,9 @@ Puedes comprobar qué tipo de variable es con `class(x)` o `is.numeric()`.
 
 
 ```r
-x &lt;- 1        # operador de asignación
-x = 1         # igual, operador de asignación
-x == 1        # evaluación lógica
+x &lt;- 7        # operador de asignación
+x = 7         # igual, operador de asignación
+x == 7        # evaluación lógica
 ```
 
 ```
@@ -331,15 +332,23 @@ y &lt;- x:10; y  # sequencia
 ```
 
 ```
-##  [1]  1  2  3  4  5  6  7  8  9 10
+## [1]  7  8  9 10
 ```
 
 ```r
-y[3:2]        # selection de elementos
+y[2:3]        # seleccion de elementos
 ```
 
 ```
-## [1] 3 2
+## [1] 8 9
+```
+
+```r
+y[3:2]        # seleccion de elementos
+```
+
+```
+## [1] 9 8
 ```
 
 ```r
@@ -358,15 +367,15 @@ Define una función:
 
 ```r
 my_fn1 &lt;- function(x){
-* fx &lt;- 2*log(exp(x)*exp(2*x))
+* fx &lt;- 2^x - 1/x
   return(fx)
 }
 
-my_fn1(1)
+my_fn1(3)
 ```
 
 ```
-## [1] 6
+## [1] 7.666667
 ```
 ]
 
@@ -463,7 +472,7 @@ sample(1:50,5)
 ```
 
 ```
-## [1] 20  4 49 38 23
+## [1] 18  3  6 40 24
 ```
 
 ```r
@@ -472,7 +481,7 @@ sample(1:50,5)
 ```
 
 ```
-## [1]  5 10 37 22 49
+## [1] 15  5 43 31 45
 ```
 
 ---
@@ -866,6 +875,10 @@ class: inverse, center, middle
 Mauricio Bucca &lt;br&gt;
 https://mebucca.github.io/ &lt;br&gt;
 github.com/mebucca
+
+
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

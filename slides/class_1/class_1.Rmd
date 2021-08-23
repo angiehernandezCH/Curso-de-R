@@ -293,11 +293,12 @@ Puedes comprobar qué tipo de variable es con `class(x)` o `is.numeric()`.
 ##Símbolos básicos
 
 ```{r key-symbols}
-x <- 1        # operador de asignación
-x = 1         # igual, operador de asignación
-x == 1        # evaluación lógica
+x <- 7        # operador de asignación
+x = 7         # igual, operador de asignación
+x == 7        # evaluación lógica
 y <- x:10; y  # sequencia
-y[3:2]        # selection de elementos
+y[2:3]        # seleccion de elementos
+y[3:2]        # seleccion de elementos
 rm(x)         # remover un objeto   
 ```
 
@@ -312,11 +313,11 @@ Define una función:
 .pull-left[
 ```{r}
 my_fn1 <- function(x){
-  fx <- 2*log(exp(x)*exp(2*x)) #<<
+  fx <- 2^x - 1/x #<<
   return(fx)
 }
 
-my_fn1(1)
+my_fn1(3)
 ```
 ]
 
