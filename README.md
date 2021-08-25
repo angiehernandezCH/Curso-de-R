@@ -89,6 +89,7 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 |     3|Felipe   |Andrea Velásquez Velásquez        |
 |     3|Felipe   |Valeria Alejandra Illanes Aedo    |
 |     3|Felipe   |Francisco Fuentes Ortega          |
+|     3|Felipe   |Trajan Pirkovic                   |
 
 ---
 
