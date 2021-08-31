@@ -411,7 +411,7 @@ Para multiplicar vectores usamos el operador `%%`
 dot <- t(x)%*%y; dot
 
 # producto diadico
-outer <--x%o%y; outer
+outer <- x%o%y; outer
 
 ```
 

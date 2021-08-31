@@ -14,37 +14,41 @@ library("tinytex")
 ```
 
 Ponderación: 12% de la nota final del curso
-Entrega: Desde el momento de entrega, los estudiantes tiene 1 exacta semana de plazo para completar esta tarea. 
+
 Formato: Desarrollar esta tarea en un RScript, agregando comentarios cuando sea necesario. 
+
 
 
 1) Instalar y cargar el paquete (desde el Script) `CarData`.
 
 
-2) Usa la documentación del paquete `CarData` para identificar los datos correspondientes a "Duncan's Occupational Prestige Data"
+
+2) Usa la documentación del paquete `CarData` para identificar los datos correspondientes a "Self-Reports of Height and Weight"
 
 
-3) Carga los datos y crea un objeto que los contenga. Llama tal objeto "datos_duncan".
+3) Carga los datos y crea un objeto que los contenga. Llama tal objeto "datos_davis".
 
 
 4) Muestra las primeras y las últimas 6 observaciones de la base de datos en la consola.
 
 
-5) Crea una base de datos que contenga sólo las variables `type` and `prestige` de "datos_duncan". Llama tal objeto "subdatos_duncan". Muestra las dimensiones de la nueva bases de datos.
+5) Crea una base de datos que contenga sólo las variables `sex`, `height` y `repht` de "datos_davis". Llama tal objeto "subdatos_davis". Muestra las dimensiones de la nueva bases de datos.
 
 
-6) Presenta un resumen estadístico (summary) de las variables en la base de datos.
+6) Presenta un resumen estadístico (summary) de las variables en "subdatos_davis".
 
 
-7) Chequea la presencia de valores perdidos en la variable "education". Luego, calcula la media de la variable "education" y almacénala en un objeto llamado "education_promedio".
+7) Crea una variable llamada "diff" que mida la diferencia entre el peso real y el peso reportado por los individuos y añadela a "subdatos_davis". 
 
 
-8) Crea una nueva variable llamada "educacion_agg". Asigna valor 1 a "educacion_agg" para aquellas observaciones en las cuales la variable "education" toma un valor por sobre la media. Asigna valor 0 a "educacion_agg" para aquellas observaciones en las cuales la variable "education" toma un valor igual o menor a la media.
+8) Chequea la presencia de valores perdidos en la variable "diff". Luego crea una nueva base de datos que contenga sólo las observaciones con datos completos en todas las variables en "subdatos_davis". Llama este objeto "subdatos_davis_full" y presenta un resumen estadístico (summary) de las variables en "subdatos_davis_full".
 
 
-9) Usa un loop para calcular la media y la desviación estándar de la variable "prestige" para las observaciones en cada uno de los niveles de la variable "educacion_agg". No olvides usar el comando `print()` para mostrar los cálculos ejecutados dentro del loop.
+9) Crea una nueva variable llamada "sex_num". Asigna valor 1 a "sex_num" para aquellas observaciones en las cuales la variable "sex" toma valor "F" (mujer). Asigna valor 0 a "sex_num" para aquellas observaciones en las cuales la variable "sex" toma un valor "M" (hombre).
 
 
-10) Crea un scatterplot de las variables "prestige" and "education". Dale un nombre informativo a cada eje. 
+10) Usa un loop para calcular la media de la variable "diff" para las observaciones en cada uno de los niveles de la variable "sex" (es decir, para hombres y mujeres). No olvides usar el comando `print()` para mostrar los cálculos ejecutados dentro del loop.
 
+
+11) Explica MUY brevemente el resultado obtenidos en la pregunta anterior.
 
