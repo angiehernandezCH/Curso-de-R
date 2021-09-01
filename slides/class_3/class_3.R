@@ -1,18 +1,23 @@
-# Establecer directory de trabajo
+
+# Descargar en la base de datos en formato SPSS desde aquí:
+#http://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-en-pandemia-2020
+# Renombrar el archivo como "Casen_2020"
+
+# Establecer directory de trabajo (cambiar a la ubicación en computador donde guardaron la base de datos)
 
 getwd()
 setwd("/Users/Mauricio/Desktop")
 
-# Importar datos Casen 2017
+# Importar datos Casen 2020 desde formato .sav (SPSS)
 
-install.packages("readstata13")
-library("readstata13")
+install.packages("foreign")
+library("foreign")
 
-?readstata13
-??readstata13
-data_casen <-  read.dta13("Casen 2017.dta", convert.factors = TRUE)
+?foreign
+??foreign
+data_casen <-  read.spss("Casen_2020.sav", to.data.frame=TRUE)
 
-# Visualizar datos
+# Visualizar datos (muchos = display en pantalla es desastrozo)
 
 data_casen
 
@@ -25,7 +30,6 @@ summary(data_casen)
 
 
 # Seleccionar set de datos de interés
-
 
 vars <- c("comuna", "sexo", "edad", "esc", "educ" ,"yautcor", "ytotcor", "pobreza")
 
@@ -40,8 +44,7 @@ str(subdata_casen)
 summary(subdata_casen)
 
 
-# Transformar variables
-
+# Transformar variables (ingresos en miles de pesos)
 
 subdata_casen$yautcor <- subdata_casen$yautcor/1000
 subdata_casen$ytotcor <- subdata_casen$ytotcor/1000
@@ -69,12 +72,12 @@ prop.table(mitable)
 
 pov_educ <- table(subdata_casen$educ,subdata_casen$pobreza)
 
-rows <- nrow(pov_educ)
-pov_educ <- pov_educ[-rows,]
+rows <- nrow(pov_educ) 
+pov_educ <- pov_educ[-rows,] # excluyendo la última fila ("No Sabe")
 
-prop.table(pov_educ)
-prop.table(pov_educ, margin=1)
-prop.table(pov_educ, margin=2)
+prop.table(pov_educ) # % celda (tabla suma a 100)
+prop.table(pov_educ, margin=1) # % fila (filas suman a 100)
+prop.table(pov_educ, margin=2) # % columna (columnas suman a 100)
 
 
 ## Funciones básicas para vectores y variables
@@ -96,40 +99,9 @@ length(subdata_casen$yautcor) # largo
 
 # Quantiles
 
-quantile(subdata_casen$yautcor, p=c(.2,.4,.6,.8), na.rm = TRUE)
-quantile(subdata_casen$yautcor, p=seq(0,1,by=0.1), na.rm = TRUE)
-quantile(subdata_casen$yautcor, p=seq(0,1,by=0.05), na.rm = TRUE)
-quantile(subdata_casen$yautcor, p=seq(0,1,by=0.01), na.rm = TRUE)
-
-
-
-# Correlaciones 
-
-cor(subdata_casen$yautcor,subdata_casen$esc, use = "complete.obs")
-
-cor(subdata_casen[,c("yautcor","ytotcor","esc")], use = "complete.obs")
-
-
-# Modelo de regresión lineal
-
-mi_reg <- lm(yautcor ~  sexo + esc + I(esc^2), data = subdata_casen)
-
-mi_reg <- lm(subdata_casen$yautcor ~  subdata_casen$sexo + subdata_casen$esc + I(subdata_casen$esc^2))
-
-
-lm(yautcor*1000 ~  sexo + esc + I(esc^2), data = subdata_casen)
-
-mi_reg$coefficients
-mi_reg$terms
-mi_reg$residuals
-
-
-sum_mi_reg <- summary(mi_reg)
-sum_mi_reg$sigma
-
-sqrt(sum_mi_reg$sigma)
-sqrt(784.4) 
-
+quantile(subdata_casen$yautcor, p=c(.2,.4,.6,.8), na.rm = TRUE) # calculando quintiles de ingreso
+quantile(subdata_casen$yautcor, p=seq(0,1,by=0.1), na.rm = TRUE) # deciles
+quantile(subdata_casen$yautcor, p=seq(0,1,by=0.05), na.rm = TRUE) # veintiles
 
 # Funciones de paquetes
 
@@ -139,12 +111,17 @@ library("ineq")
 ??ineq
 
 Gini(subdata_casen$yautcor, corr = TRUE, na.rm = TRUE)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8cfeadfb75cb3c253fd827090ef9495a130b42a0
 
 
-# Funciones propias
+# Funciones propias 
 
 quantile(subdata_casen$yautcor, p=c(.1,.9), na.rm = TRUE)
 
+# función que calcula ratio 90-10 (ratio entre ingreso del decil 9 y el decil 1)
 ratio9010 <- function(x){
   qq <- quantile(x, p=c(.1,.9), na.rm = TRUE)
   ratio <- qq[2]/qq[1]
@@ -153,7 +130,6 @@ ratio9010 <- function(x){
 } 
 
 ratio9010(subdata_casen$yautcor)
-ratio9010(subdata_casen$ytotcor)
 ratio9010(subdata_casen$esc)
 
 
@@ -161,21 +137,15 @@ ratio9010(subdata_casen$esc)
 
 ratio9010(subdata_casen$yautcor[subdata_casen$comuna=="Iquique"])
 ratio9010(subdata_casen$yautcor[subdata_casen$comuna=="Vitacura"])
-ratio9010(subdata_casen$yautcor[subdata_casen$comuna=="Santiago"])
-ratio9010(subdata_casen$yautcor[subdata_casen$comuna=="Lo Barnechea"])
-ratio9010(subdata_casen$yautcor[subdata_casen$comuna=="Aysén"])
-ratio9010(subdata_casen$yautcor[subdata_casen$comuna=="Lo Espejo"])
 
 Gini(subdata_casen$yautcor[subdata_casen$comuna=="Iquique"], corr = FALSE, na.rm = TRUE)
 Gini(subdata_casen$yautcor[subdata_casen$comuna=="Vitacura"], corr = FALSE, na.rm = TRUE)
-Gini(subdata_casen$yautcor[subdata_casen$comuna=="Santiago"], corr = FALSE, na.rm = TRUE)
-Gini(subdata_casen$yautcor[subdata_casen$comuna=="Lo Barnechea"], corr = FALSE, na.rm = TRUE)
-Gini(subdata_casen$yautcor[subdata_casen$comuna=="Aysén"], corr = FALSE, na.rm = TRUE)
-Gini(subdata_casen$yautcor[subdata_casen$comuna=="Lo Espejo"], corr = FALSE, na.rm = TRUE)
 
 
 
 ## for loops
+
+# loop que calcula promedio de ingreso, ratio9010 y Gini para cada comuna y lo almacena en una matriz
 
 comunas <- unique(subdata_casen$comuna)
 ncomunas <- length(comunas)
@@ -195,10 +165,8 @@ rownames(resultados) <- comunas
 
 resultados <- as.data.frame(resultados)
 
-cor(resultados)
 
 #Visualización
-
 
 ## Scatterplots
 par(mfrow=c(2,2))
@@ -230,21 +198,7 @@ plot(mi_reg$fitted.values, mi_reg$residuals,
 dev.off()
 
 
-# otro
-par(mfrow=c(1,1))
-order <- order(resultados$gini)
-
-plot(x=resultados$gini[order], y=seq(1:ncomunas),
-     xlab="Indice de Gini",
-     ylab="comuna", 
-     type="b",  
-     pch=43, 
-     col="blue")
-
-dev.off()
-
-
-## Bar plots
+# otro, bar plot
 
 barplot(prop.table(table(subdata_casen$educ)), col="purple", las=2)
 box()
