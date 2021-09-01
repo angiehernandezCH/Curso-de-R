@@ -111,11 +111,6 @@ library("ineq")
 ??ineq
 
 Gini(subdata_casen$yautcor, corr = TRUE, na.rm = TRUE)
-<<<<<<< HEAD
-=======
-
->>>>>>> 8cfeadfb75cb3c253fd827090ef9495a130b42a0
-
 
 # Funciones propias 
 
