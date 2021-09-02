@@ -16,6 +16,7 @@ library("foreign")
 ?foreign
 ??foreign
 data_casen <-  read.spss("Casen_2020.sav", to.data.frame=TRUE)
+?read.spss
 
 # Visualizar datos (muchos = display en pantalla es desastrozo)
 
@@ -47,7 +48,7 @@ summary(subdata_casen)
 # Transformar variables (ingresos en miles de pesos)
 
 subdata_casen$yautcor <- subdata_casen$yautcor/1000
-subdata_casen$ytotcor <- subdata_casen$ytotcor/1000
+subdata_casen$ytotcor_nueva <- subdata_casen$ytotcor/1000
 
 # Crea variable nueva
 
@@ -79,7 +80,6 @@ prop.table(pov_educ) # % celda (tabla suma a 100)
 prop.table(pov_educ, margin=1) # % fila (filas suman a 100)
 prop.table(pov_educ, margin=2) # % columna (columnas suman a 100)
 
-
 ## Funciones básicas para vectores y variables
 
 sum(subdata_casen$yautcor, na.rm = TRUE)   # suma
@@ -93,12 +93,13 @@ rank(subdata_casen$yautcor)   # ranking de valores
 median(subdata_casen$yautcor) # mediana
 range(subdata_casen$yautcor, na.rm = TRUE)  # rango
 rev(subdata_casen$yautcor)    # revertir elementos
-unique(subdata_casen$yautcor) # lista de elementos únicos
+unique(subdata_casen$sexo) # lista de elementos únicos
 length(subdata_casen$yautcor) # largo
 
 
 # Quantiles
 
+quantile(subdata_casen$yautcor, p=0.5, na.rm = TRUE) # median
 quantile(subdata_casen$yautcor, p=c(.2,.4,.6,.8), na.rm = TRUE) # calculando quintiles de ingreso
 quantile(subdata_casen$yautcor, p=seq(0,1,by=0.1), na.rm = TRUE) # deciles
 quantile(subdata_casen$yautcor, p=seq(0,1,by=0.05), na.rm = TRUE) # veintiles
@@ -110,13 +111,15 @@ library("ineq")
 ?ineq
 ??ineq
 
+?Gini
 Gini(subdata_casen$yautcor, corr = TRUE, na.rm = TRUE)
 
 # Funciones propias 
 
-quantile(subdata_casen$yautcor, p=c(.1,.9), na.rm = TRUE)
-
+qs <- quantile(subdata_casen$yautcor, p=c(.1,.9), na.rm = TRUE)
+qs[1]; qs[2]
 # función que calcula ratio 90-10 (ratio entre ingreso del decil 9 y el decil 1)
+
 ratio9010 <- function(x){
   qq <- quantile(x, p=c(.1,.9), na.rm = TRUE)
   ratio <- qq[2]/qq[1]
@@ -154,17 +157,22 @@ for(i in comunas){
   resultados[row,3] <- Gini(subdata_casen$yautcor[subdata_casen$comuna==i], corr = FALSE, na.rm = TRUE)
   row = row + 1
 }
-  
+
+
 colnames(resultados) <- c("promedio","r9010","gini")
 rownames(resultados) <- comunas
-
+resultados
 resultados <- as.data.frame(resultados)
 
 
 #Visualización
 
+x <- seq(1:100)
+y <- sin(x)
+plot(x,y, type="l")
+
 ## Scatterplots
-par(mfrow=c(2,2))
+par(mfrow=c(1,2))
 
 plot(resultados$promedio, resultados$gini, 
    xlab="Ingreso autonomo promedio en comuna", 
@@ -181,14 +189,6 @@ plot(resultados$gini, resultados$r9010,
      ylab="ratio 90/10", 
      type="p", 
      col="red")
-
-
-plot(mi_reg$fitted.values, mi_reg$residuals, 
-     xlab="y_hat", 
-     ylab="residuos", 
-     type="p", 
-     pch=11, 
-     col="green")
 
 dev.off()
 
