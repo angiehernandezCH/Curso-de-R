@@ -17,7 +17,7 @@ library("stargazer")
 
 # Change the line below to set your own working directory
 
-folder <- "/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_data_analysis_r/repo/slides/class_4/workflow/"
+folder <- "/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2021_2_data_analysis_r/repo/slides/class_4/workflow/"
 
 dircode     <- paste0(folder,"code/") 
 dirdata 	  <- paste0(folder,"data/") 

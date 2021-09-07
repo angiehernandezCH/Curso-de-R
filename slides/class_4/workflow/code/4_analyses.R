@@ -29,20 +29,22 @@ par(mfrow=c(1,2))
 unique(essdata$eisced)
 essdata$eisced <- ifelse(essdata$eisced==55, NA, essdata$eisced)
 
-#plot(essdata$eisced, essdata$hinctnta)
+plot(essdata$eisced, essdata$hinctnta)
 
-plot(jitter(essdata$eisced,1), jitter(essdata$hinctnta,1), pch=16)
+#plot(jitter(essdata$eisced,2), jitter(essdata$hinctnta,2), pch=16, col="blue", xlab="Education", ylab="Income")
+
+#plot(jitter(essdata$eisced,1), jitter(essdata$hinctnta,2), col = rgb(red = 0, green = 0, blue = 1, alpha = 0.05),
+#     pch = 16,xlab="Education", ylab="Income")
 
 countries <- unique(essdata$cntry)
 
 for (c in countries) {
   data_country <- essdata[essdata$cntry==c,] 
-  abline(lm(hinctnta ~ eisced, data=data_country))
+  abline(lm(hinctnta ~ eisced, data=data_country), col="red")
 }
 
-
 # plot derecha
-hist(essdata$eisced)
+hist(essdata$eisced, col="green")
 
 dev.off()
 
@@ -60,7 +62,7 @@ model1 <- lm(eisced ~ age + factor(gndr_string), data=essdata_sub); model1
 model2 <- update(model1, . ~ . + factor(gndr_string)*age); model2
 
 
-# acceder aloutput 
+# acceder al output 
 
 names(model2)
 
