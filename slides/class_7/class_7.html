@@ -4,7 +4,7 @@
     <title>Procesamiento avanzado de Bases de Datos en R</title>
     <meta charset="utf-8" />
     <meta name="author" content="  Mauricio Bucca  Profesor Asistente, Sociología UC" />
-    <script src="libs/header-attrs-2.3/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="gentle-r.css" type="text/css" />
@@ -115,7 +115,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##   mean_ytotcor_region
 ##                 &lt;dbl&gt;
 ## 1             414351.
@@ -161,7 +161,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##      q20
 ##    &lt;dbl&gt;
 ## 1 104646
@@ -180,7 +180,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##   tercer
 ##    &lt;dbl&gt;
 ## 1  78327
@@ -194,7 +194,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##   distintos
 ##       &lt;int&gt;
 ## 1      5207
@@ -215,7 +215,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 1 x 2
+## # A tibble: 1 × 2
 ##    sexo  edad
 ##   &lt;dbl&gt; &lt;dbl&gt;
 ## 1  1.52  37.6
@@ -230,12 +230,10 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 1 x 13
-##   yaimcorh yautcor ytotcor yautcorh ymonecorh ytotcorh yoprcor yoprcorh
-##      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
-## 1  181168.      NA      NA  941282.   979353. 1160520.      NA       NA
-## # … with 5 more variables: ytrabajocor &lt;dbl&gt;, ytrabajocorh &lt;dbl&gt;,
-## #   ypchautcor &lt;dbl&gt;, ypc &lt;dbl&gt;, ypchtrabajo &lt;dbl&gt;
+## # A tibble: 1 × 13
+##   yaimcorh yautcor ytotcor yautcorh ymonecorh ytotcorh yoprcor yoprcorh ytrabajocor ytrabajocorh ypchautcor     ypc ypchtrabajo
+##      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt;
+## 1  181168.      NA      NA  941282.   979353. 1160520.      NA       NA          NA      813928.    274190. 344678.          NA
 ```
 
 
@@ -252,7 +250,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 1 x 2
+## # A tibble: 1 × 2
 ##    sexo  edad
 ##   &lt;dbl&gt; &lt;dbl&gt;
 ## 1  1.52  37.6
@@ -267,12 +265,10 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 1 x 13
-##   yaimcorh yautcor ytotcor yautcorh ymonecorh ytotcorh yoprcor yoprcorh
-##      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
-## 1  181168. 491459. 414351.  941282.   979353. 1160520. 492152.  492152.
-## # … with 5 more variables: ytrabajocor &lt;dbl&gt;, ytrabajocorh &lt;dbl&gt;,
-## #   ypchautcor &lt;dbl&gt;, ypc &lt;dbl&gt;, ypchtrabajo &lt;dbl&gt;
+## # A tibble: 1 × 13
+##   yaimcorh yautcor ytotcor yautcorh ymonecorh ytotcorh yoprcor yoprcorh ytrabajocor ytrabajocorh ypchautcor     ypc ypchtrabajo
+##      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt;
+## 1  181168. 491459. 414351.  941282.   979353. 1160520. 492152.  492152.     514546.      813928.    274190. 344678.     231178.
 ```
 
 ---
@@ -285,7 +281,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 1 x 2
+## # A tibble: 1 × 2
 ##   edad_media edad_mediana
 ##        &lt;dbl&gt;        &lt;dbl&gt;
 ## 1       37.6           36
@@ -300,7 +296,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 1 x 2
+## # A tibble: 1 × 2
 ##   ytrabajocor_media ytrabajocor_mediana
 ##               &lt;dbl&gt;               &lt;dbl&gt;
 ## 1           514546.              330000
@@ -317,18 +313,14 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 1 x 26
-##   yaimcorh_media yaimcorh_mediana yautcor_media yautcor_mediana ytotcor_media
-##            &lt;dbl&gt;            &lt;dbl&gt;         &lt;dbl&gt;           &lt;dbl&gt;         &lt;dbl&gt;
-## 1        181168.           150000       491459.          302500       414351.
-## # … with 21 more variables: ytotcor_mediana &lt;dbl&gt;, yautcorh_media &lt;dbl&gt;,
-## #   yautcorh_mediana &lt;dbl&gt;, ymonecorh_media &lt;dbl&gt;, ymonecorh_mediana &lt;dbl&gt;,
-## #   ytotcorh_media &lt;dbl&gt;, ytotcorh_mediana &lt;dbl&gt;, yoprcor_media &lt;dbl&gt;,
-## #   yoprcor_mediana &lt;dbl&gt;, yoprcorh_media &lt;dbl&gt;, yoprcorh_mediana &lt;dbl&gt;,
-## #   ytrabajocor_media &lt;dbl&gt;, ytrabajocor_mediana &lt;dbl&gt;,
-## #   ytrabajocorh_media &lt;dbl&gt;, ytrabajocorh_mediana &lt;dbl&gt;,
-## #   ypchautcor_media &lt;dbl&gt;, ypchautcor_mediana &lt;dbl&gt;, ypc_media &lt;dbl&gt;,
-## #   ypc_mediana &lt;dbl&gt;, ypchtrabajo_media &lt;dbl&gt;, ypchtrabajo_mediana &lt;dbl&gt;
+## # A tibble: 1 × 26
+##   yaimcorh_media yaimcorh_mediana yautcor_media yautcor_mediana ytotcor_media ytotcor_mediana yautcorh_media yautcorh_mediana
+##            &lt;dbl&gt;            &lt;dbl&gt;         &lt;dbl&gt;           &lt;dbl&gt;         &lt;dbl&gt;           &lt;dbl&gt;          &lt;dbl&gt;            &lt;dbl&gt;
+## 1        181168.           150000       491459.          302500       414351.         274718.        941282.          624122.
+## # … with 18 more variables: ymonecorh_media &lt;dbl&gt;, ymonecorh_mediana &lt;dbl&gt;, ytotcorh_media &lt;dbl&gt;, ytotcorh_mediana &lt;dbl&gt;,
+## #   yoprcor_media &lt;dbl&gt;, yoprcor_mediana &lt;dbl&gt;, yoprcorh_media &lt;dbl&gt;, yoprcorh_mediana &lt;dbl&gt;, ytrabajocor_media &lt;dbl&gt;,
+## #   ytrabajocor_mediana &lt;dbl&gt;, ytrabajocorh_media &lt;dbl&gt;, ytrabajocorh_mediana &lt;dbl&gt;, ypchautcor_media &lt;dbl&gt;,
+## #   ypchautcor_mediana &lt;dbl&gt;, ypc_media &lt;dbl&gt;, ypc_mediana &lt;dbl&gt;, ypchtrabajo_media &lt;dbl&gt;, ypchtrabajo_mediana &lt;dbl&gt;
 ```
 
 ---
@@ -343,7 +335,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 32 x 4
+## # A tibble: 32 × 4
 ## # Groups:   region [16]
 ##    region  sexo mean_ytotcor_region median_ytotcor_region
 ##     &lt;dbl&gt; &lt;dbl&gt;               &lt;dbl&gt;                 &lt;dbl&gt;
@@ -380,7 +372,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 32 x 4
+## # A tibble: 32 × 4
 ## # Groups:   region [16]
 ##    region  sexo ytrabajocor_media ytrabajocor_mediana
 ##     &lt;dbl&gt; &lt;dbl&gt;             &lt;dbl&gt;               &lt;dbl&gt;
@@ -411,7 +403,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 32 x 3
+## # A tibble: 32 × 3
 ## # Groups:   region [16]
 ##    region  sexo  gini
 ##     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -443,7 +435,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 32 x 3
+## # A tibble: 32 × 3
 ## # Groups:   region [16]
 ##    region  sexo ratio9010
 ##     &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
@@ -487,7 +479,7 @@ data_a &lt;- data_casen_csv %&gt;% filter(region &lt;2 | region&gt;=15 ) %&gt;%
 ```
 
 ```
-## # A tibble: 3 x 2
+## # A tibble: 3 × 2
 ##   region  edad
 ##    &lt;dbl&gt; &lt;dbl&gt;
 ## 1      1  32.8
@@ -504,7 +496,7 @@ data_b &lt;- data_casen_csv %&gt;% filter(region &lt;3 | region&gt;=16 ) %&gt;%
 ```
 
 ```
-## # A tibble: 3 x 3
+## # A tibble: 3 × 3
 ##   region  edad yautcorh
 ##    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1  32.8 1052109.
@@ -526,7 +518,7 @@ Muchas formas de juntar ambas bases de datos.
 `data_a`
 
 ```
-## # A tibble: 3 x 2
+## # A tibble: 3 × 2
 ##   region  edad
 ##    &lt;dbl&gt; &lt;dbl&gt;
 ## 1      1  32.8
@@ -538,7 +530,7 @@ Muchas formas de juntar ambas bases de datos.
 `data_b`
 
 ```
-## # A tibble: 3 x 3
+## # A tibble: 3 × 3
 ##   region  edad yautcorh
 ##    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1  32.8 1052109.
@@ -557,7 +549,7 @@ data_a %&gt;% inner_join(data_b, by="region")
 ```
 
 ```
-## # A tibble: 2 x 4
+## # A tibble: 2 × 4
 ##   region edad.x edad.y yautcorh
 ##    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1   32.8   32.8 1052109.
@@ -571,7 +563,7 @@ data_a %&gt;% inner_join(data_b, by="region")
 `data_a`
 
 ```
-## # A tibble: 3 x 2
+## # A tibble: 3 × 2
 ##   region  edad
 ##    &lt;dbl&gt; &lt;dbl&gt;
 ## 1      1  32.8
@@ -583,7 +575,7 @@ data_a %&gt;% inner_join(data_b, by="region")
 `data_b`
 
 ```
-## # A tibble: 3 x 3
+## # A tibble: 3 × 3
 ##   region  edad yautcorh
 ##    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1  32.8 1052109.
@@ -602,7 +594,7 @@ data_a %&gt;% inner_join(data_b %&gt;% select(!edad), by="region")
 ```
 
 ```
-## # A tibble: 2 x 3
+## # A tibble: 2 × 3
 ##   region  edad yautcorh
 ##    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1  32.8 1052109.
@@ -616,7 +608,7 @@ data_a %&gt;% inner_join(data_b %&gt;% select(!edad), by="region")
 `data_a`
 
 ```
-## # A tibble: 3 x 2
+## # A tibble: 3 × 2
 ##   region  edad
 ##    &lt;dbl&gt; &lt;dbl&gt;
 ## 1      1  32.8
@@ -628,7 +620,7 @@ data_a %&gt;% inner_join(data_b %&gt;% select(!edad), by="region")
 `data_b`
 
 ```
-## # A tibble: 3 x 3
+## # A tibble: 3 × 3
 ##   region  edad yautcorh
 ##    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1  32.8 1052109.
@@ -647,7 +639,7 @@ data_a %&gt;% select(!edad) %&gt;% inner_join(data_b, by="region")
 ```
 
 ```
-## # A tibble: 2 x 3
+## # A tibble: 2 × 3
 ##   region  edad yautcorh
 ##    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1  32.8 1052109.
@@ -662,7 +654,7 @@ data_a %&gt;% select(!edad) %&gt;% inner_join(data_b, by="region")
 `data_a`
 
 ```
-## # A tibble: 3 x 2
+## # A tibble: 3 × 2
 ##   region  edad
 ##    &lt;dbl&gt; &lt;dbl&gt;
 ## 1      1  32.8
@@ -674,7 +666,7 @@ data_a %&gt;% select(!edad) %&gt;% inner_join(data_b, by="region")
 `data_b %&gt;% select(!edad)`
 
 ```
-## # A tibble: 3 x 2
+## # A tibble: 3 × 2
 ##   region yautcorh
 ##    &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1 1052109.
@@ -693,7 +685,7 @@ data_a %&gt;% left_join(data_b  %&gt;% select(!edad), by="region")
 ```
 
 ```
-## # A tibble: 3 x 3
+## # A tibble: 3 × 3
 ##   region  edad yautcorh
 ##    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1  32.8 1052109.
@@ -714,7 +706,7 @@ data_a %&gt;% left_join(data_b  %&gt;% select(!edad), by="region")
 `data_a`
 
 ```
-## # A tibble: 3 x 2
+## # A tibble: 3 × 2
 ##   region  edad
 ##    &lt;dbl&gt; &lt;dbl&gt;
 ## 1      1  32.8
@@ -726,7 +718,7 @@ data_a %&gt;% left_join(data_b  %&gt;% select(!edad), by="region")
 `data_b %&gt;% select(!edad)`
 
 ```
-## # A tibble: 3 x 2
+## # A tibble: 3 × 2
 ##   region yautcorh
 ##    &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1 1052109.
@@ -745,7 +737,7 @@ data_a  %&gt;% right_join(data_b %&gt;% select(!edad), by="region")
 ```
 
 ```
-## # A tibble: 3 x 3
+## # A tibble: 3 × 3
 ##   region  edad yautcorh
 ##    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1  32.8 1052109.
@@ -760,7 +752,7 @@ data_a  %&gt;% right_join(data_b %&gt;% select(!edad), by="region")
 `data_a`
 
 ```
-## # A tibble: 3 x 2
+## # A tibble: 3 × 2
 ##   region  edad
 ##    &lt;dbl&gt; &lt;dbl&gt;
 ## 1      1  32.8
@@ -772,7 +764,7 @@ data_a  %&gt;% right_join(data_b %&gt;% select(!edad), by="region")
 `data_b %&gt;% select(!edad)`
 
 ```
-## # A tibble: 3 x 2
+## # A tibble: 3 × 2
 ##   region yautcorh
 ##    &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1 1052109.
@@ -791,7 +783,7 @@ data_a  %&gt;% full_join(data_b %&gt;% select(!edad), by="region")
 ```
 
 ```
-## # A tibble: 4 x 3
+## # A tibble: 4 × 3
 ##   region  edad yautcorh
 ##    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
 ## 1      1  32.8 1052109.
@@ -812,7 +804,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 21,644 x 3
+## # A tibble: 21,644 × 3
 ##    region  sexo yautcorh
 ##     &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
 ##  1     13     2   600000
@@ -840,7 +832,7 @@ gini_regsex &lt;- data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 32 x 3
+## # A tibble: 32 × 3
 ## # Groups:   region [16]
 ##    region  sexo  gini
 ##     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -873,7 +865,7 @@ data_casen_csv %&gt;%
 ```
 
 ```
-## # A tibble: 21,644 x 4
+## # A tibble: 21,644 × 4
 ##    region  sexo yautcorh  gini
 ##     &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;
 ##  1     13     2   600000 0.506

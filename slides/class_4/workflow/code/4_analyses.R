@@ -6,6 +6,7 @@ mean(essdata_sub$age, na.rm = T)
 sd(essdata_sub$age, na.rm = T)
 table(essdata_sub$gndr_string)
 
+
 sapply(essdata_sub[,c("eisced", "age")], mean, na.rm=TRUE) 
 sapply(essdata_sub[,c("eisced", "age")], sd, na.rm=TRUE) 
 
@@ -17,8 +18,6 @@ summary_table <- describeBy(essdata_sub[,c("eisced", "age")], essdata_sub$cntry)
 
 #################### Plots  #################### 
 
-dev.off()
-
 filename <- paste0(dirresults,"miprimerplot.jpeg")
 jpeg(file=filename, width=600, height=350)
 
@@ -29,12 +28,14 @@ par(mfrow=c(1,2))
 unique(essdata$eisced)
 essdata$eisced <- ifelse(essdata$eisced==55, NA, essdata$eisced)
 
-plot(essdata$eisced, essdata$hinctnta)
+#plot(essdata$eisced, essdata$hinctnta)
 
-#plot(jitter(essdata$eisced,2), jitter(essdata$hinctnta,2), pch=16, col="blue", xlab="Education", ylab="Income")
+#plot(jitter(essdata$eisced,2), jitter(essdata$hinctnta,2), pch=16, col="blue", 
+#     xlab="Education", ylab="Income")
 
-#plot(jitter(essdata$eisced,1), jitter(essdata$hinctnta,2), col = rgb(red = 0, green = 0, blue = 1, alpha = 0.05),
-#     pch = 16,xlab="Education", ylab="Income")
+plot(jitter(essdata$eisced,1), jitter(essdata$hinctnta,2), 
+  col = rgb(red = 0, green = 0, blue = 1, alpha = 0.05),
+     pch = 16,xlab="Education", ylab="Income")
 
 countries <- unique(essdata$cntry)
 
