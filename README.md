@@ -98,7 +98,7 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 
 #### Tareas 
 
-- 31/08, Asignación Tarea 1: [`[PDF]`](homework/t_1.pdf) [`[.Rmd]`](homework/t_1.Rmd) 
+- 31/08, Asignación Tarea 1: [`[PDF]`](homework/t_1.pdf) [`[.Rmd]`](homework/t_1.Rmd) [`[PDF Respuestas]`](homework/t_1_answers.pdf) [`[.Rmd Respuestas]`](homework/t_1_answers.Rmd) 
 - 21/09, Asignación Tarea 2:  
 - 12/10, Asignación Tarea 3: 
 - 26/10, Asignación Tarea 4: 
