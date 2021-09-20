@@ -1,0 +1,37 @@
+---
+title: "SOC4001 Procesamiento avanzado de bases de datos en R"
+author: "Tarea 2, respuestas"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r, echo=FALSE}
+# Escribir install.packages("tinytex") en la consola para instalar "tinytex"
+# Carga "tinytex" para compilar PDF
+library("tinytex")
+```
+
+Ponderación: 12% de la nota final del curso
+
+Formato: Desarrollar esta tarea en un RScript, agregando comentarios cuando sea necesario. 
+
+
+1) Carga la base de datos "Chile" del paquete `carData` y crea un objeto que los contenga los datos. Llama tal objeto "datos_chile".  Carga la librería `tidyverse` y ejecuta la siguientes operaciones usando las herramientas contenidas de `tidyverse`.
+
+
+2) Añade a "datos_chile" un variable llamada "year" con valor 1988 en todas las filas
+
+
+3) Calcula el año de nacimiento de cada individuo. Añade a "datos_chile" un variable llamada "birthyear" que contenga esta información
+
+
+4) Usando la función `if_else()` añade a "datos_chile" un variable llamada "vote_no" que tome valor 1 si la persona declara que votará por el No y valor 0 en cualquier otra caso. 
+
+
+5) Usando la función `case_when()` añade a "datos_chile" un variable llamada "cohort73" que tome valor 1 si la persona tenía 18 año o más el año del golpe de estado (1973) y valor 0 si tenía menos de 18. Trata las observaciones que no cumplan ninguna de estas condiciones como valores perdidos. 
+
+
+6) Usando la función `group_by()` añade a "datos_chile" un variable llamada "no_by_groups" que contenga el promedio de la variable "vote_no" por región, nivel educacional y cohorte (cohort73). 
+
