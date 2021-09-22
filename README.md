@@ -7,6 +7,7 @@ Encuentra también aquí una presentación sobre el rol de `R` como *lingua fran
 ## Calendario
 
 clase tipo: T (téorica), P (práctica)
+
 Nota: Una vez realizada la clase el link a la reunión de Zoom será reemplazado por un link a la grabación de la clase. 
 
 | dia| mes|tipo |contenido                                                              |funciones                                                                                                      |entrega |link/grabación zoom                                            |material                    |
