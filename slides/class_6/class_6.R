@@ -14,33 +14,6 @@ library("tidyverse")
 data_casen_csv %>% select(sexo,edad,ytotcor)
 
 
-## readr: cargar archivos .cvs
-library("tidyverse")
-
-library("readr") 
-setwd("~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/gentle-ggplot2/data/")
-
-# leer archivo csv
-data_casen_csv <- read_csv("sample_casen2017.csv")
-
-head(as.data.frame(data_casen_csv),4)
-
-
-## readr: cargar archivos .dta (Stata)
-
-install.packages("haven")
-library("haven") 
-
-setwd(
-  "~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/gentle-ggplot2/data/"
-)
-
-
-read_dta("sample_casen2017.dta")
-# leer archivo dta 
-data_casen_dta <- read_dta("sample_casen2017.dta", encoding = "latin1", .name_repair = "minimal")
-
-
 ## Crear un tibble
 
 library("tibble")
@@ -82,7 +55,6 @@ data_casen_csv %>% select(1:5,8)
 data_casen_csv %>% select(starts_with("y"))
 data_casen_csv %>% select(ends_with("a"))
 data_casen_csv %>% select(contains("cor"))
-data_casen_csv %>% select((num_range("x", 10:15)))
 
 
 ## filter: selección de variables
@@ -101,8 +73,7 @@ data_casen_csv <- data_casen_csv %>%
   mutate(ln_ytotcor_mm = log((ytotcor + 1)/1000)) %>%
   
   
-  
-  data_casen_csv %>% select(sexo,edad,ytotcor,anno,ln_ytotcor_mm) %>%
+data_casen_csv %>% select(sexo,edad,ytotcor,anno,ln_ytotcor_mm) %>%
   select(!ln_ytotcor_mm)
 
 
@@ -122,7 +93,6 @@ data_casen_csv %>% select(sexo,edad,ytotcor) %>%
 
 
 ## mutate, case_when: creación de datos
-
 
 data_casen_csv %>% select(sexo,edad,ytotcor) %>% 
   mutate(edad_cat = case_when(edad <= 18 ~ 1, 
