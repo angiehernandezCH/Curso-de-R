@@ -58,11 +58,7 @@ data_casen_csv %>%
 
 ## summarise una variable con una lista de funciones
 
-# vector
-data_casen_csv %>% 
-  summarise(across(edad, c(media = mean, mediana = median)))
 
-# lista
 data_casen_csv %>% 
   summarise(across(edad, list(media = mean, mediana = median)))
 
@@ -153,6 +149,8 @@ data_a  %>% full_join(data_b, by="region") %>%
 
 
 ## join: juntar bases de datos por más de una llave
+
+library("ineq")
 
 data_casen_csv %>% 
   select(region,sexo,yautcorh)
