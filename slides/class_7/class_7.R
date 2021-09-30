@@ -1,7 +1,7 @@
 # Carga datos
 library("readr") 
 
-setwd("~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_data_analysis_r/repo/slides/class_5/")
+setwd("~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_data_analysis_r/repo/slides/class_7/")
 
 # leer archivo csv
 data_casen_csv <- read_csv("sample_casen2017.csv")
