@@ -99,7 +99,6 @@ data_casen_csv %>%
   summarise(across(ytrabajocor, list(media =  ~mean(.x, na.rm = TRUE), mediana = ~median(.x, na.rm = TRUE))))
 
 
-
 ## join: juntar bases de datos
 
 
@@ -150,14 +149,6 @@ data_a  %>% full_join(data_b, by="region") %>%
 
 ## join: juntar bases de datos por más de una llave
 
-library("ineq")
-
-data_casen_csv %>% 
-  select(region,sexo,yautcorh)
-
-gini_regsex <- data_casen_csv %>% 
-  group_by(region,sexo) %>% 
-  summarise(gini = Gini(yautcorh, na.rm = T )); gini_regsex
 
 mitabla
 
