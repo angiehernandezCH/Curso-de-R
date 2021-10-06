@@ -1,7 +1,7 @@
 # Carga datos
 library("readr") 
 
-setwd("~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_data_analysis_r/repo/slides/class_5/")
+setwd("~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_data_analysis_r/repo/slides/class_7/")
 
 # leer archivo csv
 data_casen_csv <- read_csv("sample_casen2017.csv")
@@ -17,7 +17,7 @@ data_casen_csv %>%
 data_casen_csv %>% 
   summarise(mean_ytotcor = mean(ytotcor, na.rm = T), 
             median_ytotcor = median(ytotcor, na.rm = T)) %>%
-            mutate(ratio = mean_ytotcor/median_ytotcor) 
+  mutate(ratio = mean_ytotcor/median_ytotcor) 
 
 
 #Quantile:
@@ -58,11 +58,7 @@ data_casen_csv %>%
 
 ## summarise una variable con una lista de funciones
 
-# vector
-data_casen_csv %>% 
-  summarise(across(edad, c(media = mean, mediana = median)))
 
-# lista
 data_casen_csv %>% 
   summarise(across(edad, list(media = mean, mediana = median)))
 
@@ -101,7 +97,6 @@ mitabla <- data_casen_csv %>%
 data_casen_csv %>% 
   group_by(region, sexo) %>% 
   summarise(across(ytrabajocor, list(media =  ~mean(.x, na.rm = TRUE), mediana = ~median(.x, na.rm = TRUE))))
-
 
 
 ## join: juntar bases de datos
@@ -154,19 +149,13 @@ data_a  %>% full_join(data_b, by="region") %>%
 
 ## join: juntar bases de datos por más de una llave
 
-data_casen_csv %>% 
-  select(region,sexo,yautcorh)
-
-gini_regsex <- data_casen_csv %>% 
-  group_by(region,sexo) %>% 
-  summarise(gini = Gini(yautcorh, na.rm = T )); gini_regsex
 
 mitabla
 
 data_casen_csv %>% 
   mutate(edad_cat = case_when(edad <= 18 ~ "menores",
-                                               edad >18 & edad<=65 ~ "adultos",
-                                               edad > 65  ~ "adultos mayores")) %>%
+                              edad >18 & edad<=65 ~ "adultos",
+                              edad > 65  ~ "adultos mayores")) %>%
   left_join(mitabla, by=c("region","sexo", "edad_cat")) %>% 
   select(region,sexo,mean_ytotcor, median_ytotcor, ratio)
 

@@ -1,3 +1,5 @@
+### REPASO CLASE TEÓRICA
+
 # Limpiar pantalla y remover objetos existentes
 cat("\014") 
 rm(list = ls())
@@ -7,120 +9,55 @@ library("carData")
 library("janitor")
 
 data(WeightLoss)
-wl <- WeightLoss %>% dplyr::select(group,starts_with("w")) %>% as_tibble(); rm(WeightLoss); wl
+wl <- WeightLoss %>% as.tibble(); wl
+rm(WeightLoss)
 
 
-wl %>% 
-  pivot_longer(
-    cols = starts_with("w")) 
+# de ancho a largo
 
-
-wl %>% 
-  pivot_longer(
-    cols = starts_with("w"), 
-    names_to="week", 
-    values_to= "lbs_lost") 
-
-wl %>% 
-  pivot_longer(
-    cols = starts_with("w"), 
-    names_to="week", 
-    values_to= "lbs_lost",
-    names_prefix="wl")  %>%
-    mutate(week = as.integer(week))
-
-
-
-data(WeightLoss)
-wl <- WeightLoss  %>% as_tibble(); rm(WeightLoss); wl
-
- 
-wl %>% mutate(id = 1:n()) %>%
+wl_long <- wl %>% mutate(id = 1:n()) %>% # crea un id única para identificar individuos fácilmente
   pivot_longer(cols = -c(id,group),     
-                    names_to = "outcome_week", 
-                    values_to = "score") 
+               names_to = "outcome_week",
+               values_to = "score") %>%
+  separate(outcome_week, into = c("outcome", "week"), sep = 2) %>%
+  mutate(week = as.integer(week))
 
 
-wl_long <- wl %>% mutate(id = 1:n()) %>% 
-      pivot_longer(cols = -c(id,group),     
-                               names_to = "outcome_week",
-                               values_to = "score") %>%
-  separate(outcome_week, into = c("outcome", "week"), sep = 2); wl_long
+# de largo a ancho
 
-
-wl_long %>% 
+wl_tidy <- wl_long %>% 
   pivot_wider(names_from = outcome, values_from = score)
 
 
-
-wl_long %>% mutate(error = rnorm(n())) %>%
-  pivot_wider(names_from = outcome, values_from = c(score, error))  
+wl_tidy
 
 
-wl_long %>% mutate(error = rnorm(n())) %>%
-  pivot_wider(names_from = c(outcome,week), values_from = c(score, error))  
+### EJERCICIO PRÁCTICO
+
+# Bajar datos covid desde repositorio Github del Ministerio de la Ciencia
+# Repositorio y descripción de los datos: https://github.com/MinCiencia/Datos-COVID19/tree/master/output/producto1
+
+# En particular:
+# "El archivo Covid-19.csv contiene las columnas 'Región', ‘Código Región’, 'Comuna', ‘Código comuna’, 'Población', 
+# múltiples columnas correspondientes a '[fecha]', y una columna 'Tasa'. Estas últimas columnas, ‘[fecha]’,
+# contienen los 'Casos Confirmados' reportados por el Ministerio de Salud de Chile en cada una de las fechas que se
+# indican en las respectivas columnas."
+
+library("RCurl")
+library("tidyverse")
+x <- getURL("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto1/Covid-19.csv")
+
+# almacenamos en R
+data_covid <- read.csv(text = x) %>% as_tibble()
+
+# visualizamos los datos
+data_covid 
 
 
-##############################
-
-setwd("/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_data_analysis_r/repo/slides/class_9")
-
-data_mpd_messy <- read_delim("mpd2020.csv", delim = ";")
+# 1) Pasar datos de ancho a largo para que se vean así:  
 
 
-data_mpd_gdp <- data_mpd_messy %>% dplyr::select(X1,starts_with("GDP")) %>% row_to_names(row_number = 1) %>%
-  rename(year=Region) %>% 
-  filter(year!="Year") %>%
-  pivot_longer(cols = -year, names_to= "region", values_to="gdp"); data_mpd_gdp
+# 2) - calcular el promedio de casos por cada 1000 mil habitantes en cada comuna
+# - calcular el total de casos por cada 1000 mil habitantes en cada comuna
+# El resultado se debe ver así: 
 
-
-data_mpd_pop <- data_mpd_messy %>% dplyr::select(X1,starts_with("Pop")) %>% row_to_names(row_number = 1) %>%
-  rename(year=Region) %>% 
-  filter(year!="Year") %>%
-  pivot_longer(cols = -year, names_to= "region", values_to="population"); data_mpd_pop
-
-
-
-data_mpd <- data_mpd_gdp %>% left_join(data_mpd_pop, by=c("year","region"))
-data_mpd 
-
-
-
-setwd(
-  "~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_data_analysis_r/repo/slides/class_5/")
-
-# leer archivo csv
-data_casen_csv <- read_csv("sample_casen2017.csv")
-
-
-data_casen_csv %>% 
-  summarise(across(starts_with("y"), list(media = ~mean(.x, na.rm = TRUE), mediana= ~median(.x, na.rm = TRUE)) ))
-
-
-data_casen_csv %>% 
-  summarise(across(starts_with("y"), list(media = ~mean(.x, na.rm = TRUE), mediana= ~median(.x, na.rm = TRUE)) )) %>%
-  pivot_longer( 
-    everything(), 
-    names_to="outcome_stat", 
-    values_to="value")  
-
-
-data_casen_csv %>% 
-  summarise(across(starts_with("y"), list(media = ~mean(.x, na.rm = TRUE), mediana= ~median(.x, na.rm = TRUE)) )) %>%
-  pivot_longer(
-    everything(), 
-    names_to="outcome_stat",
-    values_to="value"
-  ) %>%
-  separate(outcome_stat, sep="_", into = c("outcome","stat")) 
-
-
-data_casen_csv %>% 
-  summarise(across(starts_with("y"), list(media = ~mean(.x, na.rm = TRUE), mediana= ~median(.x, na.rm = TRUE)) )) %>%
-  pivot_longer(
-    everything(), 
-    names_to="outcome_stat",
-    values_to="value"
-  ) %>%
-  separate(outcome_stat, sep="_", into = c("outcome","stat") ) %>%
-  pivot_wider(names_from = "stat", values_from = "value") 

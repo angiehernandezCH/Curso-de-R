@@ -1,0 +1,50 @@
+---
+title: "Ejercicio Práctico"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+Bajar datos covid desde repositorio Github del Ministerio de la Ciencia
+Repositorio y descripción de los datos: [Link](https://github.com/MinCiencia/Datos-COVID19/tree/master/output/producto1)
+
+En particular: "El archivo Covid-19.csv contiene las columnas 'Región', ‘Código Región’, 'Comuna', ‘Código comuna’, 'Población', múltiples columnas correspondientes a '[fecha]', y una columna 'Tasa'. Estas últimas columnas, ‘[fecha]’, contienen los 'Casos Confirmados' reportados por el Ministerio de Salud de Chile en cada una de las fechas que se indican en las respectivas columnas.
+
+```{r}
+library("RCurl")
+library("tidyverse")
+x <- getURL("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto1/Covid-19.csv")
+
+# almacenamos en R
+data_covid <- read.csv(text = x) %>% as_tibble()
+
+# visualizamos los datos
+data_covid 
+```
+
+
+Ejercicios:
+  
+  
+1. Pasar datos de ancho a largo para que se vean así:  
+```{r, echo=F}
+data_covid <- data_covid %>% 
+  pivot_longer(cols = -c(Region,Codigo.region,Comuna,Codigo.comuna,Poblacion,), 
+               names_to = "Fecha", values_to = "Casos_diarios", names_prefix="X") %>% 
+  mutate(Fecha = as.Date(Fecha, format = "%Y.%m.%d")) # opcional
+
+data_covid  
+```
+
+
+2.1 Calcular(a) el promedio de casos por cada 1000 mil habitantes en cada comuna y (b) el total de casos por cada 1000 mil habitantes en cada comuna. El resultado se debe ver así: 
+
+```{r, echo=F}
+stats_covid_comunas <- data_covid %>% group_by(Comuna) %>%
+  summarise(across(Casos_diarios, list(promedio_cada1000hbs = ~ mean(1000*.x/Poblacion,rm=T), 
+                                       total_cada1000hbs = ~ sum(1000*.x/Poblacion,rm=T) )))
+
+stats_covid_comunas
+```
+
