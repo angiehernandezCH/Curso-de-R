@@ -12,12 +12,12 @@ Repositorio y descripción de los datos: [Link](https://github.com/MinCiencia/Da
 En particular: "El archivo Covid-19.csv contiene las columnas 'Región', ‘Código Región’, 'Comuna', ‘Código comuna’, 'Población', múltiples columnas correspondientes a '[fecha]', y una columna 'Tasa'. Estas últimas columnas, ‘[fecha]’, contienen los 'Casos Confirmados' reportados por el Ministerio de Salud de Chile en cada una de las fechas que se indican en las respectivas columnas.
 
 ```{r}
-library("RCurl")
+library("readr")
 library("tidyverse")
-x <- getURL("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto1/Covid-19.csv")
 
 # almacenamos en R
-data_covid <- read.csv(text = x) %>% as_tibble()
+data_covid <- read.csv(url("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto1/Covid-19.csv"))
+
 
 # visualizamos los datos
 data_covid 
@@ -30,7 +30,7 @@ Ejercicios:
 1. Pasar datos de ancho a largo para que se vean así:  
 ```{r, echo=F}
 data_covid <- data_covid %>% 
-  pivot_longer(cols = -c(Region,Codigo.region,Comuna,Codigo.comuna,Poblacion,), 
+  pivot_longer(cols = starts_with("X"), 
                names_to = "Fecha", values_to = "Casos_diarios", names_prefix="X") %>% 
   mutate(Fecha = as.Date(Fecha, format = "%Y.%m.%d")) # opcional
 

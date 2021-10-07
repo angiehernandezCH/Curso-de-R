@@ -43,12 +43,12 @@ wl_tidy
 # contienen los 'Casos Confirmados' reportados por el Ministerio de Salud de Chile en cada una de las fechas que se
 # indican en las respectivas columnas."
 
-library("RCurl")
+library("readr")
 library("tidyverse")
-x <- getURL("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto1/Covid-19.csv")
 
 # almacenamos en R
-data_covid <- read.csv(text = x) %>% as_tibble()
+data_covid <- read.csv(url("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto1/Covid-19.csv"))
+
 
 # visualizamos los datos
 data_covid 
