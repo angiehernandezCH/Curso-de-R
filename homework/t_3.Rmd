@@ -15,8 +15,7 @@ library("tinytex")
 
 Ponderación: 12% de la nota final del curso
 
-Entrega: Desde el momento de entrega, los estudiantes tienen plazo hasta el domingo 19 de Octubre a las 23:59pm para completar esta tarea. 
-
+Entrega: Desde el momento de entrega, los estudiantes tienen plazo hasta el 20 de Octubre a las 23:59pm para completar esta tarea. 
 Formato: Desarrollar esta tarea en un RScript, agregando comentarios cuando sea necesario. 
 
 
