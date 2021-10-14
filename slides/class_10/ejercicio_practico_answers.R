@@ -1,8 +1,12 @@
-library(statnet)
-library(UserNetR)
-library(tidyverse)
+install.packages("devtools")
+devtools::install_github("DougLuke/UserNetR")
+
+library("statnet")
+library("UserNetR")
+library("tidyverse")
 data("Krebs")
 data_911 <- Krebs
+rm(Krebs)
 
 path <- "/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2021_2_data_analysis_r/repo/slides/class_10/"
 setwd(path)
@@ -21,6 +25,7 @@ setwd(path)
 
 # Edgelist --> Adjacency Matrix
 edgelist <- read.csv("network_terrorists911.csv")
+#edgelist <- read.csv(url("https://raw.githubusercontent.com/mebucca/dar_soc4001/master/slides/class_10/network_terrorists911.csv"))
 
 adjacency_matrix <- as.sociomatrix(data_911)
 plot.network(network(adjacency))
