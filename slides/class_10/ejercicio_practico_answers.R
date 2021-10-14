@@ -1,7 +1,6 @@
 install.packages("devtools")
 devtools::install_github("DougLuke/UserNetR")
-
-library("statnet")
+library("statnet") 
 library("UserNetR")
 library("tidyverse")
 data("Krebs")
@@ -28,7 +27,9 @@ edgelist <- read.csv("network_terrorists911.csv")
 #edgelist <- read.csv(url("https://raw.githubusercontent.com/mebucca/dar_soc4001/master/slides/class_10/network_terrorists911.csv"))
 
 adjacency_matrix <- as.sociomatrix(data_911)
-plot.network(network(adjacency))
+plot.network(network(adjacency_matrix))
+
+# 1) respuesta 
 
 adjacency_tibble <- edgelist %>% mutate(edge = 1) %>%
   complete(ego,alter, fill=list(edge = 0)) %>%
@@ -39,8 +40,10 @@ adjacency_tibble <- edgelist %>% mutate(edge = 1) %>%
 
 edgelist_tibble <- adjacency_tibble %>%
   pivot_longer(-ego, names_to = "alter", values_to = "edge") %>%
+  # filter(edge==1) %>%
   mutate(edge = if_else(edge==1,edge,NA_real_)) %>%
-  drop_na(edge)
+  drop_na(edge) %>%
+  select(-edge)
 
 # World Inequality Data
 
@@ -52,11 +55,11 @@ data_inequality <- download_wid(
   indicators = "shweal", # Shares of personal wealth
   areas = c("FR","GB","DE","US"),  # In France, Great Britain, Germany, USA
   perc = c("p0p50", "p90p100", "p99p100") # Bottom 50%, top 10% and top 1%
-) %>% select(-variable)
+) %>% select(-variable) %>% arrange(country,year)
 
 data_inequality %>% as_tibble()
 
-# mirar los datos
+# mirar los datos 
 data_inequality %>% group_by(country,percentile) %>% summarise(min(year),max(year)) # NAs implícitos
 data_inequality %>% ggplot(aes(x=year,y=value, group=percentile, colour=percentile)) + geom_point() + facet_wrap(. ~ country)
 

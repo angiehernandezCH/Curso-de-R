@@ -1,8 +1,7 @@
+install.packages("devtools")
 library(statnet)
-library(UserNetR)
 library(tidyverse)
-data("Krebs")
-data_911 <- Krebs
+
 
 path <- "/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2021_2_data_analysis_r/repo/slides/class_10/"
 setwd(path)
@@ -18,17 +17,10 @@ setwd(path)
 #Using publically available data at the time, he constructed this contact network to illustrate the contact ties that 
 #the 19 hijackers had prior to the attack.
 
+# 1) Transformar datos para que se vean lo como muestra el ayudante
 
 # Edgelist --> Adjacency Matrix
 edgelist <- read.csv("network_terrorists911.csv")
-
-# 1) Transformar datos para que se vean así:
-adjacency_matrix <- as.sociomatrix(data_911); adjacency_matrix 
-plot.network(network(adjacency))
-
-
-
-
 
 
 #  Adjacency Matrix -->  Edgelist 
@@ -37,15 +29,8 @@ plot.network(network(adjacency))
 edgelist 
 
 
-
-
-
-
-
-
 # World Inequality Data
 
-install.packages("devtools")
 devtools::install_github("WIDworld/wid-r-tool")
 library("wid")
 
@@ -63,7 +48,6 @@ data_inequality %>% ggplot(aes(x=year,y=value, group=percentile, colour=percenti
 
 
 # 3) Hacer explícitos los NAs implícitos en la variable percentiles
-
 
 
 
