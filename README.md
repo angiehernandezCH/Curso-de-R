@@ -4,7 +4,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 Encuentra también aquí una presentación sobre el rol de `R` como *lingua franca* de la ciencia de datos: [`[Slides]`](https://mebucca.github.io/dar_soc4001/slides/presentation/presentation#1) [`[.Rmd]`](slides/presentation/presentation.Rmd). 
 
 
-![tweet](https://t.co/ikKWmeqw7O)
+![tweet](https://pbs.twimg.com/media/FCKBMNdWUAA_LnW?format=png&name=small)
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">90% of data science in industry is <a href="https://t.co/ikKWmeqw7O">pic.twitter.com/ikKWmeqw7O</a></p>&mdash; Jeep Wrangler Owner (@asmae_toumi) <a href="https://twitter.com/asmae_toumi/status/1450864160326172673?ref_src=twsrc%5Etfw">October 20, 2021</a></blockquote>  
 
 ---
