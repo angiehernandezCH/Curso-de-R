@@ -41,3 +41,14 @@ clima_australia %>% group_by(Year) %>%
   geom_point(alpha=0.5, colour="red") +
   geom_line(colour="blue") +
   labs(x="Año", y="Temperatura (celsius)", title="Promedio de temperatura anual", subtitle="daily_avg")
+
+#(4)
+
+library("lubridate")
+clima_australia <- clima_australia %>% 
+  mutate(fecha = make_datetime(Year, Month, Day))
+
+clima_australia %>% 
+  ggplot(aes(x=fecha,y=rainfall_mm)) +
+  geom_line(colour="blue", alpha=0.7) +
+  labs(x="Fecha", y="Milímetros diarios de lluvia", title="Evolución lluvia en Australia", subtitle="milímetros diarios")
