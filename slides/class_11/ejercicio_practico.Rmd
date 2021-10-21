@@ -75,7 +75,7 @@ Importante: debes transformar previamente los ceros de la variable `daily_avg` e
 
 4) Usa el siguiente código para transformar crear una variable de fecha a partir de las variables `Year`, `Month`, `Day`.  
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE}
 library("lubridate")
 clima_australia <- clima_australia %>% 
 mutate(fecha = make_datetime(Year, Month, Day))
