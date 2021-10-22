@@ -22,9 +22,7 @@ setwd(path)
 #the 19 hijackers had prior to the attack.
 
 
-# Edgelist --> Adjacency Matrix
-edgelist <- read.csv("network_terrorists911.csv")
-#edgelist <- read.csv(url("https://raw.githubusercontent.com/mebucca/dar_soc4001/master/slides/class_10/network_terrorists911.csv"))
+edgelist <- read.csv(url("https://raw.githubusercontent.com/mebucca/dar_soc4001/master/slides/class_10/network_terrorists911.csv"))
 
 adjacency_matrix <- as.sociomatrix(data_911)
 plot.network(network(adjacency_matrix))
