@@ -17,14 +17,14 @@ data_casen2017 <- read_csv(file)
 
 Los datos se ven así:
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE}
 data_casen2017 %>% str()
 ```
 
 
 1) Haz el siguiente gráfico usando `geom_histogram()`:
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE}
 data_casen2017 %>% filter(sexo==1, edad>18 & edad<65) %>%
   ggplot(aes(x=yautcor/1000)) +
   geom_histogram(colour="black", fill="green") +
@@ -35,7 +35,7 @@ data_casen2017 %>% filter(sexo==1, edad>18 & edad<65) %>%
 
 2) Haz el siguiente gráfico usando. Prueba primero usando `geom_point()` y  luego trata con `geom_jitter()`:
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE}
 data_casen2017 %>% filter(edad>18 & edad<65) %>%
   mutate(sexo_text = case_when(sexo==1 ~ "Hombre", sexo==2 ~ "Mujer")) %>%
   ggplot(aes(x=esc, y=log(yautcor), colour=sexo_text)) +
@@ -55,13 +55,13 @@ clima_australia <- read_csv(file)
 
 Los datos se ven así:
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE}
 clima_australia %>% str()
 ```
 
 3) Haz el siguiente gráfico usando `geom_line()` y  `geom_point()`:
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE}
 clima_australia %>% group_by(Year) %>%
   mutate(daily_avg = if_else(daily_avg==0,NA_real_,daily_avg)) %>%
   summarise(temperatura = mean(daily_avg, na.rm = T)) %>% 
@@ -82,7 +82,7 @@ mutate(fecha = make_datetime(Year, Month, Day))
 ```
 Haz el siguiente gráfico usando `geom_line()`:
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE}
 clima_australia %>% 
   ggplot(aes(x=fecha,y=rainfall_mm)) +
   geom_line(colour="blue", alpha=0.7) +
