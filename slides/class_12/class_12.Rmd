@@ -77,10 +77,8 @@ background-image: url("images/typewriter.jpg")
 
 ```{r, echo=FALSE, message=F, warning=F}
 library("tidyverse")
-library("wesanderson")
 library("cowplot")
 library("lubridate")
-library("viridis")
 
 setwd(
   "~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_data_analysis_r/repo/slides/class_12/")
@@ -651,43 +649,13 @@ covid_data  %>%
 ```
 ]
 
----
-## Palette
-
-.pull-left[
-```{r  gg-palette1, eval=FALSE,warning=FALSE, message=FALSE}
-covid_data  %>% 
-  ggplot(aes(
-    x=date, 
-    y=total_deaths_per_million, 
-    group=location, 
-    colour=continent)) +
-  geom_smooth(se=F) +
-  theme(legend.position = "none") +
-  facet_wrap( continent ~ . ) +
-  labs(
-    x="fecha",  
-    y= "total muertes por millon de habitantes", 
-    title = "Evolución de muertes por covid-19 por región" 
-  ) +
-  ylim(0,1500) +
-  theme_bw() +
-  scale_color_manual(values = wes_palette("BottleRocket1")) #<<
-```
-]
-
---
-.pull-right[
-```{r  gg-palette1-out, ref.label="gg-palette1", echo=FALSE, warning=FALSE, message=FALSE, fig.height=6}
-```
-]
-
 
 ---
 ## Palette
 
 .pull-left[
 ```{r  gg-palette2, eval=FALSE,warning=FALSE, message=FALSE}
+library("viridis") #<<
 covid_data  %>% 
   ggplot(aes(
     x=date, 
@@ -719,6 +687,7 @@ covid_data  %>%
 
 .pull-left[
 ```{r  gg-palette3, eval=FALSE,warning=FALSE, message=FALSE}
+library("viridis") #<<
 covid_data  %>% 
   ggplot(aes(
     x=date, 
@@ -743,6 +712,126 @@ covid_data  %>%
 --
 .pull-right[
 ```{r  gg-palette3-out, ref.label="gg-palette3", echo=FALSE, warning=FALSE, message=FALSE, fig.height=6}
+```
+]
+
+---
+## Palette
+
+.center[![wa1](images/wa1.jpg)]
+
+---
+## Palette
+
+.center[![wa1](images/wa2.webp)]
+
+---
+## Palette: Wes Andersen
+
+.center[![wa1](images/wa3.webp)]
+
+---
+## Palette: 
+`library("wesanderson")`
+.center[![wa1](images/wa4.jpg)]
+
+---
+## Palette
+
+.pull-left[
+```{r  gg-palette1, eval=FALSE,warning=FALSE, message=FALSE}
+library("wesanderson") #<<
+covid_data  %>% 
+  ggplot(aes(
+    x=date, 
+    y=total_deaths_per_million, 
+    group=location, 
+    colour=continent)) +
+  geom_smooth(se=F) +
+  theme(legend.position = "none") +
+  facet_wrap( continent ~ . ) +
+  labs(
+    x="fecha",  
+    y= "total muertes por millon de habitantes", 
+    title = "Evolución de muertes por covid-19 por región" 
+  ) +
+  ylim(0,1500) +
+  theme_bw() +
+  scale_color_manual(
+    values = wes_palette("BottleRocket1")) #<<
+```
+]
+
+--
+.pull-right[
+```{r  gg-palette1-out, ref.label="gg-palette1", echo=FALSE, warning=FALSE, message=FALSE, fig.height=6}
+```
+]
+
+
+---
+## Palette
+
+.pull-left[
+```{r  gg-palette4, eval=FALSE,warning=FALSE, message=FALSE}
+library("wesanderson") #<<
+covid_data  %>% 
+  ggplot(aes(
+    x=date, 
+    y=total_deaths_per_million, 
+    group=location, 
+    colour=continent)) +
+  geom_smooth(se=F) +
+  theme(legend.position = "none") +
+  facet_wrap( continent ~ . ) +
+  labs(
+    x="fecha",  
+    y= "total muertes por millon de habitantes", 
+    title = "Evolución de muertes por covid-19 por región" 
+  ) +
+  ylim(0,1500) +
+  theme_bw() +
+  scale_color_manual(
+    values = wes_palette("Zissou1", 6, type = "continuous")) #<<
+```
+]
+
+--
+.pull-right[
+```{r  gg-palette4-out, ref.label="gg-palette4", echo=FALSE, warning=FALSE, message=FALSE, fig.height=6}
+```
+]
+
+---
+## Palette
+
+.pull-left[
+```{r  gg-palette5, eval=FALSE,warning=FALSE, message=FALSE}
+library("wesanderson") #<<
+covid_data  %>% 
+  ggplot(aes(
+    x=date, 
+    y=total_deaths_per_million, 
+    group=location, 
+    colour=continent)) +
+  geom_smooth(se=F) +
+  theme(legend.position = "none") +
+  facet_wrap( continent ~ . ) +
+  labs(
+    x="fecha",  
+    y= "total muertes por millon de habitantes", 
+    title = "Evolución de muertes por covid-19 por región" 
+  ) +
+  ylim(0,1500) +
+  theme_bw() +
+  scale_color_manual(
+    values = wes_palette("Darjeeling2", 6, type = "continuous")) #<<
+```
+]
+
+--
+.pull-right[
+```{r  gg-palette5-out, ref.label="gg-palette5", echo=FALSE, warning=FALSE, message=FALSE, fig.height=6}
 ```
 ]
 
