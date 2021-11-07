@@ -187,8 +187,7 @@ path &lt;- url(&quot;https://raw.githubusercontent.com/mebucca/dar_soc4001/maste
 covid_data &lt;- read_csv(path)</code></pre>
 <p>Referencia: Hasell, J., Mathieu, E., Beltekian, D. et al. A cross-country database of COVID-19 testing. Sci Data 7, 345 (2020). <a href="https://doi.org/10.1038/s41597-020-00688-8" class="uri">https://doi.org/10.1038/s41597-020-00688-8</a> y utilizad</p>
 <p>Los datos deben verse así:</p>
-<pre><code>## spec_tbl_df [56,748 × 31] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
-##  $ X1                             : num [1:56748] 1 2 3 4 5 6 7 8 9 10 ...
+<pre><code>## spec_tbl_df [56,748 × 30] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
 ##  $ continent                      : chr [1:56748] &quot;Asia&quot; &quot;Asia&quot; &quot;Asia&quot; &quot;Asia&quot; ...
 ##  $ total_cases                    : num [1:56748] NA NA NA NA NA NA NA NA NA NA ...
 ##  $ new_cases                      : num [1:56748] 0 0 0 0 0 0 0 0 0 0 ...
@@ -221,7 +220,6 @@ covid_data &lt;- read_csv(path)</code></pre>
 ##  $ human_development_index        : num [1:56748] 498 498 498 498 498 498 498 498 498 498 ...
 ##  - attr(*, &quot;spec&quot;)=
 ##   .. cols(
-##   ..   X1 = col_double(),
 ##   ..   continent = col_character(),
 ##   ..   total_cases = col_double(),
 ##   ..   new_cases = col_double(),
@@ -265,136 +263,101 @@ covid_data &lt;- read_csv(path)</code></pre>
 <p>El objeto <code>miscors</code> debe verse así:</p>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["continent"],"name":[1],"type":["chr"],"align":["left"]},{"label":["data"],"name":[2],"type":["list"],"align":["right"]},{"label":["corrs"],"name":[3],"type":["list"],"align":["right"]}],"data":[{"1":"Asia","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>"},{"1":"Europe","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>"},{"1":"Africa","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>"},{"1":"North America","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>"},{"1":"South America","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>"},{"1":"Oceania","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["continent"],"name":[1],"type":["chr"],"align":["left"]},{"label":["data"],"name":[2],"type":["list"],"align":["right"]},{"label":["corrs"],"name":[3],"type":["list"],"align":["right"]}],"data":[{"1":"Asia","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>"},{"1":"Europe","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>"},{"1":"Africa","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>"},{"1":"North America","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>"},{"1":"South America","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>"},{"1":"Oceania","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>y cada matriz de correlación contenida en <code>corrs</code> de ve así</p>
-<pre><code>##                                           X1  total_cases    new_cases
-## X1                               1.000000000 -0.050732233 -0.053233000
-## total_cases                     -0.050732233  1.000000000  0.837583724
-## new_cases                       -0.053233000  0.837583724  1.000000000
-## new_cases_smoothed              -0.051234729  0.858906029  0.995025880
-## total_deaths                    -0.085834110  0.968340745  0.849426123
-## new_deaths                      -0.066059054  0.754153747  0.931509600
-## new_deaths_smoothed              0.039368777  0.349988827  0.429666366
-## total_cases_per_million         -0.083474270  0.061786708  0.023441457
-## new_cases_per_million            0.024281403 -0.031992040 -0.005481486
-## new_cases_smoothed_per_million   0.020245805 -0.041537618 -0.022619362
-## total_deaths_per_million         0.128237232 -0.025330403 -0.039422347
-## new_deaths_per_million          -0.005247992  0.240498513  0.286469407
-## new_deaths_smoothed_per_million -0.020833712  0.237998847  0.281171387
-## reproduction_rate                0.048418247 -0.017348351  0.017994740
-## stringency_index                -0.072182863  0.054182919  0.103294381
-## population                      -0.179922061  0.396592941  0.435149828
-## population_density               0.063947439 -0.006532626 -0.009389834
-## median_age                       0.051079290 -0.039572426 -0.049040813
-## aged_65_older                   -0.023711197 -0.023383228 -0.021551716
-## aged_70_older                    0.214440927 -0.015718868 -0.024875079
-## gdp_per_capita                   0.143016113 -0.051700242 -0.070478989
-## extreme_poverty                  0.070436038  0.215668396  0.252953015
-## cardiovasc_death_rate           -0.140974797 -0.004450546 -0.003483943
-## diabetes_prevalence              0.049633891  0.046181993  0.032985846
-## female_smokers                   0.063451532 -0.056837694 -0.055056961
-## male_smokers                    -0.161112061 -0.165130911 -0.168700150
-## handwashing_facilities           0.070477358 -0.082035083 -0.087895517
-## hospital_beds_per_thousand       0.083201660 -0.104236832 -0.110011161
-## life_expectancy                  0.180198608 -0.094494182 -0.109425510
-## human_development_index         -0.069769812 -0.197885938 -0.230728541
-##                                 new_cases_smoothed  total_deaths    new_deaths
-## X1                                    -0.051234729 -8.583411e-02 -0.0660590540
-## total_cases                            0.858906029  9.683407e-01  0.7541537473
-## new_cases                              0.995025880  8.494261e-01  0.9315095999
-## new_cases_smoothed                     1.000000000  8.660723e-01  0.9245865267
-## total_deaths                           0.866072285  1.000000e+00  0.8209288523
-## new_deaths                             0.924586527  8.209289e-01  1.0000000000
-## new_deaths_smoothed                    0.427985488  3.557722e-01  0.4206777913
-## total_cases_per_million                0.023273743  4.337068e-03  0.0051667971
-## new_cases_per_million                 -0.013877392 -6.545080e-02 -0.0229388129
-## new_cases_smoothed_per_million        -0.022018512 -7.232470e-02 -0.0413852942
-## total_deaths_per_million              -0.038428242 -1.084433e-02 -0.0253883016
-## new_deaths_per_million                 0.282106531  2.223352e-01  0.2872205328
-## new_deaths_smoothed_per_million        0.279491076  2.143584e-01  0.2656270927
-## reproduction_rate                      0.007901933 -3.267117e-02  0.0219233048
-## stringency_index                       0.098560133  2.145856e-02  0.1122991525
-## population                             0.436346648  4.549572e-01  0.4513956923
-## population_density                    -0.009665324 -3.850820e-02 -0.0267117121
-## median_age                            -0.048806715 -6.027339e-02 -0.0506684652
-## aged_65_older                         -0.022389908 -3.429322e-02 -0.0273998717
-## aged_70_older                         -0.025383688 -5.221499e-02 -0.0458221446
-## gdp_per_capita                        -0.070977045 -1.117355e-01 -0.0916019557
-## extreme_poverty                        0.255239504  3.535243e-01  0.2268947644
-## cardiovasc_death_rate                 -0.003995755  3.597606e-03  0.0002438802
-## diabetes_prevalence                    0.030875511 -1.280154e-05  0.0211886020
-## female_smokers                        -0.055263321 -8.365826e-02 -0.0745989929
-## male_smokers                          -0.168251255 -1.799736e-01 -0.1807553149
-## handwashing_facilities                -0.087805113 -1.414590e-01 -0.0911599361
-## hospital_beds_per_thousand            -0.109246717 -1.295465e-01 -0.1267718081
-## life_expectancy                       -0.110259287 -1.412712e-01 -0.1146140416
-## human_development_index               -0.230995980 -1.996730e-01 -0.2150737815
-##                                 new_deaths_smoothed total_cases_per_million
-## X1                                      0.039368777            -0.083474270
-## total_cases                             0.349988827             0.061786708
-## new_cases                               0.429666366             0.023441457
-## new_cases_smoothed                      0.427985488             0.023273743
-## total_deaths                            0.355772178             0.004337068
-## new_deaths                              0.420677791             0.005166797
-## new_deaths_smoothed                     1.000000000             0.033322046
-## total_cases_per_million                 0.033322046             1.000000000
-## new_cases_per_million                   0.036878278             0.168736940
-## new_cases_smoothed_per_million          0.025274070             0.141549764
-## total_deaths_per_million               -0.023547744             0.020578428
-## new_deaths_per_million                  0.078836373             0.164401943
-## new_deaths_smoothed_per_million         0.095012147             0.226451504
-## reproduction_rate                       0.137955457            -0.043528275
-## stringency_index                        0.196436802             0.098382842
-## population                              0.204977458            -0.115420634
-## population_density                      0.023350867             0.123642163
-## median_age                              0.021495035             0.069358415
-## aged_65_older                           0.010353268            -0.159723031
-## aged_70_older                           0.084600639             0.368597617
-## gdp_per_capita                          0.031666783             0.457493517
-## extreme_poverty                         0.089504498            -0.145235402
-## cardiovasc_death_rate                  -0.008834907            -0.184237504
-## diabetes_prevalence                     0.057915463             0.372073841
-## female_smokers                         -0.029758543            -0.041663974
-## male_smokers                           -0.115176133            -0.144307873
-## handwashing_facilities                  0.032547615             0.369034128
-## hospital_beds_per_thousand              0.013234802            -0.098541977
-## life_expectancy                         0.038061670             0.251726876
-## human_development_index                -0.126131118             0.216216174
-##                                 new_cases_per_million
-## X1                                        0.024281403
-## total_cases                              -0.031992040
-## new_cases                                -0.005481486
-## new_cases_smoothed                       -0.013877392
-## total_deaths                             -0.065450796
-## new_deaths                               -0.022938813
-## new_deaths_smoothed                       0.036878278
-## total_cases_per_million                   0.168736940
-## new_cases_per_million                     1.000000000
-## new_cases_smoothed_per_million            0.487121685
-## total_deaths_per_million                  0.063265415
-## new_deaths_per_million                   -0.023778087
-## new_deaths_smoothed_per_million          -0.008878456
-## reproduction_rate                         0.067129390
-## stringency_index                          0.114325448
-## population                               -0.059932888
-## population_density                        0.046925976
-## median_age                                0.063496064
-## aged_65_older                             0.063255415
-## aged_70_older                             0.040797388
-## gdp_per_capita                            0.083326085
-## extreme_poverty                          -0.084740080
-## cardiovasc_death_rate                    -0.072059661
-## diabetes_prevalence                       0.081355537
-## female_smokers                            0.038173597
-## male_smokers                             -0.040766890
-## handwashing_facilities                    0.047724796
-## hospital_beds_per_thousand                0.066376452
-## life_expectancy                           0.114384953
-## human_development_index                   0.039717854
+<pre><code>##                                  total_cases    new_cases new_cases_smoothed
+## total_cases                      1.000000000  0.837583724        0.858906029
+## new_cases                        0.837583724  1.000000000        0.995025880
+## new_cases_smoothed               0.858906029  0.995025880        1.000000000
+## total_deaths                     0.968340745  0.849426123        0.866072285
+## new_deaths                       0.754153747  0.931509600        0.924586527
+## new_deaths_smoothed              0.349988827  0.429666366        0.427985488
+## total_cases_per_million          0.061786708  0.023441457        0.023273743
+## new_cases_per_million           -0.031992040 -0.005481486       -0.013877392
+## new_cases_smoothed_per_million  -0.041537618 -0.022619362       -0.022018512
+## total_deaths_per_million        -0.025330403 -0.039422347       -0.038428242
+## new_deaths_per_million           0.240498513  0.286469407        0.282106531
+## new_deaths_smoothed_per_million  0.237998847  0.281171387        0.279491076
+## reproduction_rate               -0.017348351  0.017994740        0.007901933
+## stringency_index                 0.054182919  0.103294381        0.098560133
+## population                       0.396592941  0.435149828        0.436346648
+## population_density              -0.006532626 -0.009389834       -0.009665324
+## median_age                      -0.039572426 -0.049040813       -0.048806715
+## aged_65_older                   -0.023383228 -0.021551716       -0.022389908
+## aged_70_older                   -0.015718868 -0.024875079       -0.025383688
+## gdp_per_capita                  -0.051700242 -0.070478989       -0.070977045
+## extreme_poverty                  0.215668396  0.252953015        0.255239504
+## cardiovasc_death_rate           -0.004450546 -0.003483943       -0.003995755
+## diabetes_prevalence              0.046181993  0.032985846        0.030875511
+## female_smokers                  -0.056837694 -0.055056961       -0.055263321
+## male_smokers                    -0.165130911 -0.168700150       -0.168251255
+## handwashing_facilities          -0.082035083 -0.087895517       -0.087805113
+## hospital_beds_per_thousand      -0.104236832 -0.110011161       -0.109246717
+## life_expectancy                 -0.094494182 -0.109425510       -0.110259287
+## human_development_index         -0.197885938 -0.230728541       -0.230995980
+##                                  total_deaths    new_deaths new_deaths_smoothed
+## total_cases                      9.683407e-01  0.7541537473         0.349988827
+## new_cases                        8.494261e-01  0.9315095999         0.429666366
+## new_cases_smoothed               8.660723e-01  0.9245865267         0.427985488
+## total_deaths                     1.000000e+00  0.8209288523         0.355772178
+## new_deaths                       8.209289e-01  1.0000000000         0.420677791
+## new_deaths_smoothed              3.557722e-01  0.4206777913         1.000000000
+## total_cases_per_million          4.337068e-03  0.0051667971         0.033322046
+## new_cases_per_million           -6.545080e-02 -0.0229388129         0.036878278
+## new_cases_smoothed_per_million  -7.232470e-02 -0.0413852942         0.025274070
+## total_deaths_per_million        -1.084433e-02 -0.0253883016        -0.023547744
+## new_deaths_per_million           2.223352e-01  0.2872205328         0.078836373
+## new_deaths_smoothed_per_million  2.143584e-01  0.2656270927         0.095012147
+## reproduction_rate               -3.267117e-02  0.0219233048         0.137955457
+## stringency_index                 2.145856e-02  0.1122991525         0.196436802
+## population                       4.549572e-01  0.4513956923         0.204977458
+## population_density              -3.850820e-02 -0.0267117121         0.023350867
+## median_age                      -6.027339e-02 -0.0506684652         0.021495035
+## aged_65_older                   -3.429322e-02 -0.0273998717         0.010353268
+## aged_70_older                   -5.221499e-02 -0.0458221446         0.084600639
+## gdp_per_capita                  -1.117355e-01 -0.0916019557         0.031666783
+## extreme_poverty                  3.535243e-01  0.2268947644         0.089504498
+## cardiovasc_death_rate            3.597606e-03  0.0002438802        -0.008834907
+## diabetes_prevalence             -1.280154e-05  0.0211886020         0.057915463
+## female_smokers                  -8.365826e-02 -0.0745989929        -0.029758543
+## male_smokers                    -1.799736e-01 -0.1807553149        -0.115176133
+## handwashing_facilities          -1.414590e-01 -0.0911599361         0.032547615
+## hospital_beds_per_thousand      -1.295465e-01 -0.1267718081         0.013234802
+## life_expectancy                 -1.412712e-01 -0.1146140416         0.038061670
+## human_development_index         -1.996730e-01 -0.2150737815        -0.126131118
+##                                 total_cases_per_million new_cases_per_million
+## total_cases                                 0.061786708          -0.031992040
+## new_cases                                   0.023441457          -0.005481486
+## new_cases_smoothed                          0.023273743          -0.013877392
+## total_deaths                                0.004337068          -0.065450796
+## new_deaths                                  0.005166797          -0.022938813
+## new_deaths_smoothed                         0.033322046           0.036878278
+## total_cases_per_million                     1.000000000           0.168736940
+## new_cases_per_million                       0.168736940           1.000000000
+## new_cases_smoothed_per_million              0.141549764           0.487121685
+## total_deaths_per_million                    0.020578428           0.063265415
+## new_deaths_per_million                      0.164401943          -0.023778087
+## new_deaths_smoothed_per_million             0.226451504          -0.008878456
+## reproduction_rate                          -0.043528275           0.067129390
+## stringency_index                            0.098382842           0.114325448
+## population                                 -0.115420634          -0.059932888
+## population_density                          0.123642163           0.046925976
+## median_age                                  0.069358415           0.063496064
+## aged_65_older                              -0.159723031           0.063255415
+## aged_70_older                               0.368597617           0.040797388
+## gdp_per_capita                              0.457493517           0.083326085
+## extreme_poverty                            -0.145235402          -0.084740080
+## cardiovasc_death_rate                      -0.184237504          -0.072059661
+## diabetes_prevalence                         0.372073841           0.081355537
+## female_smokers                             -0.041663974           0.038173597
+## male_smokers                               -0.144307873          -0.040766890
+## handwashing_facilities                      0.369034128           0.047724796
+## hospital_beds_per_thousand                 -0.098541977           0.066376452
+## life_expectancy                             0.251726876           0.114384953
+## human_development_index                     0.216216174           0.039717854
 ##                                 new_cases_smoothed_per_million
-## X1                                                  0.02024580
 ## total_cases                                        -0.04153762
 ## new_cases                                          -0.02261936
 ## new_cases_smoothed                                 -0.02201851
@@ -425,38 +388,36 @@ covid_data &lt;- read_csv(path)</code></pre>
 ## life_expectancy                                     0.10417165
 ## human_development_index                             0.04392686
 ##                                 total_deaths_per_million new_deaths_per_million
-## X1                                            0.12823723           -0.005247992
-## total_cases                                  -0.02533040            0.240498513
-## new_cases                                    -0.03942235            0.286469407
-## new_cases_smoothed                           -0.03842824            0.282106531
-## total_deaths                                 -0.01084433            0.222335166
-## new_deaths                                   -0.02538830            0.287220533
-## new_deaths_smoothed                          -0.02354774            0.078836373
-## total_cases_per_million                       0.02057843            0.164401943
-## new_cases_per_million                         0.06326542           -0.023778087
-## new_cases_smoothed_per_million                0.06978777           -0.051799898
-## total_deaths_per_million                      1.00000000           -0.131636837
-## new_deaths_per_million                       -0.13163684            1.000000000
-## new_deaths_smoothed_per_million              -0.15563708            0.595989269
-## reproduction_rate                             0.03750161            0.064617499
-## stringency_index                             -0.02513913            0.221409999
-## population                                   -0.08740938            0.065841102
-## population_density                           -0.07984459           -0.055940861
-## median_age                                    0.07840411           -0.060420162
-## aged_65_older                                 0.05073577           -0.107969909
-## aged_70_older                                -0.06584422            0.052219057
-## gdp_per_capita                               -0.11120759            0.074429892
-## extreme_poverty                              -0.17466956            0.057858237
-## cardiovasc_death_rate                        -0.11950024            0.013554985
-## diabetes_prevalence                          -0.05458186            0.172985130
-## female_smokers                               -0.11927415            0.047598611
-## male_smokers                                 -0.08176876           -0.092679963
-## handwashing_facilities                        0.21242495           -0.068833924
-## hospital_beds_per_thousand                   -0.05270246           -0.112504356
-## life_expectancy                               0.05332561           -0.030589233
-## human_development_index                      -0.04513722            0.046156877
+## total_cases                                  -0.02533040             0.24049851
+## new_cases                                    -0.03942235             0.28646941
+## new_cases_smoothed                           -0.03842824             0.28210653
+## total_deaths                                 -0.01084433             0.22233517
+## new_deaths                                   -0.02538830             0.28722053
+## new_deaths_smoothed                          -0.02354774             0.07883637
+## total_cases_per_million                       0.02057843             0.16440194
+## new_cases_per_million                         0.06326542            -0.02377809
+## new_cases_smoothed_per_million                0.06978777            -0.05179990
+## total_deaths_per_million                      1.00000000            -0.13163684
+## new_deaths_per_million                       -0.13163684             1.00000000
+## new_deaths_smoothed_per_million              -0.15563708             0.59598927
+## reproduction_rate                             0.03750161             0.06461750
+## stringency_index                             -0.02513913             0.22141000
+## population                                   -0.08740938             0.06584110
+## population_density                           -0.07984459            -0.05594086
+## median_age                                    0.07840411            -0.06042016
+## aged_65_older                                 0.05073577            -0.10796991
+## aged_70_older                                -0.06584422             0.05221906
+## gdp_per_capita                               -0.11120759             0.07442989
+## extreme_poverty                              -0.17466956             0.05785824
+## cardiovasc_death_rate                        -0.11950024             0.01355499
+## diabetes_prevalence                          -0.05458186             0.17298513
+## female_smokers                               -0.11927415             0.04759861
+## male_smokers                                 -0.08176876            -0.09267996
+## handwashing_facilities                        0.21242495            -0.06883392
+## hospital_beds_per_thousand                   -0.05270246            -0.11250436
+## life_expectancy                               0.05332561            -0.03058923
+## human_development_index                      -0.04513722             0.04615688
 ##                                 new_deaths_smoothed_per_million
-## X1                                                 -0.020833712
 ## total_cases                                         0.237998847
 ## new_cases                                           0.281171387
 ## new_cases_smoothed                                  0.279491076
@@ -487,7 +448,6 @@ covid_data &lt;- read_csv(path)</code></pre>
 ## life_expectancy                                    -0.002744981
 ## human_development_index                             0.023611920
 ##                                 reproduction_rate stringency_index  population
-## X1                                    0.048418247      -0.07218286 -0.17992206
 ## total_cases                          -0.017348351       0.05418292  0.39659294
 ## new_cases                             0.017994740       0.10329438  0.43514983
 ## new_cases_smoothed                    0.007901933       0.09856013  0.43634665
@@ -518,7 +478,6 @@ covid_data &lt;- read_csv(path)</code></pre>
 ## life_expectancy                       0.031156922      -0.12372899 -0.09193697
 ## human_development_index              -0.049439961      -0.06757580 -0.20411258
 ##                                 population_density  median_age aged_65_older
-## X1                                     0.063947439  0.05107929   -0.02371120
 ## total_cases                           -0.006532626 -0.03957243   -0.02338323
 ## new_cases                             -0.009389834 -0.04904081   -0.02155172
 ## new_cases_smoothed                    -0.009665324 -0.04880671   -0.02238991
@@ -549,7 +508,6 @@ covid_data &lt;- read_csv(path)</code></pre>
 ## life_expectancy                        0.404356239  0.78571995    0.55387630
 ## human_development_index                0.222000944  0.26986284    0.05446377
 ##                                 aged_70_older gdp_per_capita extreme_poverty
-## X1                                 0.21444093     0.14301611      0.07043604
 ## total_cases                       -0.01571887    -0.05170024      0.21566840
 ## new_cases                         -0.02487508    -0.07047899      0.25295302
 ## new_cases_smoothed                -0.02538369    -0.07097705      0.25523950
@@ -580,7 +538,6 @@ covid_data &lt;- read_csv(path)</code></pre>
 ## life_expectancy                    0.22728347     0.62143459     -0.57714200
 ## human_development_index            0.18750054     0.46721487     -0.25874254
 ##                                 cardiovasc_death_rate diabetes_prevalence
-## X1                                      -0.1409747974        4.963389e-02
 ## total_cases                             -0.0044505460        4.618199e-02
 ## new_cases                               -0.0034839430        3.298585e-02
 ## new_cases_smoothed                      -0.0039957547        3.087551e-02
@@ -611,7 +568,6 @@ covid_data &lt;- read_csv(path)</code></pre>
 ## life_expectancy                         -0.6849095121        3.422894e-01
 ## human_development_index                 -0.5353263825        2.785528e-01
 ##                                 female_smokers male_smokers
-## X1                                  0.06345153  -0.16111206
 ## total_cases                        -0.05683769  -0.16513091
 ## new_cases                          -0.05505696  -0.16870015
 ## new_cases_smoothed                 -0.05526332  -0.16825125
@@ -642,7 +598,6 @@ covid_data &lt;- read_csv(path)</code></pre>
 ## life_expectancy                     0.20547556  -0.22004085
 ## human_development_index             0.13058267   0.02989920
 ##                                 handwashing_facilities
-## X1                                         0.070477358
 ## total_cases                               -0.082035083
 ## new_cases                                 -0.087895517
 ## new_cases_smoothed                        -0.087805113
@@ -673,7 +628,6 @@ covid_data &lt;- read_csv(path)</code></pre>
 ## life_expectancy                            0.675697627
 ## human_development_index                    0.205778878
 ##                                 hospital_beds_per_thousand life_expectancy
-## X1                                              0.08320166     0.180198608
 ## total_cases                                    -0.10423683    -0.094494182
 ## new_cases                                      -0.11001116    -0.109425510
 ## new_cases_smoothed                             -0.10924672    -0.110259287
@@ -704,7 +658,6 @@ covid_data &lt;- read_csv(path)</code></pre>
 ## life_expectancy                                 0.46456023     1.000000000
 ## human_development_index                         0.10637767     0.481886533
 ##                                 human_development_index
-## X1                                          -0.06976981
 ## total_cases                                 -0.19788594
 ## new_cases                                   -0.23072854
 ## new_cases_smoothed                          -0.23099598
@@ -742,7 +695,7 @@ covid_data &lt;- read_csv(path)</code></pre>
 </ul>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["continent"],"name":[1],"type":["chr"],"align":["left"]},{"label":["data"],"name":[2],"type":["list"],"align":["right"]},{"label":["corrs"],"name":[3],"type":["list"],"align":["right"]},{"label":["mean_cor"],"name":[4],"type":["list"],"align":["right"]}],"data":[{"1":"Asia","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>","4":"<dbl [1]>"},{"1":"Europe","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>","4":"<dbl [1]>"},{"1":"Africa","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>","4":"<dbl [1]>"},{"1":"North America","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>","4":"<dbl [1]>"},{"1":"South America","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>","4":"<dbl [1]>"},{"1":"Oceania","2":"<tibble[,30]>","3":"<dbl[,30] [30 × 30]>","4":"<dbl [1]>"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["continent"],"name":[1],"type":["chr"],"align":["left"]},{"label":["data"],"name":[2],"type":["list"],"align":["right"]},{"label":["corrs"],"name":[3],"type":["list"],"align":["right"]},{"label":["mean_cor"],"name":[4],"type":["list"],"align":["right"]}],"data":[{"1":"Asia","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>","4":"<dbl [1]>"},{"1":"Europe","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>","4":"<dbl [1]>"},{"1":"Africa","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>","4":"<dbl [1]>"},{"1":"North America","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>","4":"<dbl [1]>"},{"1":"South America","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>","4":"<dbl [1]>"},{"1":"Oceania","2":"<tibble[,29]>","3":"<dbl[,29] [29 × 29]>","4":"<dbl [1]>"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -750,7 +703,7 @@ covid_data &lt;- read_csv(path)</code></pre>
 </ol>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["continent"],"name":[1],"type":["chr"],"align":["left"]},{"label":["mean_cor"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Asia","2":"0.08272145"},{"1":"Europe","2":"0.09659470"},{"1":"Africa","2":"0.12529206"},{"1":"North America","2":"0.14531915"},{"1":"South America","2":"0.09412140"},{"1":"Oceania","2":"0.08620329"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["continent"],"name":[1],"type":["chr"],"align":["left"]},{"label":["mean_cor"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Asia","2":"0.08689308"},{"1":"Europe","2":"0.10036567"},{"1":"Africa","2":"0.13030944"},{"1":"North America","2":"0.14723535"},{"1":"South America","2":"0.10724142"},{"1":"Oceania","2":"0.10369263"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>

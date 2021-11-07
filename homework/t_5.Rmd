@@ -22,12 +22,9 @@ library("cowplot")
 library("lubridate")
 library("viridis")
 
-path <- url("https://raw.githubusercontent.com/mebucca/dar_soc4001/master/slides/class_12/covid_data.csv")
+path <- url("https://raw.githubusercontent.com/mebucca/dar_soc4001/master/homework/datos_covid.csv")
 # leer archivo csv
-covid_data <- read_delim(path, delim=";")
-covid_data <-  covid_data %>% select(continent, where(is.numeric))
-
-write.csv(covid_data, "datos_covid.csv", row.names=FALSE)
+covid_data <- read_csv(path)
 ```
 
 Referencia: Hasell, J., Mathieu, E., Beltekian, D. et al. A cross-country database of COVID-19 testing. Sci Data 7, 345 (2020). https://doi.org/10.1038/s41597-020-00688-8 y utilizad
