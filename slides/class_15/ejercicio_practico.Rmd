@@ -32,7 +32,7 @@ setwd(dirreport)
 
 ```
 
-## Introdución
+## Introducción
 
 Diferentes autores han argumentado que la vida en Austria se reduce a pasear por las calles de Viena, tomar café y comer torta Sacher (Velasquez 2019). Las figuras a continuación ilustran este argumento. 
 
