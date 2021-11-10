@@ -34,7 +34,7 @@ setwd(dirreport)
 
 ## Introducción
 
-Diferentes autores han argumentado que la vida en Austria se reduce a pasear por las calles de Viena, tomar café y comer torta Sacher (Velasquez 2019). Las figuras a continuación ilustran este argumento. 
+Diferentes autores han argumentado que la vida en Austria se reduce a pasear por las calles de Viena, tomar café y comer torta Sacher (Velasquez 2019). La figura a continuación ilustran este argumento. 
 
 \begin{figure}
 \centering
@@ -42,11 +42,11 @@ Diferentes autores han argumentado que la vida en Austria se reduce a pasear por
 \caption{Café y torta Sacher}
 \end{figure}
 
-El presente artículo, basado en teorías recientes en literatura de economía institucional (Aranzaes y Rebolledo 2020), busca testear la siguiente hipótesis complementaria: para entender la vida en Austria hay que considerar elementos adicionales, no reducibles a consideraciones estéticas de sus ciudades, la oferta de bebidas calientes y la calidad de la repostería local. Formalmente, nuestro modelo puede ser escrito de la siguiente manera:
+El presente artículo, basado en teorías recientes en literatura de economía institucional (Aranzaes y Rebolledo 2020), busca testear la siguiente hipótesis complementaria: para entender la vida en Austria hay que considerar elementos adicionales, no reductibles a consideraciones estéticas de sus ciudades, la oferta de bebidas calientes y la calidad de la repostería local. Formalmente, nuestro modelo puede ser escrito de la siguiente manera:
 
 $$\text{Vida Austria} = \int f(\text{calles Viena},\text{Cafe},\text{Sacher},x)dx$$
 
-donde $x$ es una variable que mide "otros elementos".
+donde $x$ es una variable que mide "elementos adicionales", un nuevo concepto acuñado en este artículo.
 
 
 ```{r, echo=FALSE}
