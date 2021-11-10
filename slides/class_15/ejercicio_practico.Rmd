@@ -1,0 +1,56 @@
+---
+title: ""
+author: "Mauricio Bucca"
+date: "10 de Noviembre 2021"
+output:
+  word_document: default
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE, fig.height=6)
+
+# Carga paquetes
+library("haven")
+library("tidyverse")
+library("stargazer")
+library("knitr")
+library("viridis")
+library("xtable")
+library("rmarkdown")
+library("tinytex")
+
+dirdata <- "/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2021_2_data_analysis_r/repo/slides/class_4/workflow/data/"
+
+setwd(dirdata)
+essdata <- read_dta("ESS8_subset.dta"); essdata
+
+setwd(dircode)
+source("2_exploration.R")
+
+setwd(dircode)
+source("3_recoding.R")
+
+essdata_sub_cntry <- essdata_sub %>% filter(cntry == i)
+
+
+```
+
+## Introducción
+
+
+Este resumen está basados en los datos correspondientes al país  `r i`, con N= `r nrow(essdata_sub_cntry)` y `r sum(is.na(essdata_sub_cntry$age))` valores perdidos.
+
+
+## Resultados
+
+La siguiente figura resume nuestros resultados
+
+```{r}
+fig <- essdata_sub_cntry %>% filter(age>30) %>% ggplot(aes(x=yrbrn, y=eisced, colour=gndr_string)) +
+	geom_point(alpha=0.2, position = jitter) +
+	geom_smooth(method="lm",se=F) + 
+  	scale_color_viridis(discrete=TRUE, option="plasma") +
+    labs(x="año de nacimento", y="máxima educación alcanzada", colour="genero")
+print(fig)
+```

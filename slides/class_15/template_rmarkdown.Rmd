@@ -3,7 +3,6 @@ title: "RMarkdown en 10 minutos"
 author: "Mauricio Bucca"
 date: "Agosto de 2020"
 output:
-  pdf_document: default
   html_document: default
 ---
 
@@ -13,7 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Primeros pasos 
 
-![Newfile](images/inicio.png)
+![Newfile](https://angus.readthedocs.io/en/2017/_images/create_rmd.png)
+
+El código para agregar esta imagen es: `![nombre_que_quieras](https://angus.readthedocs.io/en/2017/_images/create_rmd.png)`.
 
 ## Introducción
 
@@ -97,10 +98,3 @@ iris %>% ggplot(aes(x=Sepal.Length, y=Sepal.Width, group=Species, colour=Species
                   geom_point(alpha=0.5)
 ```
 
-## Tablas 
-
-Este reporte usa datos de la base de datos `iris`:
-
-```{r, echo=FALSE, eval=TRUE, message=FALSE}
-iris %>% knitr::kable(type="html")
-```
