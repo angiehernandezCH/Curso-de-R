@@ -9,18 +9,16 @@ output:
     df_print: paged
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE, fig.height=6)
-
+```{r setup, echo=FALSE}
 # Carga paquetes
 library("haven")
 library("tidyverse")
-library("stargazer")
 library("knitr")
 library("viridis")
-library("xtable")
 library("rmarkdown")
 library("tinytex")
+library("xaringan")
+
 
 dirdata <- "/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2021_2_data_analysis_r/repo/slides/class_4/workflow/data"
 
@@ -36,11 +34,16 @@ setwd(dirreport)
 
 Diferentes autores han argumentado que la vida en Austria se reduce a pasear por las calles de Viena, tomar café y comer torta Sacher (Velasquez 2019). La figura a continuación ilustran este argumento. 
 
+![Torta Sacher](sacher.jpg)
+
+Alternativamente:
+```{r, eval=FALSE}
 \begin{figure}
 \centering
 \includegraphics[width=0.7\textwidth]{sacher.jpg}
 \caption{Café y torta Sacher}
 \end{figure}
+```
 
 El presente artículo, basado en teorías recientes en literatura de economía institucional (Aranzaes y Rebolledo 2020), busca testear la siguiente hipótesis complementaria: para entender la vida en Austria hay que considerar elementos adicionales, no reductibles a consideraciones estéticas de sus ciudades, la oferta de bebidas calientes y la calidad de la repostería local. Formalmente, nuestro modelo puede ser escrito de la siguiente manera:
 
