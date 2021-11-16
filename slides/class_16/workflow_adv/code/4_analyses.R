@@ -15,12 +15,10 @@ essdata_sub %>% group_by(cntry) %>%
   
 filename <- paste0(dirresults,"table_des2.tex") 
 
-
 essdata_sub %>% pivot_wider(names_from=cntry, values_from=c(eisced,age)) %>%
   dplyr::select(eisced_BE:age_SI) %>%
     as.data.frame() %>%
     stargazer(type="latex", out=filename)
-
 
 
 ####################### Figuras ######################### 
@@ -34,7 +32,6 @@ mi_figura <- essdata_sub %>% filter(age>30) %>% ggplot(aes(x=yrbrn, y=eisced, co
 	geom_smooth(method="lm",se=F) + 
   	scale_color_viridis(discrete=TRUE, option="plasma") +
     labs(x="año de nacimento", y="máxima educación alcanzada", colour="genero")
-
 
 filename <- paste0(dirresults,"mi_figura.pdf") 
 ggsave(filename, mi_figura, width = 25, height = 20, units = "cm")

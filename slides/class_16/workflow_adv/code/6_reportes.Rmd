@@ -42,6 +42,15 @@ essdata_sub_cntry <- essdata_sub %>% filter(cntry == i)
 
 Este resumen está basados en los datos correspondientes al país  `r i`, con N= `r nrow(essdata_sub_cntry)` y `r sum(is.na(essdata_sub_cntry$age))` valores perdidos.
 
+## Marco Teórico
+
+Por las tardes en `r paises_nombres[which(paises==i)]` la gente acostumbra a relajarse de la siguiente manera.
+
+```{r, results = "asis"}
+    cat(paste0("![](pics/", i, ".jpg)"), "\n")
+```
+
+
 
 ## Resultados
 
