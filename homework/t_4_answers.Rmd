@@ -1,0 +1,59 @@
+---
+title: "SOC4001 Procesamiento avanzado de bases de datos en R"
+author: "Tarea 4"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+Ponderación: 12% de la nota final del curso
+
+Formato: Desarrollar esta tarea en un RScript, agregando comentarios cuando sea necesario. 
+
+
+## Instrucciones:
+
+Usa el siguiente cógigo para cargar la base de datos sobre Covid-19 usados en clase:
+
+
+```{r, message=FALSE, warning=FALSE}
+library("tidyverse")
+library("wesanderson")
+library("cowplot")
+library("lubridate")
+library("viridis")
+library("ggdark")
+
+
+path <- url("https://raw.githubusercontent.com/mebucca/dar_soc4001/master/slides/class_12/covid_data.csv")
+# leer archivo csv
+covid_data <- read_delim(path, delim=";")
+```
+
+Referencia: Hasell, J., Mathieu, E., Beltekian, D. et al. A cross-country database of COVID-19 testing. Sci Data 7, 345 (2020). https://doi.org/10.1038/s41597-020-00688-8 y utilizad
+
+Los datos deben verse así:
+
+```{r, echo=F}
+covid_data  %>% str()
+```
+
+## Ejercicio
+
+Produce un gráfico lo más parecido posible a la figura mostrada a continuación. Usa un `theme` y una paleta de colores de tu preferencia.
+
+Pista: mi paleta de colores está definida por la siguiente linea de código: `scale_color_viridis(trans = "date", option = "plasma")` y mi theme es `dark_theme_gray()`, del paquete `library("ggdark")`. Ambos ejes están graficados en escala log10.
+
+
+```{r, echo=FALSE, message=F,warning=F}
+plot <- covid_data  %>% filter(continent=="Europe") %>%
+  ggplot(aes(x=new_cases_smoothed_per_million, y=new_deaths_smoothed_per_million, colour=date)) + 
+  geom_point(alpha=0.1) +
+  scale_x_log10() +  scale_y_log10() +
+  dark_theme_gray() +
+  scale_color_viridis(trans = "date", option = "plasma") +
+  labs(x="New cases smoothed per million", y="New deaths smoothed per million", title="Covid-19 in Europe")
+
+print(plot)
+```
