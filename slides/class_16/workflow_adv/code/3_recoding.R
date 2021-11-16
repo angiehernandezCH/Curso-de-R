@@ -6,7 +6,6 @@ essdata_sub <-  essdata %>% select(idno,cntry,gndr,yrbrn,eisced,hinctnta)
 
 # filtra filas que cumplen condición lógica 
 
-
 essdata_sub <- essdata_sub %>% filter(cntry %in% c("DE","GB","FR","IT","ES"), yrbrn>1910)
 
 
