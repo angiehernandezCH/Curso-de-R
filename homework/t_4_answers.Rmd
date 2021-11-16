@@ -46,7 +46,7 @@ Produce un gráfico lo más parecido posible a la figura mostrada a continuació
 Pista: mi paleta de colores está definida por la siguiente linea de código: `scale_color_viridis(trans = "date", option = "plasma")` y mi theme es `dark_theme_gray()`, del paquete `library("ggdark")`. Ambos ejes están graficados en escala log10.
 
 
-```{r, echo=FALSE, message=F,warning=F}
+```{r, echo=T, message=F,warning=F}
 plot <- covid_data  %>% filter(continent=="Europe") %>%
   ggplot(aes(x=new_cases_smoothed_per_million, y=new_deaths_smoothed_per_million, colour=date)) + 
   geom_point(alpha=0.1) +
