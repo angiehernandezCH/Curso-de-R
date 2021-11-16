@@ -13,12 +13,12 @@ essdata_sub %>% group_by(cntry) %>%
 
 #  usando stargazer
   
-filename <- paste0(dirresults,"table_des2.tex") 
+filename <- paste0(dirresults,"table_des2.txt") 
 
 essdata_sub %>% pivot_wider(names_from=cntry, values_from=c(eisced,age)) %>%
-  dplyr::select(eisced_BE:age_SI) %>%
+  dplyr::select(eisced_DE:age_IT) %>%
     as.data.frame() %>%
-    stargazer(type="latex", out=filename)
+    stargazer(type="text", out=filename)
 
 
 ####################### Figuras ######################### 
@@ -54,10 +54,10 @@ model2 <- update(model1, . ~ . + factor(gndr_string)*age); model2
 
 # exportar resultados a una tabla latex
 
-filename <- paste0(dirresults,"mi_tablareg.tex")
+filename <- paste0(dirresults,"mi_tablareg.txt")
 
 
-stargazer(model1, model2, type="latex",
+stargazer(model1, model2, type="text",
           covariate.labels=c("Age","Gender (Male=1)", "Gender*Age","Intercepto"),
           dep.var.labels=c("Education","Education"),
           out=filename)
