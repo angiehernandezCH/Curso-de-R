@@ -108,12 +108,12 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 - 21/09, Asignación Tarea 2:  [`[PDF]`](homework/t_2.pdf) [`[.Rmd]`](homework/t_2.Rmd)[`[PDF Respuestas]`](homework/t_2_answers.pdf) [`[.Rmd Respuestas]`](homework/t_2_answers.Rmd) 
 - 12/10, Asignación Tarea 3:  [`[PDF]`](homework/t_3.pdf) [`[.Rmd]`](homework/t_3.Rmd) [`[ipc.cvs]`](homework/ipc.csv) [`[PDF Respuestas]`](homework/t_3_answers.pdf) [`[.Rmd Respuestas]`](homework/t_2_answers.Rmd) 
 - 26/10, Asignación Tarea 4: [`[HTML]`](https://mebucca.github.io/dar_soc4001/homework/t_4#1) [`[HTML Respuestas]`](https://mebucca.github.io/dar_soc4001/homework/t_4_answers#1)
-- 02/11, Asignación Tarea 5: [`[HTML]`](https://mebucca.github.io/dar_soc4001/homework/t_5#1)
+- 02/11, Asignación Tarea 5: [`[HTML]`](https://mebucca.github.io/dar_soc4001/homework/t_5#1) 
 
 
 #### Trabajo Final
 
-- 16/11, Asignación Trabajo final: 
+- 16/11, Asignación Trabajo final: [`[HTML]`](https://mebucca.github.io/dar_soc4001/homework/tf#1)[`[.Rmd]`](homework/tf.Rmd)
 
 
 #### Lectura recomendada
