@@ -51,6 +51,9 @@ Nota: Una vez realizada la clase el link a la reunión de Zoom será reemplazado
 - Descargar e instalar R: [`[Grabación]`](https://www.youtube.com/watch?v=bwxUdV1JBiA) 
 - Introducción a for loops: [`[Grabación]`](https://www.youtube.com/watch?v=0KsSF8ZMenI&feature=youtu.be) 
 - `pivot_longer()` y `pivot_wider()`: [`[Grabación]`](https://www.youtube.com/watch?v=MsBULP96EJU&feature=youtu.be)
+- Datos perdidos en "edgelist":  [`[Grabación]`](https://youtu.be/mC2d2yrWilg)
+- Generación de variables aleatorias y visualización:  [`[Grabación]`](https://youtu.be/chsoNFqXIZ8) 
+- Clonación de repositorios:  [`[Grabación]`](https://youtu.be/8uQbQAplAlI) 
 
 ---
 
