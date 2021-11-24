@@ -37,7 +37,7 @@ covid <- read_csv(file)
 Link: [Datos Covid](https://github.com/MinCiencia/Datos-COVID19/blob/master/output/producto38/CasosFallecidosPorComuna.csv)
 
 
-4) Desde la página del Ministerio de Desarrollo Social descarga la Encuesta CASEN 2017: [Datos CASEN 2010](http://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2017#basedatos)
+4) Desde la página del Ministerio de Desarrollo Social descarga la Encuesta CASEN 2017: [Datos CASEN 2017](http://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2017#basedatos)
 
 Guarda los datos en `tf\datos\`
 
