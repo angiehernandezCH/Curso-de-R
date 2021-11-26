@@ -41,7 +41,7 @@ Link: [Datos Covid](https://github.com/MinCiencia/Datos-COVID19/blob/master/outp
 
 Guarda los datos en `tf\datos\`
 
-5) En base a los datos de la encuesta CASEN crea una base a nivel de comunas que contenga las siguiente información: media de edad (`edad`)  por comuna, media de escolaridad por comuna (`esc`) por comuna y media de ingreso total del hogar por comuna (`ytotcorh`). . 
+5) En base a los datos de la encuesta CASEN crea una base a nivel de comunas que contenga las siguiente información: media de edad (`edad`)  por comuna, media de escolaridad por comuna (`esc`) por comuna y media de ingreso total del hogar por comuna (`ytotcorh`).  
 
 6) Junta las bases covid y las bases a nivel de comuna. 
 
