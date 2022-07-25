@@ -48,8 +48,7 @@ Nota: Una vez realizada la clase el link a la reunión de Zoom será reemplazado
 
 ## Cápsulas
 
-- Descargar e instalar R: [`[Grabación]`](https://www.youtube.com/watch?v=bwxUdV1JBiA) 
-- Introducción a for loops: [`[Grabación]`](https://www.youtube.com/watch?v=0KsSF8ZMenI&feature=youtu.be) 
+- Descargar e instalar R: 
 
 ---
 
