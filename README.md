@@ -50,10 +50,6 @@ Nota: Una vez realizada la clase el link a la reunión de Zoom será reemplazado
 
 - Descargar e instalar R: [`[Grabación]`](https://www.youtube.com/watch?v=bwxUdV1JBiA) 
 - Introducción a for loops: [`[Grabación]`](https://www.youtube.com/watch?v=0KsSF8ZMenI&feature=youtu.be) 
-- `pivot_longer()` y `pivot_wider()`: [`[Grabación]`](https://www.youtube.com/watch?v=MsBULP96EJU&feature=youtu.be)
-- Datos perdidos en "edgelist":  [`[Grabación]`](https://youtu.be/mC2d2yrWilg)
-- Generación de variables aleatorias y visualización:  [`[Grabación]`](https://youtu.be/chsoNFqXIZ8) 
-- Clonación de repositorios:  [`[Grabación]`](https://youtu.be/8uQbQAplAlI) 
 
 ---
 
@@ -61,45 +57,6 @@ Nota: Una vez realizada la clase el link a la reunión de Zoom será reemplazado
 
 El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentras aquí: [`[Codigo]`](files/student2ta.R)
 
-| Grupo|Ayudante |Estudiante                        |
-|-----:|:--------|:---------------------------------|
-|     1|Roberto  |María De Los Ángeles García Matte |
-|     1|Roberto  |Hernán Gianini Vivado             |
-|     1|Roberto  |Maite Begoña González Yáñez       |
-|     1|Roberto  |Lorena Andrea Loyola Canales      |
-|     1|Roberto  |Roxana Lorena Muñoz Marchan       |
-|     1|Roberto  |Anakena Orrego López              |
-|     1|Roberto  |Constanza Ortega Gunckel          |
-|     1|Roberto  |Javiera Fernanda Perez Canio      |
-|     1|Roberto  |Gabriela Fernanda Peters Riveros  |
-|     1|Roberto  |Lourdes Soledad Velez Burneo      |
-|     1|Roberto  |Mario Sainz Martínez              |
-|     1|Roberto  |Recaredo Alberto Gálvez Carrasco  |
-|     2|Martín   |Esteban Alejandro Burgos Ruiz     |
-|     2|Martín   |Matías Deneken Uribe              |
-|     2|Martín   |Felipe Guzmán Aravena             |
-|     2|Martín   |Andrés Esteban Lazcano Astorga    |
-|     2|Martín   |Catalina Andrea Ossa Concha       |
-|     2|Martín   |Felipe Alejandro Peters Riveros   |
-|     2|Martín   |Felipe Quintana Saez              |
-|     2|Martín   |Felipe Alfredo Rivas Cifuentes    |
-|     2|Martín   |Jorge Andres Vega López           |
-|     2|Martín   |Josefa Paz Hernández Aguirre      |
-|     2|Martín   |Ignacio Rodriguez Zúñiga          |
-|     2|Martín   |Verónica Gonzalez Acevedo         |
-|     3|Felipe   |Simon Esteu Aranda Rojas          |
-|     3|Felipe   |Piero Alexander Beroiza Saldivia  |
-|     3|Felipe   |Isaac Andrés Galassi Oyarzun      |
-|     3|Felipe   |Daniel Alonso González Álvarez    |
-|     3|Felipe   |Natalia Guerrero Torres           |
-|     3|Felipe   |Valentina Sofia Proust Iligaray   |
-|     3|Felipe   |Bárbara Paz Ramos Mesías          |
-|     3|Felipe   |Jacinta Antonia Rodriguez Pavani  |
-|     3|Felipe   |Jorge Urzua Urzua Faune           |
-|     3|Felipe   |Andrea Velásquez Velásquez        |
-|     3|Felipe   |Valeria Alejandra Illanes Aedo    |
-|     3|Felipe   |Francisco Fuentes Ortega          |
-|     3|Felipe   |Trajan Pirkovic                   |
 
 ---
 
@@ -107,16 +64,12 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 
 #### Tareas 
 
-- 31/08, Asignación Tarea 1: [`[PDF]`](homework/t_1.pdf) [`[.Rmd]`](homework/t_1.Rmd) [`[PDF Respuestas]`](homework/t_1_answers.pdf) [`[.Rmd Respuestas]`](homework/t_1_answers.Rmd) 
-- 21/09, Asignación Tarea 2:  [`[PDF]`](homework/t_2.pdf) [`[.Rmd]`](homework/t_2.Rmd)[`[PDF Respuestas]`](homework/t_2_answers.pdf) [`[.Rmd Respuestas]`](homework/t_2_answers.Rmd) 
-- 12/10, Asignación Tarea 3:  [`[PDF]`](homework/t_3.pdf) [`[.Rmd]`](homework/t_3.Rmd) [`[ipc.cvs]`](homework/ipc.csv) [`[PDF Respuestas]`](homework/t_3_answers.pdf) [`[.Rmd Respuestas]`](homework/t_2_answers.Rmd) 
-- 26/10, Asignación Tarea 4: [`[HTML]`](https://mebucca.github.io/dar_soc4001/homework/t_4#1) [`[HTML Respuestas]`](https://mebucca.github.io/dar_soc4001/homework/t_4_answers#1)[`[.Rmd Respuestas]`](homework/t_4_answers.Rmd)
-- 02/11, Asignación Tarea 5: [`[HTML]`](https://mebucca.github.io/dar_soc4001/homework/t_5#1) [`[HTML Respuestas]`](https://mebucca.github.io/dar_soc4001/homework/t_5_answers#1)[`[.Rmd Respuestas]`](homework/t_5_answers.Rmd)
+- Asignación Tarea 1: [`[HTML]`]() [`[HTML Respuestas]`]()[`[.Rmd Respuestas]`]()
 
 
 #### Trabajo Final
 
-- 16/11, Asignación Trabajo final: [`[HTML]`](https://mebucca.github.io/dar_soc4001/homework/tf#1)[`[.Rmd]`](homework/tf.Rmd)
+- Asignación Trabajo final: [`[HTML]`]()[`[.Rmd]`]()
 
 
 #### Lectura recomendada
