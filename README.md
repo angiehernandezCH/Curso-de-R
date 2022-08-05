@@ -11,7 +11,7 @@ Encuentra también aquí una presentación sobre el rol de `R` como *lingua fran
 
 clase tipo: T (téorica), P (práctica)
 
-Nota: Una vez realizada la clase el link a la reunión de Zoom será reemplazado por un link a la grabación de la clase. 
+Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El link de Zoom correspondiente a cada clase se encuentra en la tabla a continuación. Una vez realizada la clase el link a la reunión de Zoom será reemplazado por un link a la grabación de la clase. 
 
 | dia  | mes  | tipo  | contenido                                                               | funciones                                                                                                       | entrega  | link/grabación zoom                                                                                | material                                                                                                                                                                                                                                     |
 | ---: | ---: | :---- | :---------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- | :------- | :-----------------------------------------------                                                   | :--------------------------- 
