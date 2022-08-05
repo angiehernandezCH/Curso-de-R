@@ -59,12 +59,17 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 
 #### Tareas 
 
-- Asignación Tarea 1: [`[HTML]`]() [`[HTML Respuestas]`]()[`[.Rmd Respuestas]`]()
+- Asignación Tarea 1: 
+- Asignación Tarea 2: 
+- Asignación Tarea 3: 
+- Asignación Tarea 4: 
+- Asignación Tarea 5: 
 
 
 #### Trabajo Final
 
-- Asignación Trabajo final: [`[HTML]`]()[`[.Rmd]`]()
+- Asignación Trabajo final: 
+
 
 
 #### Lectura recomendada
