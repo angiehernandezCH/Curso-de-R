@@ -52,6 +52,30 @@ Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El li
 
 El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentras aquí: [`[Codigo]`](files/student2ta.R)
 
+| Grupo|Ayudante  |Estudiante                             |
+|-----:|:---------|:--------------------------------------|
+|     1|Matias    |Candel Sarmiento Daleskha Paola        |
+|     1|Matias    |Flores Aguilera Nelson Antonio         |
+|     1|Matias    |Tapia Fernández Yanis Pamela           |
+|     1|Matias    |Vásquez León Jonathan Moisés           |
+|     1|Matias    |Villagrán Valenzuela Loreto Andrea     |
+|     1|Matias    |Carvajal Bahamondes Simon Cefas        |
+|     1|Matias    |Román Castillo Juan Pablo              |
+|     2|Martín    |Bravo Valencia Manuel Antonio          |
+|     2|Martín    |Ortega Cano Rodrigo Daniel             |
+|     2|Martín    |Oviedo Ramírez Gabriel Andrés          |
+|     2|Martín    |Rauld Idiaquez María Teresa            |
+|     2|Martín    |Rivera González Macarena Fabiola Elena |
+|     2|Martín    |Zamorano Wistuba Charlotte Belén       |
+|     2|Martín    |Ocampo Urrutia Gino Andrés             |
+|     3|Sebastian |Cifuentes Krstulovic Mariangeles       |
+|     3|Sebastian |Ducci Chapochnik Josefa Alejandra      |
+|     3|Sebastian |Fuentes Rojas Claudio Manuel Antonio   |
+|     3|Sebastian |Galarce Lastra Camila Raquel           |
+|     3|Sebastian |Soto Flores Talya Carola               |
+|     3|Sebastian |Ulloa Rodríguez Deborah Alexandra      |
+|     3|Sebastian |Deuster Peña Hermann Klaus             |
+|     3|Sebastian |Rodriguez Gajardo Milena Antonia       |
 
 ---
 
