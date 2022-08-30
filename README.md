@@ -44,7 +44,7 @@ Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El li
 
 ## Cápsulas
 
-- Descargar e instalar R: 
+- Descargar e instalar R: [`[Cápsula]`](https://www.youtube.com/watch?v=805yKZSQaj8)
 
 ---
 
