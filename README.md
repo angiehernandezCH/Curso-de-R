@@ -68,6 +68,7 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 |     2|Martín    |Rivera González Macarena Fabiola Elena |
 |     2|Martín    |Zamorano Wistuba Charlotte Belén       |
 |     2|Martín    |Ocampo Urrutia Gino Andrés             |
+|     2|Martín    |Pino Jáurregui Jose Manuel             |
 |     3|Sebastian |Cifuentes Krstulovic Mariangeles       |
 |     3|Sebastian |Ducci Chapochnik Josefa Alejandra      |
 |     3|Sebastian |Fuentes Rojas Claudio Manuel Antonio   |
