@@ -77,8 +77,6 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 |     3|Sebastian |Ulloa Rodríguez Deborah Alexandra      |
 |     3|Sebastian |Deuster Peña Hermann Klaus             |
 |     3|Sebastian |Rodriguez Gajardo Milena Antonia       |
-|     3|Sebastian |Charlotte Zamorano Wistuba             |
-
 
 
 ---
