@@ -6,9 +6,9 @@
 # Establecer directory de trabajo (cambiar a la ubicación en computador donde guardaron la base de datos)
 
 getwd()
-setwd("/Users/Mauricio/Desktop")
+setwd("/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2022_2_data_analysis_r/repo/slides/class_3")
 
-# Importar datos Casen 2020 desde formato .sav (SPSS)
+# Importar datos Casen 2020 desde formato .sav (SPSS). Requiere paquete "foreign" para leer archivos .sav
 
 install.packages("foreign")
 library("foreign")
@@ -45,12 +45,14 @@ str(subdata_casen)
 summary(subdata_casen)
 
 
-# Transformar variables (ingresos en miles de pesos)
+# Transformar variables (ingresos en miles de pesos). Reemplaza la variable original
 
 subdata_casen$yautcor <- subdata_casen$yautcor/1000
 subdata_casen$ytotcor_nueva <- subdata_casen$ytotcor/1000
 
 # Crea variable nueva
+
+table(subdata_casen$pobreza)
 
 subdata_casen$pobre <- 1
 subdata_casen$pobre[subdata_casen$pobreza=="No pobres"] <- 0
@@ -59,8 +61,6 @@ subdata_casen$pobre[is.na(subdata_casen$pobreza)] <- NA
 
 # tablas
 
-table(subdata_casen$pobreza)
-table(subdata_casen$pobre)
 table(subdata_casen$pobreza,subdata_casen$pobre)
 
 prop.table(table(subdata_casen$pobreza))
@@ -68,6 +68,7 @@ prop.table(table(subdata_casen$pobreza))
 # lo mismo que arriba pero guardando el objecto previamente
 mitable <- table(subdata_casen$pobreza)
 prop.table(mitable)
+
 
 # tabla con proporciones
 
@@ -78,7 +79,20 @@ pov_educ <- pov_educ[-rows,] # excluyendo la última fila ("No Sabe")
 
 prop.table(pov_educ) # % celda (tabla suma a 100)
 prop.table(pov_educ, margin=1) # % fila (filas suman a 100)
-prop.table(pov_educ, margin=2) # % columna (columnas suman a 100)
+
+
+
+########################### Ejercicio 1 ##############################
+
+# Contruir una tabla de contingencia con la distribución educacional 
+# para cada categoría de pobreza
+
+
+
+
+
+######################################################################
+
 
 ## Funciones básicas para vectores y variables
 
@@ -92,7 +106,6 @@ which.min(subdata_casen$yautcor) # posición de valor mínimo
 rank(subdata_casen$yautcor)   # ranking de valores
 median(subdata_casen$yautcor) # mediana
 range(subdata_casen$yautcor, na.rm = TRUE)  # rango
-rev(subdata_casen$yautcor)    # revertir elementos
 unique(subdata_casen$sexo) # lista de elementos únicos
 length(subdata_casen$yautcor) # largo
 
@@ -103,6 +116,7 @@ quantile(subdata_casen$yautcor, p=0.5, na.rm = TRUE) # median
 quantile(subdata_casen$yautcor, p=c(.2,.4,.6,.8), na.rm = TRUE) # calculando quintiles de ingreso
 quantile(subdata_casen$yautcor, p=seq(0,1,by=0.1), na.rm = TRUE) # deciles
 quantile(subdata_casen$yautcor, p=seq(0,1,by=0.05), na.rm = TRUE) # veintiles
+
 
 # Funciones de paquetes
 
@@ -116,22 +130,27 @@ Gini(subdata_casen$yautcor, corr = TRUE, na.rm = TRUE)
 
 # Funciones propias 
 
-qs <- quantile(subdata_casen$yautcor, p=c(.1,.9), na.rm = TRUE)
+qs <- quantile(subdata_casen$yautcor, p=c(.1,.9), na.rm = TRUE); qs
 qs[1]; qs[2]
 # función que calcula ratio 90-10 (ratio entre ingreso del decil 9 y el decil 1)
 
-ratio9010 <- function(x){
-  qq <- quantile(x, p=c(.1,.9), na.rm = TRUE)
-  ratio <- qq[2]/qq[1]
-  names(ratio) <- "r9010"
-  return(ratio)
-} 
-
-ratio9010(subdata_casen$yautcor)
-ratio9010(subdata_casen$esc)
 
 
-# Filtrar casos
+
+########################### Ejercicio 2 ##############################
+
+# Contruir una función llamada "ratio9010" que calcule la razon entre
+# el percentil 90 y el percentil 10 de una variable x. Recuenda omitir
+# valors perdidos
+
+
+
+
+
+######################################################################
+
+
+# Filtrar casos y aplicar nuestra función a un subconjunto de datos
 
 ratio9010(subdata_casen$yautcor[subdata_casen$comuna=="Iquique"])
 ratio9010(subdata_casen$yautcor[subdata_casen$comuna=="Vitacura"])
@@ -143,20 +162,53 @@ Gini(subdata_casen$yautcor[subdata_casen$comuna=="Vitacura"], corr = FALSE, na.r
 
 ## for loops
 
-# loop que calcula promedio de ingreso, ratio9010 y Gini para cada comuna y lo almacena en una matriz
+# iteración: para cada valor de i calcula: i + (i-1), lo almacena en objeto x y lo imprime.
+# por ejemplo. Si i=5 entonces x= 5 + 4 = 9
 
-comunas <- unique(subdata_casen$comuna)
+for (i in 1:10) {
+  x <- i + (i-1)
+  print(x)
+}
+
+
+# iteración: define un conjunto de comunas, calcula ratio 90-10 de ingresos para cada comuna y guarda resultado en un vector.
+
+table(subdata_casen$comuna)
+
+comunas <- c("Arica", "Providencia", "Macul") # lista de comunas
+ratios <- rep(NA,length(comunas)) # crea vector vacio con el mismo largo que el numero de comunas. Aca guardaremos resultados
+
+pos=1 # este valor se usará para definir posición de cada resultado en vector "ratios"
+
+for (j in comunas) {
+
+  ratios[pos] <- ratio9010(subdata_casen$yautcor[subdata_casen$comuna==j])
+  pos = pos + 1
+
+}
+
+ratios
+
+
+########################### Ejercicio 3 ##############################
+
+
+# Usando un loop calcula promedio de ingreso, ratio9010 y Gini para cada comuna y lo almacena en una matriz
+# pon comunas en las filas y las tres medidas (promedio, ratio9010 y Gini) en las columnas.
+# para obtener lista y numbero de comunas usa el siguiente código:
+
+comunas  <- unique(subdata_casen$comuna)
 ncomunas <- length(comunas)
 
-resultados <- matrix(NA, nrow = ncomunas, ncol = 3 ) 
 
-row=1
-for(i in comunas){
-  resultados[row,1] <- mean(subdata_casen$yautcor[subdata_casen$comuna==i], na.rm = T)
-  resultados[row,2] <- ratio9010(subdata_casen$yautcor[subdata_casen$comuna==i])
-  resultados[row,3] <- Gini(subdata_casen$yautcor[subdata_casen$comuna==i], corr = FALSE, na.rm = TRUE)
-  row = row + 1
-}
+
+
+
+######################################################################
+
+
+# agrega nombre filas y columnas y transforma 
+# matriz en base de datos
 
 
 colnames(resultados) <- c("promedio","r9010","gini")
@@ -171,8 +223,8 @@ x <- seq(1:100)
 y <- sin(x)
 plot(x,y, type="l")
 
+
 ## Scatterplots
-par(mfrow=c(1,2))
 
 plot(resultados$promedio, resultados$gini, 
    xlab="Ingreso autonomo promedio en comuna", 
@@ -183,18 +235,3 @@ plot(resultados$promedio, resultados$gini,
 
 abline(lm(resultados$gini ~ resultados$promedio))
 
-
-plot(resultados$gini, resultados$r9010, 
-     xlab="Gini", 
-     ylab="ratio 90/10", 
-     type="p", 
-     col="red")
-
-dev.off()
-
-
-# otro, bar plot
-
-barplot(prop.table(table(subdata_casen$educ)), col="purple", las=2)
-box()
-dev.off()
