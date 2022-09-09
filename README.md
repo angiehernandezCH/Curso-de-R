@@ -86,7 +86,7 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 
 #### Tareas 
 
-- Asignación Tarea 1: [Tarea 1](homework/t1.pdf) [Tarea 1.Rmd](homework/t1.Rmd)
+- Asignación Tarea 1: [`[Tarea 1]`](homework/t_1.pdf) [`[Tarea 1.Rmd]`](homework/t_1.Rmd)
 - Asignación Tarea 2: 
 - Asignación Tarea 3: 
 - Asignación Tarea 4: 
