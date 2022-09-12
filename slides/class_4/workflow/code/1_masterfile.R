@@ -1,5 +1,5 @@
 
-################################################## Preámbulo #################################################
+################################################### Preambulo ###################################################
 
 # Limpiar pantalla y remover objetos existentes
 cat("\014") 
@@ -16,7 +16,7 @@ library("stargazer")
 
 # Change the line below to set your own working directory
 
-folder <- "/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2021_2_data_analysis_r/repo/slides/class_4/workflow/"
+folder <- "~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2022_2_data_analysis_r/repo/slides/class_4/workflow/"
 
 dircode     <- paste0(folder,"code/") 
 dirdata 	  <- paste0(folder,"data/") 
@@ -27,7 +27,7 @@ dirresults  <- paste0(folder,"results/");  dirresults
 
 
 # Set working directory
-getwd()
+
 setwd(dirdata)
 getwd()
 
@@ -51,7 +51,6 @@ source("2_exploration.R")
 
 # Establece el directorio de trabajo correspondiente
 setwd(dircode)
-
 source("3_recoding.R")
 
 

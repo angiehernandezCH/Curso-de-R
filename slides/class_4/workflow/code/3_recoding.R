@@ -11,10 +11,10 @@ head(essdata_sub)
 
 
 # filtra filas que cumplen condición lógica 
-
+ 
 attach(essdata_sub)
 
-essdata_sub <- essdata_sub[cntry!="AT" & yrbrn>1990, ]
+essdata_sub <- essdata_sub[(cntry=="AT" | cntry=="BE") & yrbrn>1990, ]
 dim(essdata_sub)
 
 detach(essdata_sub)
@@ -37,7 +37,7 @@ mean(age, na.rm=T)
 # recodifica variable existente
 
 
-ifelse(yrbrn > 2000, "Millenial", "Viejo") # ejemplo simple: >2000 = millenial, else: viejo
+essdata_sub$generacion <- ifelse(yrbrn > 2000, "Millenial", "Viejo") # ejemplo simple: >2000 = millenial, else: viejo
 
 essdata_sub$gndr_string <- ifelse(gndr == 1, "Male", ifelse(gndr == 2, "Female", NA)) # recodifica y adjunta a base de datos
 

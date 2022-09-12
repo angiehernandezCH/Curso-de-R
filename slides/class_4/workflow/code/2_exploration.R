@@ -19,6 +19,7 @@ summary(essdata)
 
 summary(essdata$eisced)
 
+summary(essdata$cntry)
 
 # tabla educacion por nivel de ingreso, imprimir resultado 
 
