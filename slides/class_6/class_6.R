@@ -1,5 +1,5 @@
 # Carga datos
-library("readr") 
+library("tidyverse")
 
 setwd("~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2021_2_data_analysis_r/repo/slides/class_6/")
 
@@ -8,67 +8,6 @@ setwd("~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2021_2_data_
 data_casen_csv <- read_csv("sample_casen2017.csv")
 
 
-# Seleccion subconjunto de datos
-
-library("tidyverse")
-
-data_casen_csv %>% select(sexo,edad,ytotcor)
-
-
-## Crear un tibble
-
-library("tibble")
-
-mytibble <- 
-  tibble(
-    x=rep(c("A","B","C"),8),
-    y=sample(1:10,size=24, replace = T), 
-    z=factor(sample(letters,size=24))
-  )
-
-print(mytibble)
-
-
-## Transformar un data frame en tibble
-
-as.data.frame(data_casen_csv)
-as_tibble(data_casen_csv)
-
-
-# pipes
-
-data_casen_csv %>%
-  select(esc,sexo,ypchautcor) %>%
-  arrange(esc) %>%
-  filter(esc <= 12 & sexo == 2) 
-
-
-## arrange: ordenación de datos
-
-data_casen_csv %>% arrange(edad)
-data_casen_csv %>% arrange(edad,desc(sexo),yautcor)
-
-## select: selección de variables
-
-data_casen_csv %>% select(sexo,edad,educ)
-data_casen_csv %>% select(!c(sexo,edad,educ))
-data_casen_csv %>% select(1:5,8)
-data_casen_csv %>% select(starts_with("y"))
-data_casen_csv %>% select(ends_with("a"))
-data_casen_csv %>% select(contains("cor"))
-
-
-## filter: selección de variables
-
-data_casen_csv %>% filter(sexo==2)
-data_casen_csv %>% filter(sexo==2 & edad>=18 & (region==2 | region==6) )
-data_casen_csv %>% filter(sexo==2 & edad>=18 & region==2 | region==6 )
-
-
-data_casen_csv %>% 
-  filter(sexo==2 | region==13) %>% 
-  select(sexo, region) %>% head()
-
 # Creación de nuevas variables
 
 data_casen_csv <- data_casen_csv %>% 
@@ -76,16 +15,10 @@ data_casen_csv <- data_casen_csv %>%
   mutate(ln_ytotcor_mm = log((ytotcor + 1)/1000)) 
   
   
-data_casen_csv %>% select(sexo,edad,ytotcor,anno,ln_ytotcor_mm) %>%
-  select(!ln_ytotcor_mm)
-
-
-
 # mutate, if_else: creación de datos
 
 data_casen_csv %>% select(sexo,edad,ytotcor,anno,ln_ytotcor_mm) %>%
-  mutate(sexo2 = if_else(sexo==1,1,0)) %>% select(sexo,sexo2) %>%
-  with(table(sexo,sexo2))
+  mutate(sexo2 = if_else(sexo==1,1,0)) %>% select(sexo,sexo2) 
 
 
 data_casen_csv %>% select(sexo,edad,ytotcor) %>% 
@@ -110,6 +43,23 @@ data_casen_csv %>% select(sexo,edad,ytotcor) %>%
                               edad > 65  ~ 3, 
                               TRUE ~ 0)
   )
+
+
+
+############################# Ejercicio 1 #############################
+
+# Usando la funcion  quantile(data_casen_csv$ytotcor, p=c(0.25,0.5,0.75), na.rm=T), calcula 
+# los limites que separan a los 4 cuartiles de ingreso autónomo (25% mas pobre, segundo 25% mas pobre, segundo 25% mas rico y 25% mas rico).
+# Luego, usando estos límites y la funcion case_when crea una nueva variable llamada "cuartiles" que tome valor 1 para individuds en primer
+# cuartil (25% más pobre), hasta 4 para el cuarto cuartil (25% más rico)
+
+qs <- quantile(data_casen_csv$ytotcor, p=c(0.25,0.5,0.75), na.rm=T)
+
+data_casen_csv  <- data_casen_csv %>% mutate(cuartiles = case_when(ytotcor<qs[1] ~ 1,
+                                                ytotcor>=qs[1] & ytotcor<qs[2] ~ 2,
+                                                ytotcor>=qs[2] & ytotcor<qs[3] ~ 3,
+                                                ytotcor>=qs[3] ~ 4)
+                                                ) 
 
 
 
@@ -142,5 +92,14 @@ data_casen_csv %>% group_by(sexo) %>% sample_n(size = 4, replace = T)
 
 data_casen_csv %>%  sample_n(size = 8, replace = T)
 
+
+############################# Ejercicio 2 #############################
+
+# Usando las funciones group_by y summarise, calcula el promedio y desviacion estándar de ytotcor
+# por cuartil de ingresos
+
+data_casen_csv %>% 
+  group_by(cuartiles) %>%
+  summarise(promedio = mean(ytotcor, na.rm=T), sd = sd(ytotcor, na.rm=T))
 
 
