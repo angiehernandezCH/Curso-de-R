@@ -88,8 +88,8 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 
 #### Tareas 
 
-- Asignación Tarea 1: [`[Tarea 1]`](homework/t_1.pdf) [`[Tarea 1.Rmd]`](homework/t_1.Rmd)
-- Asignación Tarea 2: 
+- Asignación Tarea 1: [`[Tarea 1]`](homework/t_1.pdf) [`[Tarea 1.Rmd]`](homework/t_1.Rmd) [`[Respuestas Tarea 1]`](homework/t_1_answers.pdf) [`[Respuestas Tarea 1.Rmd]`](homework/t_1_answers.Rmd)
+- Asignación Tarea 2: [`[Tarea 1]`](homework/t_1.pdf) [`[Tarea 1.Rmd]`](homework/t_1.Rmd)
 - Asignación Tarea 3: 
 - Asignación Tarea 4: 
 - Asignación Tarea 5: 
