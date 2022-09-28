@@ -1,6 +1,6 @@
 ---
 title: "SOC4001 Procesamiento avanzado de bases de datos en R"
-author: "Tarea 2, respuestas"
+author: "Tarea 2"
 output:
   pdf_document: default
   html_document:
