@@ -53,15 +53,6 @@ data_casen_csv %>% select(sexo,edad,ytotcor) %>%
 # Luego, usando estos límites y la funcion case_when crea una nueva variable llamada "cuartiles" que tome valor 1 para individuds en primer
 # cuartil (25% más pobre), hasta 4 para el cuarto cuartil (25% más rico)
 
-qs <- quantile(data_casen_csv$ytotcor, p=c(0.25,0.5,0.75), na.rm=T)
-
-data_casen_csv  <- data_casen_csv %>% mutate(cuartiles = case_when(ytotcor<qs[1] ~ 1,
-                                                ytotcor>=qs[1] & ytotcor<qs[2] ~ 2,
-                                                ytotcor>=qs[2] & ytotcor<qs[3] ~ 3,
-                                                ytotcor>=qs[3] ~ 4)
-                                                ) 
-
-
 
 ## group_by: operaciones agrupadas.
 
@@ -97,9 +88,5 @@ data_casen_csv %>%  sample_n(size = 8, replace = T)
 
 # Usando las funciones group_by y summarise, calcula el promedio y desviacion estándar de ytotcor
 # por cuartil de ingresos
-
-data_casen_csv %>% 
-  group_by(cuartiles) %>%
-  summarise(promedio = mean(ytotcor, na.rm=T), sd = sd(ytotcor, na.rm=T))
 
 
