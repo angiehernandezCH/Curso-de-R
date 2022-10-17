@@ -94,7 +94,6 @@ data_inequality
 
 4. Poner cada variable ("percentile") en una variable separadamente (wide)
 
-
 ```{r, , echo=FALSE, message=FALSE, warning=FALSE}
 data_inequality <- data_inequality %>%  mutate(id = row_number()) %>% 
   pivot_wider(names_from = percentile, values_from = value) %>%
