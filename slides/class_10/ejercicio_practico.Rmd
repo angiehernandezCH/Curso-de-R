@@ -100,5 +100,4 @@ data_inequality <- data_inequality %>%  mutate(id = row_number()) %>%
   select(-id)
 
 data_inequality 
-
 ```
