@@ -38,6 +38,7 @@ for (r in regiones) {
 }
 
 tabla_1
+tabla_13
 ```
 
 2) Usando las funciones `nest()` y `map()`del paquete `purrr`, para cada región haz una tabla de contingencia cruzando las variables `educ` y `sexo`. 
@@ -61,20 +62,4 @@ tables_df <- data_casen2017 %>% nest(-region) %>%
   unnest()
 
 tables_df
-```
-
-
-4. Usando las funciones `nest()` y `map()`  del paquete `purrr`, para cada región haz dos tablas de contingencia, una cruzando las variables `educ` y `sexo`, y otra cruzando las variables `ecivil` y `sexo`. 
-
-
-```{r, warning=FALSE, message=FALSE}
-tables <- data_casen2017 %>% 
-  pivot_longer(cols=c("sexo","ecivil"), names_to = "var_control", values_to="val_control") %>%
-  nest(-c(region,var_control)) %>%
-  mutate(mitabla = map(.x = data, .f= ~ table(.$educ,.$val_control)))
-
-tables$mitabla
-tables$mitabla[[1]]
-tables$mitabla[[2]]
-
 ```
