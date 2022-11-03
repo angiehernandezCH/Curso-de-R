@@ -49,7 +49,7 @@ Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El li
 - `Pacman` (gestión de paquetes): [`[Cápsula]`](https://zoom.us/rec/play/oEC3ylDF1FgvRefSBeVYa1sw1YUllzmpEErUAJ2Fo_Hm5ZZkKUC1eqpDLlwyAIFi2jmX_VhQJaKJPKWV.A9FP161KdHNM_Agr?continueMode=true&_x_zm_rtaid=u0HMtmUiRMejpEz1fB47bQ.1663094558713.9f2656b492d27b84f009e687810d20ab&_x_zm_rhtaid=913)
 - Parte final del workflow: [`[Cápsula]`](https://zoom.us/rec/play/uggnL2XFaA9UQEF1QgBT-vnqUUm3g2EnuXp7npOcIfav35wTzwcGnVZQL51u2li9tjgJozslJR7xb-4x.YClnoWfPbbY2rOsZ?continueMode=true&_x_zm_rtaid=u0HMtmUiRMejpEz1fB47bQ.1663094558713.9f2656b492d27b84f009e687810d20ab&_x_zm_rhtaid=913)
 - Introducción a `map()` y `nest()`: [`[Cápsula]`](https://www.youtube.com/watch?v=Ko2SdZ1_nLU)
-- `map()` y `nest() avanzado: [`[Cápsula]`](https://www.youtube.com/watch?v=uBqGpz1Rk-s)
+- `map()` y `nest()` avanzado: [`[Cápsula]`](https://www.youtube.com/watch?v=uBqGpz1Rk-s)
 
 ---
 
