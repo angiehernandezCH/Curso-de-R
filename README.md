@@ -93,7 +93,7 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 - Asignación Tarea 1: [`[Tarea 1]`](homework/t_1.pdf) [`[Tarea 1.Rmd]`](homework/t_1.Rmd) [`[Respuestas Tarea 1]`](homework/t_1_answers.pdf) [`[Respuestas Tarea 1.Rmd]`](homework/t_1_answers.Rmd)
 - Asignación Tarea 2: [`[Tarea 2]`](homework/t_2.pdf) [`[Tarea 2.Rmd]`](homework/t_2.Rmd)
 - Asignación Tarea 3: [`[Tarea 3]`](homework/t_3.pdf) [`[Tarea 3.Rmd]`](homework/t_3.Rmd)[`[Datos IPC]`](homework/ipc.csv)
-- Asignación Tarea 4: [`[Tarea 4]`](https://mebucca.github.io/dar_soc4001/homeworl/t_5#1)
+- Asignación Tarea 4: [`[Tarea 4]`](https://mebucca.github.io/dar_soc4001/homework/t_5#1)
 - Asignación Tarea 5: 
 
 
