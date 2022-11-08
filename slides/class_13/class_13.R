@@ -14,32 +14,10 @@ covid_data  %>% glimpse()
 
 
 
-# Loop
-
-## Análisis de datos Covid-19 usando loops + almacenamiento resultados via `assign()`
-
-
-for (dv in c("total_cases_per_million", "total_deaths_per_million")) {
-  for (iv in  c("population_density", "median_age", "gdp_per_capita")) {
-    
-    #ajusta modelo
-    y <- covid_data[,dv] %>% as.matrix()
-    x <- covid_data[,iv] %>% as.matrix()
-    mimodelo <- lm(y ~ x)
-    namemodelo <- paste("lm_",dv,"_",iv) 
-    assign(namemodelo,mimodelo ) 
-    
-    #r2 
-    mir2 <- summary(mimodelo)
-    namer2 <- paste("r2_",dv,"_",iv) 
-    assign(namer2,mir2)
-    
-  }
-}
-
-
 
 # Purrr
+
+
 
 covid_data <- covid_data %>% 
   dplyr::select(continent,location,total_cases_per_million, 
