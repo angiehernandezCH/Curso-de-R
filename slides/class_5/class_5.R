@@ -85,4 +85,6 @@ data_casen_csv %>%
 
 #Selecciona los individuos con un ingreso total (ytotcor) de 10 millones y cuenta cuantos hay en cada región
 
+data_casen_csv %>% filter(ytotcor>=10000000) %>% select(region)
+
 

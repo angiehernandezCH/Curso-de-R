@@ -87,9 +87,7 @@ prop.table(pov_educ, margin=1) # % fila (filas suman a 100)
 # Contruir una tabla de contingencia con la distribución educacional 
 # para cada categoría de pobreza
 
-
-
-
+prop.table(pov_educ, margin=2) # % columna (columnas suman a 100)
 
 ######################################################################
 
@@ -144,7 +142,15 @@ qs[1]; qs[2]
 # valors perdidos
 
 
+ratio9010 <- function(x){
+  qq <- quantile(x, p=c(.1,.9), na.rm = TRUE)
+  ratio <- qq[2]/qq[1]
+  names(ratio) <- "r9010"
+  return(ratio)
+} 
 
+ratio9010(subdata_casen$yautcor)
+ratio9010(subdata_casen$esc)
 
 
 ######################################################################
@@ -201,8 +207,15 @@ comunas  <- unique(subdata_casen$comuna)
 ncomunas <- length(comunas)
 
 
+resultados <- matrix(NA, nrow = ncomunas, ncol = 3 ) 
 
-
+row=1
+for(i in comunas){
+  resultados[row,1] <- mean(subdata_casen$yautcor[subdata_casen$comuna==i], na.rm = T)
+  resultados[row,2] <- ratio9010(subdata_casen$yautcor[subdata_casen$comuna==i])
+  resultados[row,3] <- Gini(subdata_casen$yautcor[subdata_casen$comuna==i], corr = FALSE, na.rm = TRUE)
+  row = row + 1
+}
 
 ######################################################################
 
