@@ -1,24 +1,25 @@
 ---
 title: "RMarkdown en 10 minutos -  SOC4001"
 author: "Mauricio Bucca"
-date: "Diciembre de 2020"
+date: "Noviembre de 2022"
 output:
-  pdf_document: default
+  word_document: default
   html_document:
     df_print: paged
 ---
 
+
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library("tidyverse")
-library("viridis")
-library("ggdark")
+#library("viridis")
 library("carData")
-library("ggplot2")
 datos_chile <- Chile
 ```
 
 #  Reportes automatizados en RMarkdown
+
+<!-- your comment -->
 
 ## Primeros pasos 
 
@@ -38,7 +39,7 @@ Para escribir la misma ecuación en una linea independiente, se usa el signo `$$
 
 $$y_{i} = \alpha + \beta_{1}x_{i} + \beta_{2}x^{2}_{i} + \epsilon_{i}$$
 
-$$e = m \times c^2 + x_{j}$$ Hola Julio
+$$e = m \times c^2$$ Hola clase
 
 $\lim\limits_{x \to \infty} \exp(-x) = 0$
 
@@ -89,7 +90,7 @@ datos_chile <- datos_chile %>% drop_na()
 promedio <- mean(datos_chile$income, na.rm = T)
 ```
 
-Como muestra nuestro análisis el promedio de ingreso es de `r round(promedio,0)`. Por último, si queremos NO mostrar el código (`echo = FALSE`), SI evaluarlo (`eval = FALSE`), PERO NO se mostrar los resultados  (`results = "hide"`), escribimos:
+Como muestra nuestro análisis el promedio de ingreso es de `r round(promedio,0)`. Por último, si queremos NO mostrar el código (`echo = FALSE`), SI evaluarlo (`eval = TRUE`), PERO NO se mostrar los resultados  (`results = "hide"`), escribimos:
 
 ```{r, echo = FALSE, eval = TRUE, results = "hide"}
 datos_chile <- datos_chile %>% drop_na()
@@ -122,5 +123,5 @@ knitr::kable(type="html")
 Mis datos son estos:
 
 ```{r, echo=FALSE, eval=TRUE, message=FALSE}
-datos_chile %>%  head() %>% knitr::kable(type="tex")
+datos_chile %>% head() %>% knitr::kable(type="tex")
 ```
