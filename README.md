@@ -94,7 +94,7 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 - Asignación Tarea 2: [`[Tarea 2]`](homework/t_2.pdf) [`[Tarea 2.Rmd]`](homework/t_2.Rmd) [`[Respuestas Tarea 2]`](homework/t_2_answers.pdf) [`[Respuestas Tarea 2.Rmd]`](homework/t_2_answers.Rmd)
 - Asignación Tarea 3: [`[Tarea 3]`](homework/t_3.pdf) [`[Tarea 3.Rmd]`](homework/t_3.Rmd)[`[Datos IPC]`](homework/ipc.csv) [`[Respuestas Tarea 3]`](homework/t_3_answers.pdf) [`[Respuestas Tarea 3.Rmd]`](homework/t_3_answers.Rmd)
 - Asignación Tarea 4: [`[Tarea 4]`](homework/t_5.pdf)
-- Asignación Tarea 5: 
+- Asignación Tarea 5: [`[Tarea 5]`](homework/t_4.pdf)
 
 
 #### Trabajo Final
