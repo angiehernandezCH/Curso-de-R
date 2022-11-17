@@ -3,7 +3,7 @@ params:
    new_title: "My Title!"
 title: "`r params$new_title`"
 author: "Mauricio Bucca"
-date: "10 de Diciembre 2020"
+date: "17 de Noviembre 2022"
 output:
   word_document: default
 

@@ -6,7 +6,6 @@ filename <- paste0(dirresults,"table_des1.tex")
 
 essdata_sub %>% group_by(cntry) %>%  
 	dplyr::summarise(across(c("eisced", "age"), list(mean= ~ mean(.x, na.rm=T), sd= ~ sd(.x, na.rm=T)) )) %>%
-	as.data.frame() %>%
 	xtable() %>%
 	print(file=filename)
 
@@ -15,7 +14,7 @@ essdata_sub %>% group_by(cntry) %>%
   
 filename <- paste0(dirresults,"table_des2.txt") 
 
-essdata_sub %>% pivot_wider(names_from=cntry, values_from=c(eisced,age)) %>%
+essdata_sub %>% tidyr::pivot_wider(names_from=cntry, values_from=c(eisced,age)) %>%
   dplyr::select(eisced_DE:age_IT) %>%
     as.data.frame() %>%
     stargazer(type="text", out=filename)
@@ -26,7 +25,6 @@ essdata_sub %>% pivot_wider(names_from=cntry, values_from=c(eisced,age)) %>%
 
 jitter <- position_jitter(width = 1, height = 0.5)
 
-
 mi_figura <- essdata_sub %>% filter(age>30) %>% ggplot(aes(x=yrbrn, y=eisced, colour=gndr_string)) +
   geom_point(alpha=0.1, position = jitter) +
 	geom_smooth(method="lm",se=F) + 
@@ -34,8 +32,7 @@ mi_figura <- essdata_sub %>% filter(age>30) %>% ggplot(aes(x=yrbrn, y=eisced, co
     labs(x="año de nacimento", y="máxima educación alcanzada", colour="genero")
 
 filename <- paste0(dirresults,"mi_figura.pdf") 
-ggsave(filename, mi_figura, width = 25, height = 20, units = "cm")
-
+ggsave(filename, mi_figura, width = 25, height = 20, units = "cm") # guarda ggplot en archivo
 
 
 

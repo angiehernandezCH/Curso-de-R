@@ -6,23 +6,25 @@ cat("\014")
 rm(list = ls())
 
 # Carga paquetes
-library("haven")
-library("tidyverse")
-library("knitr")
-library("viridis")
-library("rmarkdown")
-library("stargazer")
-library("xtable")
-library("tinytex")
+
+library("pacman")
+p_load("haven",
+       "tidyverse",
+       "knitr",
+       "viridis",
+       "rmarkdown",
+       "stargazer",
+       "xtable",
+       "tinytex")
 
 ################################################# Directorios #################################################
 
 
 # Change the line below to set your own working directory
 
-folder <- "/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2021_2_data_analysis_r/repo/slides/class_16/workflow_adv/"
+folder <- "/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2022_2_data_analysis_r/repo/slides/class_16/workflow_adv/"
 dircode    <- paste0(folder,"code/") 
-dirdata 	<- paste0(folder,"data/") 
+dirdata 	 <- paste0(folder,"data/") 
 dirresults <- paste0(folder,"results/")
 
 
@@ -77,16 +79,15 @@ cat("================ ANÁLISIS DATOS ",i, " ==================") # Debugging fl
 	setwd(dircode)
 	source("5_analyses_bycountry.R")
 
-	# Reporte por país
+## Reporte por país
 
-	setwd(dircode)
-  	render(input = "6_reportes.Rmd",
-         output_file=paste0(dirresults,"reporte_", i, ".docx"),
-         params=list(new_title=paste("Reporte ", paises_nombres[which(paises==i)]))
-         )
+setwd(dircode)
+ 	render(input = "6_reportes.Rmd",
+        output_file=paste0(dirresults,"reporte_", i, ".docx"),
+        params=list(new_title=paste("Reporte ", paises_nombres[which(paises==i)]))
+        )
 
 }
-
 
 ############################################## Reporte por paises #################################################
 
