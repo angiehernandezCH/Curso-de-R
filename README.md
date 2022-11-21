@@ -99,7 +99,7 @@ El código que asigna aleatóriamente cada estudiante a un ayudante lo encuentra
 
 #### Trabajo Final
 
-- Asignación Trabajo final: 
+- Asignación Trabajo final: [`[HTML]`](https://mebucca.github.io/dar_soc4001/homework/tf#1)[`[.Rmd]`](homework/tf.Rmd)
 
 
 
