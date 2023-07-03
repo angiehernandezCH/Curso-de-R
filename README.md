@@ -13,7 +13,7 @@ clase tipo: T (téorica), P (práctica)
 
 Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El link de Zoom correspondiente a cada clase se encuentra en la tabla a continuación. Una vez realizada la clase el link a la reunión de Zoom será reemplazado por un link a la grabación de la clase. 
 
-[Calendario](https://docs.google.com/spreadsheets/d/1S1ngDY94FRySKpBsWdo9UfW57-RD3qan7BJJVJQ3Ugo/edit?usp=sharing)
+[Calendario]([https://docs.google.com/spreadsheets/d/1S1ngDY94FRySKpBsWdo9UfW57-RD3qan7BJJVJQ3Ugo/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1S1ngDY94FRySKpBsWdo9UfW57-RD3qan7BJJVJQ3Ugo/edit?usp=sharing))
 ---
 
 ## Cápsulas
