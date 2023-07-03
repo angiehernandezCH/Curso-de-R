@@ -13,35 +13,7 @@ clase tipo: T (téorica), P (práctica)
 
 Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El link de Zoom correspondiente a cada clase se encuentra en la tabla a continuación. Una vez realizada la clase el link a la reunión de Zoom será reemplazado por un link a la grabación de la clase. 
 
-| día    | fecha         | contenido                                                            | Funciones                                                     | link/grabación             | material                |
-|--------|---------------|----------------------------------------------------------------------|---------------------------------------------------------------|----------------------------|-------------------------|
-| martes | agosto 29     | Introducción a R base y Rstudio                                      | install.packages() library() setwd() c() seq() rep() sample() | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | agosto 31     | Introducción a R base y Rstudio                                      | install.packages() library() setwd() c() seq() rep() sample() | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | septiembre 5  | R base y bases de datos en R (CASEN 2020)                            | data.frame() list() summary() table() for() plot()            | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | septiembre 7  | R base y bases de datos en R (CASEN 2020)                            | data.frame() list() summary() table() for() plot()            | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | septiembre 12 | Workflow                                                             | todo lo anterior                                              | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | septiembre 14 | Workflow                                                             | todo lo anterior                                              | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| jueves | septiembre 21 | Ejercicio repaso                                                     | todo lo anterior                                              | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | septiembre 26 | tidyverse, pipes y funciones básicas con dplyr                       | readr() tibble() %>% arrange() select() filter()              | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | septiembre 28 | tidyverse, pipes y funciones básicas con dplyr                       | readr() tibble() %>% arrange() select() filter()              | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | octubre 3     | Creación y transformación de variables con dplyr                     | mutate() group_by() if_else() case_when()                     | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | octubre 5     | Creación y transformación de variables con dplyr                     | mutate() group_by() if_else() case_when()                     | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | octubre 10    | Resumen de datos agrupados y combinación de bases de datos con dyplr | summarise() group_by() _join()                                | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | octubre 12    | Resumen de datos agrupados y combinación de bases de datos con dyplr | summarise() group_by() _join()                                | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | octubre 17    | Transformación de datos anchos y largos con tidyr                    | pivot_longer() pivot_wider()                                  | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | octubre 19    | Transformación de datos anchos y largos con tidyr                    | pivot_longer() pivot_wider()                                  | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | octubre 24    | Datos faltantes con tidyr                                            | complete() fill() drop_na() replace_na()                      | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | octubre 26    | Datos faltantes con tidyr                                            | complete() fill() drop_na() replace_na()                      | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | octubre 31    | Iteración y automatización con purrr                                 | for() map() nest()                                            | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | noviembre 2   | Iteración y automatización con purrr                                 | for() map() nest()                                            | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | noviembre 7   | Visualización de datos con ggplot                                    | aes() geom_()                                                 | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | noviembre 9   | Visualización de datos con ggplot                                    | aes() geom_()                                                 | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | noviembre 14  | Visualización de datos con ggplot                                    | aes() geom_() theme() facet_() labs(                          | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | noviembre 16  | Ejercicio repaso                                                     | todo lo anterior                                              | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | noviembre 21  | Reportes automatizados con rmarkdown y knitr                         | todo lo anterior                                              | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-| jueves | noviembre 23  | Reportes automatizados con rmarkdown y knitr                         | todo lo anterior                                              | [`[G1]`] [`[G2]`] [`[G3]`] | [`[RScript]`]           |
-| martes | noviembre 28  | Workflow avanzado                                                    | todo lo anterior                                              | [`[Todos]`]                | [`[Slides]`] [`[.Rmd]`] |
-
+![Calendario](https://docs.google.com/spreadsheets/d/1S1ngDY94FRySKpBsWdo9UfW57-RD3qan7BJJVJQ3Ugo/edit?usp=sharing)
 ---
 
 ## Cápsulas
