@@ -12,7 +12,7 @@ Encuentra también aquí una presentación sobre el rol de `R` como *lingua fran
 Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El link de Zoom correspondiente a cada clase se encuentra en la tabla a continuación. Una vez realizada la clase el link a la reunión de Zoom será reemplazado por un link a la grabación de la clase. 
 
 
-| Tipo de Clase | Día          | Fecha  | Contenido                                                   | Material                                                                         | Grabación |
+| Día | Fecha         | Tipo  | Contenido                                                   | Material                                                                         | Grabación |
 |---------------|--------------|--------|-------------------------------------------------------------|----------------------------------------------------------------------------------|-----------|
 | Martes       | Agosto 29    | Teórica| Introducción a R base y Rstudio                             | `install.packages()` `library()` `setwd()` `c()` `seq()` `rep()` `sample()`      | -         |
 | Jueves       | Agosto 31    | Práctica| Introducción a R base y Rstudio                             | `install.packages()` `library()` `setwd()` `c()` `seq()` `rep()` `sample()`      | -         |
