@@ -4,24 +4,39 @@
     <title>Procesamiento avanzado de Bases de Datos en R</title>
     <meta charset="utf-8" />
     <meta name="author" content="  Mauricio Bucca  Profesor Asistente, Sociología UC" />
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/header-attrs-2.23/header-attrs.js"></script>
     <link rel="stylesheet" href="gentle-r.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Procesamiento avanzado de Bases de Datos en R
+]
+.subtitle[
 ## Introducción a bases de datos
+]
+.author[
 ### <br> Mauricio Bucca<br> Profesor Asistente, Sociología UC
+]
+.date[
 ### <a href="https://github.com/mebucca">github.com/mebucca</a>
+]
 
 ---
 
-layout: false
 
 
+
+class: inverse, center, middle
+
+
+
+#Introducción a bases de datos
+
+---
 ## Recapitulación
 &lt;br&gt;
 
@@ -48,7 +63,8 @@ layout: false
 class: fullscreen, left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Dataframes]
+.huge[#Data]
+.huge[#frames]
 
 ---
 
@@ -125,13 +141,13 @@ head(mydf)
 .pull-bottom[
 
 ```
-##   x  y z
-## 1 A  9 u
-## 2 B  1 x
-## 3 C  4 n
-## 4 A  2 c
-## 5 B 10 s
-## 6 C  8 z
+##   x y z
+## 1 A 9 g
+## 2 B 7 t
+## 3 C 4 x
+## 4 A 6 k
+## 5 B 5 h
+## 6 C 2 d
 ```
 ]
 
@@ -160,16 +176,16 @@ mydataframe &lt;- as.data.frame(mymatrix)
 
 ```
 ##       v1   v2 
-##  [1,] "86" "m"
-##  [2,] "5"  "c"
-##  [3,] "98" "y"
-##  [4,] "66" "x"
-##  [5,] "32" "p"
-##  [6,] "60" "q"
-##  [7,] "12" "l"
-##  [8,] "24" "v"
-##  [9,] "36" "o"
-## [10,] "56" "a"
+##  [1,] "76" "x"
+##  [2,] "11" "y"
+##  [3,] "50" "q"
+##  [4,] "78" "p"
+##  [5,] "58" "s"
+##  [6,] "68" "n"
+##  [7,] "44" "b"
+##  [8,] "92" "c"
+##  [9,] "85" "e"
+## [10,] "15" "h"
 ```
 ]
 
@@ -179,16 +195,16 @@ mydataframe &lt;- as.data.frame(mymatrix)
 
 ```
 ##    v1 v2
-## 1  86  m
-## 2   5  c
-## 3  98  y
-## 4  66  x
-## 5  32  p
-## 6  60  q
-## 7  12  l
-## 8  24  v
-## 9  36  o
-## 10 56  a
+## 1  76  x
+## 2  11  y
+## 3  50  q
+## 4  78  p
+## 5  58  s
+## 6  68  n
+## 7  44  b
+## 8  92  c
+## 9  85  e
+## 10 15  h
 ```
 ]
 
@@ -214,12 +230,12 @@ names(mydf)
 
 ```
 ##   group_string outcome_numeric letters_factor
-## 1            A               9              u
-## 2            B               1              x
-## 3            C               4              n
-## 4            A               2              c
-## 5            B              10              s
-## 6            C               8              z
+## 1            A               9              g
+## 2            B               7              t
+## 3            C               4              x
+## 4            A               6              k
+## 5            B               5              h
+## 6            C               2              d
 ```
 
 ---
@@ -327,8 +343,10 @@ mylist$data[1:2,2:3]
 class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Manipulación]
-.huge[#de datos]
+.huge[#Mani]
+.huge[#pulación]
+.huge[#de]
+.huge[#datos]
 
 
 ---
@@ -634,7 +652,8 @@ dim(data_chile[complete.cases(data_chile),])
 class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Funciones]
+.huge[#Fun]
+.huge[#ciones]
 .huge[#basales]
 
 ---
@@ -794,7 +813,6 @@ class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
 .huge[#Loops]
-.huge[#(adelanto)]
 
 ---
 
@@ -925,9 +943,8 @@ print(results)
 class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Visualización]
-.huge[#de]
-.huge[#datos]
+.huge[#Visual]
+.huge[#ización]
 
 ---
 
@@ -1053,21 +1070,22 @@ background-image: url("images/bicicleta.jpg")
 ![](images/stack-exchange-search.png)
 
 ---
-class: inverse, middle
-
-Presentación y código en GitHub: &lt;https://github.com/mebucca/dar_soc4001&gt;
-
----
 class: inverse, center, middle
 
-.huge[
-**Gracias!**
-]
+#Hasta la próxima clase
+##Gracias!
+
 
 &lt;br&gt;
 Mauricio Bucca &lt;br&gt;
 https://mebucca.github.io/ &lt;br&gt;
 github.com/mebucca
+
+
+
+
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -1117,6 +1135,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

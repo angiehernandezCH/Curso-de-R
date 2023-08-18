@@ -6,7 +6,7 @@ date: "[github.com/mebucca](https://github.com/mebucca)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["default","default-fonts","gentle-r.css"]
+    css: ["gentle-r.css","xaringan-themer.css"]
     df_print: default
     nature:
       ratio: 16:9
@@ -15,9 +15,27 @@ output:
       countIncrementalSlides: true
       slideNumberFormat: "%current%"
 editor_options: 
+  
   chunk_output_type: console
----
+---  
 
+
+class: inverse, center, middle
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(primary_color = "#F87F57", secondary_color = "#F8D057",
+                 background_color = "#f8f7f3",
+                 header_font_google = google_font("Archivo"),
+                 text_font_google   = google_font("Inconsolata"), 
+                 link_color="#2175D6"
+
+)
+```
+
+
+#Introducción al lenguaje R
+
+---
 ## Hoy hablaremos de ...
 
 - El universo R
@@ -51,7 +69,9 @@ layout: false
 class: fullscreen, left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Universo R]
+.huge[#Uni]
+.huge[#verso]
+.huge[#R]
 
 ---
 
@@ -82,18 +102,19 @@ background-image: url("images/typewriter.jpg")
 
 ---
 # R en el mercado de _data science_
-![R in the market](images/R_datascience.png)
+
+.center[![R in the market](images/R_datascience.png)]
 
 ---
 
 # R en la academia
 
-![R in the market](images/R_publications.png)
+.center[![R in the market](images/R_publications.png)]
 ---
 
 # Comunidad R
 
-![Rconf1](images/rum_milano.jpg)
+.center[![Rconf1](images/rum_milano.jpg)]
 ---
 
 # Comunidad R
@@ -102,7 +123,7 @@ background-image: url("images/typewriter.jpg")
 ---
 # Comunidad R
 
-![Rconf3](images/rstudio_confLA.jpg)
+.center[![Rconf3](images/rstudio_confLA.jpg)]
 
 ---
 
@@ -154,7 +175,7 @@ background-image: url("images/typewriter.jpg")
 
 ## La Consola R
 
-![Standard R Console](images/r-console.png)
+.center[![Standard R Console](images/r-console.png)]
 
 ---
 
@@ -166,7 +187,7 @@ background-image: url("images/typewriter.jpg")
 
 ## R Studio: vista personalizada
 
-![Personalized RStudio Console](images/Rstudio-mine.png)
+.center[![Personalized RStudio Console](images/Rstudio-mine.png)]
 
 ---
 
@@ -247,10 +268,9 @@ getwd()
 class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Fundamentos]
-.huge[#del]
-.huge[#lenguaje]
-.huge[#R]
+.huge[#Funda]
+.huge[#men]
+.huge[#tos]
 
 ---
 
@@ -339,8 +359,10 @@ my_fn2("usa R")
 class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Estructuras]
-.huge[#de datos]
+.huge[#Estruc]
+.huge[#turas]
+.huge[#de]
+.huge[#datos]
 
 ---
 
@@ -597,19 +619,20 @@ background-image: url("images/bicicleta.jpg")
 .huge[#preguntando]
 
 ---
+class:  middle, center
 
 ![](images/stack-exchange-search.png)
 ---
-class: inverse, middle
+class: inverse, middle, center
 
-Presentación y código en GitHub: <https://github.com/mebucca/dar_soc4001>
+###Presentación y código en GitHub: <https://github.com/mebucca/dar_soc4001>
 
 ---
 class: inverse, center, middle
 
-.huge[
-**Gracias!**
-]
+#Hasta la próxima clase
+##Gracias!
+
 
 <br>
 Mauricio Bucca <br>

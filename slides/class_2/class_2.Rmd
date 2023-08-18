@@ -6,7 +6,7 @@ date: "[github.com/mebucca](https://github.com/mebucca)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["default","default-fonts","gentle-r.css"]
+    css: ["gentle-r.css","xaringan-themer.css"]
     df_print: default
     nature:
       ratio: 16:9
@@ -15,11 +15,28 @@ output:
       countIncrementalSlides: true
       slideNumberFormat: "%current%"
 editor_options: 
+
   chunk_output_type: console
 ---
-layout: false
 
 
+
+class: inverse, center, middle
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(primary_color = "#4F94FF", secondary_color = "#9FE298",
+                 background_color = "#f8f7f3",
+                 header_font_google = google_font("Archivo"),
+                 text_font_google   = google_font("Inconsolata"), 
+                 link_color="#F8B057"
+
+)
+```
+
+
+#Introducción a bases de datos
+
+---
 ## Recapitulación
 <br>
 
@@ -46,7 +63,8 @@ layout: false
 class: fullscreen, left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Dataframes]
+.huge[#Data]
+.huge[#frames]
 
 ---
 
@@ -214,8 +232,10 @@ mylist$data[1:2,2:3]
 class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Manipulación]
-.huge[#de datos]
+.huge[#Mani]
+.huge[#pulación]
+.huge[#de]
+.huge[#datos]
 
 
 ---
@@ -409,7 +429,8 @@ dim(data_chile[complete.cases(data_chile),])
 class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Funciones]
+.huge[#Fun]
+.huge[#ciones]
 .huge[#basales]
 
 ---
@@ -503,7 +524,6 @@ class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
 .huge[#Loops]
-.huge[#(adelanto)]
 
 ---
 
@@ -593,9 +613,8 @@ print(results)
 class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Visualización]
-.huge[#de]
-.huge[#datos]
+.huge[#Visual]
+.huge[#ización]
 
 ---
 
@@ -721,21 +740,17 @@ background-image: url("images/bicicleta.jpg")
 ![](images/stack-exchange-search.png)
 
 ---
-class: inverse, middle
-
-Presentación y código en GitHub: <https://github.com/mebucca/dar_soc4001>
-
----
 class: inverse, center, middle
 
-.huge[
-**Gracias!**
-]
+#Hasta la próxima clase
+##Gracias!
+
 
 <br>
 Mauricio Bucca <br>
 https://mebucca.github.io/ <br>
 github.com/mebucca
+
 
 
 

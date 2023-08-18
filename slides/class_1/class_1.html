@@ -4,23 +4,38 @@
     <title>Procesamiento avanzado de Bases de Datos en R</title>
     <meta charset="utf-8" />
     <meta name="author" content="  Mauricio Bucca  Profesor Asistente, Sociología UC" />
-    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/header-attrs-2.23/header-attrs.js"></script>
     <link rel="stylesheet" href="gentle-r.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Procesamiento avanzado de Bases de Datos en R
+]
+.subtitle[
 ## Introducción al lenguaje R
+]
+.author[
 ### <br> Mauricio Bucca<br> Profesor Asistente, Sociología UC
+]
+.date[
 ### <a href="https://github.com/mebucca">github.com/mebucca</a>
+]
 
 ---
 
 
+
+class: inverse, center, middle
+
+
+
+#Introducción al lenguaje R
+
+---
 ## Hoy hablaremos de ...
 
 - El universo R
@@ -54,7 +69,9 @@ layout: false
 class: fullscreen, left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Universo R]
+.huge[#Uni]
+.huge[#verso]
+.huge[#R]
 
 ---
 
@@ -85,18 +102,19 @@ background-image: url("images/typewriter.jpg")
 
 ---
 # R en el mercado de _data science_
-![R in the market](images/R_datascience.png)
+
+.center[![R in the market](images/R_datascience.png)]
 
 ---
 
 # R en la academia
 
-![R in the market](images/R_publications.png)
+.center[![R in the market](images/R_publications.png)]
 ---
 
 # Comunidad R
 
-![Rconf1](images/rum_milano.jpg)
+.center[![Rconf1](images/rum_milano.jpg)]
 ---
 
 # Comunidad R
@@ -105,7 +123,7 @@ background-image: url("images/typewriter.jpg")
 ---
 # Comunidad R
 
-![Rconf3](images/rstudio_confLA.jpg)
+.center[![Rconf3](images/rstudio_confLA.jpg)]
 
 ---
 
@@ -157,7 +175,7 @@ background-image: url("images/typewriter.jpg")
 
 ## La Consola R
 
-![Standard R Console](images/r-console.png)
+.center[![Standard R Console](images/r-console.png)]
 
 ---
 
@@ -169,7 +187,7 @@ background-image: url("images/typewriter.jpg")
 
 ## R Studio: vista personalizada
 
-![Personalized RStudio Console](images/Rstudio-mine.png)
+.center[![Personalized RStudio Console](images/Rstudio-mine.png)]
 
 ---
 
@@ -271,10 +289,9 @@ getwd()
 class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Fundamentos]
-.huge[#del]
-.huge[#lenguaje]
-.huge[#R]
+.huge[#Funda]
+.huge[#men]
+.huge[#tos]
 
 ---
 
@@ -402,8 +419,10 @@ my_fn2("usa R")
 class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Estructuras]
-.huge[#de datos]
+.huge[#Estruc]
+.huge[#turas]
+.huge[#de]
+.huge[#datos]
 
 ---
 
@@ -472,7 +491,7 @@ sample(1:50,5)
 ```
 
 ```
-## [1] 44 50 20 21 12
+## [1] 24 14 26 40 23
 ```
 
 ```r
@@ -481,7 +500,7 @@ sample(1:50,5)
 ```
 
 ```
-## [1] 50 29 22 12 19
+## [1] 50 48 38 36 13
 ```
 
 ---
@@ -857,19 +876,20 @@ background-image: url("images/bicicleta.jpg")
 .huge[#preguntando]
 
 ---
+class:  middle, center
 
 ![](images/stack-exchange-search.png)
 ---
-class: inverse, middle
+class: inverse, middle, center
 
-Presentación y código en GitHub: &lt;https://github.com/mebucca/dar_soc4001&gt;
+###Presentación y código en GitHub: &lt;https://github.com/mebucca/dar_soc4001&gt;
 
 ---
 class: inverse, center, middle
 
-.huge[
-**Gracias!**
-]
+#Hasta la próxima clase
+##Gracias!
+
 
 &lt;br&gt;
 Mauricio Bucca &lt;br&gt;
@@ -928,6 +948,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
