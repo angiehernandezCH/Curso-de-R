@@ -13,8 +13,8 @@ Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El li
 
 | Fecha      | Contenido                                                   | Material  | Grabación |
 |------------|-------------------------------------------------------------|-----------|---------- |
-| Mar Ago 29 | Introducción a R base y Rstudio                             | -         |          |
-| Jue Ago 31 | Introducción a R base y Rstudio                             | -         |          |
+| Mar Ago 29 | Introducción a R base y Rstudio                             | [`[Slides]`](https://mebucca.github.io/dar_soc4001/slides/class_1/class_1#1) [`[.Rmd]`](slides/class_1/class_1.Rmd)          |          |
+| Jue Ago 31 | Introducción a R base y Rstudio                             | [`[Slides]`](https://mebucca.github.io/dar_soc4001/slides/class_2/class_2#1) [`[.Rmd]`](slides/class_2/class_2.Rmd)          |          |
 | Mar Sep 5  | R base y bases de datos en R                                | -         |          |
 | Jue Sep 7  | R base y bases de datos en R                                | -         |          |
 | Mar Sep 12 | Workflow                                                    | -         |          |
