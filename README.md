@@ -39,15 +39,25 @@ Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El li
 | Jue Nov 23 | Reportes automatizados con rmarkdown y knitr                | -         |          |
 | Mar Nov 28 | Workflow avanzado                                           | -         |          |
 
+---
+## Cápsulas
+
+- Descargar e instalar `R`: [`[Cápsula]`](): 
+
 
 ---
 ## Evaluaciones 
 
 
----
-## Cápsulas
+| Asignación     | Entrega      | Material |
+|----------------|--------------|----------|
+| Tarea 1        | septiembre 5 | septiembre 12 |          |
+| Tarea 2        | septiembre 26| octubre 3     |          |
+| Tarea 3        | octubre 10   | octubre 17    |          |
+| Tarea 4        | octubre 24   | noviembre 2   |          |
+| Tarea 5        | noviembre 9  | noviembre 21  |          |
+| Trabajo final  | noviembre 21 | diciembre 7   |          |
 
-- Descargar e instalar `R`: [`[Cápsula]`](): 
 
 ---
 ## Grupos
