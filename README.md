@@ -41,7 +41,6 @@ Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El li
 | Martes       | Noviembre 28 | Teórica| Workflow avanzado                                           | todo lo anterior                                                                 | -         |
 
 
-
 ---
 
 ## Cápsulas
