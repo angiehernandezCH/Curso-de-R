@@ -11,33 +11,35 @@ Encuentra también aquí una presentación sobre el rol de `R` como *lingua fran
 
 Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El link de Zoom correspondiente a cada clase se encuentra en la tabla a continuación. Una vez realizada la clase el link a la reunión de Zoom será reemplazado por un link a la grabación de la clase. 
 
-| Fecha      | Contenido                                                   | Material  | Grabación |
-|------------|-------------------------------------------------------------|-----------|---------- |
-| Mar Ago 29 | Introducción a R base y Rstudio                             | [`[Slides]`](https://mebucca.github.io/dar_soc4001/slides/class_1/class_1#1) [`[.Rmd]`](slides/class_1/class_1.Rmd)          |          |
-| Jue Ago 31 | Introducción a R base y Rstudio                             | [`[Slides]`](https://mebucca.github.io/dar_soc4001/slides/class_2/class_2#1) [`[.Rmd]`](slides/class_2/class_2.Rmd)          |          |
-| Mar Sep 5  | R base y bases de datos en R                                | -         |          |
-| Jue Sep 7  | R base y bases de datos en R                                | -         |          |
-| Mar Sep 12 | Workflow                                                    | -         |          |
-| Jue Sep 14 | Workflow                                                    | -         |          |
-| Jue Sep 21 | Ejercicio repaso                                            | -         |          |
-| Mar Sep 26 | Tidyverse, pipes y funciones básicas con dplyr              | -         |          |
-| Jue Sep 28 | Tidyverse, pipes y funciones básicas con dplyr              | -         |          |
-| Mar Oct 3  | Creación y transformación de variables con dplyr            | -         |          |
-| Jue Oct 5  | Creación y transformación de variables con dplyr            | -         |          |
-| Mar Oct 10 | Resumen de datos agrupados y combinación de bases con dyplr | -         |          |
-| Jue Oct 12 | Resumen de datos agrupados y combinación de bases with dyplr| -         |          |
-| Mar Oct 17 | Transformación de datos anchos y largos con tidyr           | -         |          |
-| Jue Oct 19 | Transformación de datos anchos y largos con tidyr           | -         |          |
-| Mar Oct 24 | Datos faltantes con tidyr                                   | -         |          |
-| Jue Oct 26 | Datos faltantes con tidyr                                   | -         |          |
-| Jue Nov 2  | Iteración y automatización con purrr                        | -         |          |
-| Mar Nov 7  | Visualización de datos con ggplot                           | -         |          |
-| Jue Nov 9  | Visualización de datos con ggplot                           | -         |          |
-| Mar Nov 14 | Visualización de datos con ggplot                           | -         |          |
-| Jue Nov 16 | Ejercicio repaso                                            | -         |          |
-| Mar Nov 21 | Reportes automatizados con rmarkdown y knitr                | -         |          |
-| Jue Nov 23 | Reportes automatizados con rmarkdown y knitr                | -         |          |
-| Mar Nov 28 | Workflow avanzado                                           | -         |          |
+
+| Fecha             | Contenido                                                      | Material                                                                                                                                                  |
+|-------------------|---------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| mar ago 29        | Introducción a R base y Rstudio                               | [`[Slides]`](https://mebucca.github.io/dar_soc4001/slides/class_1/class_1#1) [`[.Rmd]`](slides/class_1/class_1.Rmd)                                        |
+| jue ago 31        | Introducción a R base y Rstudio                               | [`[Slides]`](https://mebucca.github.io/dar_soc4001/slides/class_2/class_2#1) [`[.Rmd]`](slides/class_2/class_2.Rmd)                                        |
+| mar sep 5         | R base y bases de datos en R (CASEN 2020)                     |                                                                                                                                                          |
+| jue sep 7         | R base y bases de datos en R (CASEN 2020)                     |                                                                                                                                                          |
+| mar sep 12        | Workflow                                                      |                                                                                                                                                          |
+| jue sep 21        | Workflow                                                      |                                                                                                                                                          |
+| mar sep 26        | `tidyverse`, pipes y funciones básicas con `dplyr`            |                                                                                                                                                          |
+| jue sep 28        | `tidyverse`, pipes y funciones básicas con `dplyr`            |                                                                                                                                                          |
+| mar oct 3         | Creación y transformación de variables con `dplyr`            |                                                                                                                                                          |
+| jue oct 5         | Creación y transformación de variables con `dplyr`            |                                                                                                                                                          |
+| mar oct 10        | Resumen de datos agrupados y combinación de bases de datos con `dyplr` |                                                                                                                                                          |
+| jue oct 12        | Resumen de datos agrupados y combinación de bases de datos con `dyplr` |                                                                                                                                                          |
+| mar oct 17        | Transformación de datos anchos y largos con `tidyr`           |                                                                                                                                                          |
+| jue oct 19        | Transformación de datos anchos y largos con `tidyr`           |                                                                                                                                                          |
+| mar oct 24        | Datos faltantes con `tidyr`                                   |                                                                                                                                                          |
+| jue oct 26        | Datos faltantes con `tidyr`                                   |                                                                                                                                                          |
+| jue nov 2         | Iteración y automatización con `purrr`                        |                                                                                                                                                          |
+| mar nov 7         | Iteración y automatización con `purrr`                        |                                                                                                                                                          |
+| jue nov 9         | Visualización de datos con `ggplot`                           |                                                                                                                                                          |
+| mar nov 14        | Visualización de datos con `ggplot`                           |                                                                                                                                                          |
+| jue nov 16        | Visualización de datos con `ggplot`                           |                                                                                                                                                          |
+| mar nov 21        | Reportes automatizados con `rmarkdown` y `knitr`              |                                                                                                                                                          |
+| jue nov 23        | Reportes automatizados con `rmarkdown` y `knitr`              |                                                                                                                                                          |
+| mar nov 28        | Workflow avanzado                                             |                                                                                                                                                          |
+
+
 
 ---
 ## Cápsulas
