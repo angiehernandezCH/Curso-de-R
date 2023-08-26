@@ -1,398 +1,250 @@
-# Script clase 1
 
-## Primeros pasos en R: 
+# Descargar en la base de datos en formato SPSS desde aquí:
+#http://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-en-pandemia-2020
+# Renombrar el archivo como "Casen_2020"
 
-"Hello world" # texto
-log(4 + exp(0)) # número
-4==7 # evaluación lógica
+# Establecer directory de trabajo (cambiar a la ubicación en computador donde guardaron la base de datos)
 
+getwd()
+setwd("/Users/Mauricio/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2022_2_data_analysis_r/repo/slides/class_3")
 
-## Packages
-install.packages("tidyverse") # instala paquete
-library("tidyverse") # carga paquete
+# Importar datos Casen 2020 desde formato .sav (SPSS). Requiere paquete "foreign" para leer archivos .sav
 
-?tidyverse # ayuda paquetes
+install.packages("foreign")
+library("foreign")
 
-## Working directory
+?foreign
+??foreign
+data_casen <-  read.spss("Casen_2020.sav", to.data.frame=TRUE)
+?read.spss
 
-# fija directorio de trabajo
-setwd("ubicación de tu carpeta")
-getwd() # chequea directorio de trabajo
+# Visualizar datos (muchos = display en pantalla es desastrozo)
 
-## Operadores básicos
+data_casen
 
-2 + 2       # suma
-2/2         # división
-2*2         # multiplicación
-2^2         # exponente
-sqrt(2)     # raiz cuadrada
-log(2)      # log
-exp(2)      # exponencial
-2 == 2      # evaluación lógica (2 igual a 2?)
-42 >= 2     # evaluación lógica (42 mayor o igual que 2?)
-2 <= 42     # evaluación lógica (2 menor o igual que 42?)
-2 != 42     # evaluación lógica (2 distinto de 42?)
-(2=1 | 2=2)  # evaluación lógica (2 igual a 1 o 2 igual que 2 ?)
+dim(data_casen)
+head(data_casen)
+tail(data_casen)
+attributes(data_casen)
+str(data_casen)
+summary(data_casen)
 
 
-raiz2 <- sqrt(2) # crea objeto que contiene resultado de operación matemática
+# Seleccionar set de datos de interés
 
+vars <- c("comuna", "sexo", "edad", "esc", "educ" ,"yautcor", "ytotcor", "pobreza")
 
-##Símbolos básicos
+subdata_casen <- data_casen[,vars]
 
-x <- 1        # operador de asignación
-x = 1         # igual, operador de asignación
-x == 1        # evaluación lógica
-y <- sample(1:100,10); y  # muestra de 10 valores seleccionados aleatoriamente entre 1 y 100
-y <- y[c(1,6,3)]   # selection de elementos en posición 1,6,3 y re-escribe y
-sort(y)       # ordena de mayor a menor
-rm(x)         # remover un objeto   
+dim(subdata_casen)
+head(subdata_casen)
+str(subdata_casen)
 
+# Summary
 
-## Funciones
+summary(subdata_casen)
 
 
-# funcion que suma todo los elementos de un vector y luego divide por la cantidad elemento: promedio
+# Transformar variables (ingresos en miles de pesos). Reemplaza la variable original
 
-mi_promedio <- function(x) {
-  suma <- sum(x)
-  n    <- length(x)
-  return(suma/n)
-}
+subdata_casen$yautcor <- subdata_casen$yautcor/1000
+subdata_casen$ytotcor_nueva <- subdata_casen$ytotcor/1000
 
-mi_promedio(y) # evalua función con y como input
-  
-y2 <- sample(1:1000, 50) # creo otro vector y2
+# Crea variable nueva
 
-mi_promedio(y2) # evalua función con y2 como input
+table(subdata_casen$pobreza)
 
+subdata_casen$pobre <- 1
+subdata_casen$pobre[subdata_casen$pobreza=="No pobres"] <- 0
+subdata_casen$pobre[is.na(subdata_casen$pobreza)] <- NA
 
 
-## Vectores
+# tablas
 
-x <- c(1, 2, 3, 4, 5)
-y <- c(6:10)
-z <- c(x,y); z
+table(subdata_casen$pobreza,subdata_casen$pobre)
 
+prop.table(table(subdata_casen$pobreza))
 
-## Construcción de vectores
+# lo mismo que arriba pero guardando el objecto previamente
+mitable <- table(subdata_casen$pobreza)
+prop.table(mitable)
 
-# repetición de un elemento
-rep(3,5)
 
-# sequencia desde, hasta, 'by"
-seq(4,12,by=2)
+# tabla con proporciones
 
-# sequencia desde, largo n
-seq(4,9,length.out = 5)
+pov_educ <- table(subdata_casen$educ,subdata_casen$pobreza)
 
-# muestra aleatoria dentro de un rango
-sample(1:50,5)
+rows <- nrow(pov_educ) 
+pov_educ <- pov_educ[-rows,] # excluyendo la última fila ("No Sabe")
 
-# otra muestra aleatoria dentro de un rango
-sample(1:50,5)
+prop.table(pov_educ) # % celda (tabla suma a 100)
+prop.table(pov_educ, margin=1) # % fila (filas suman a 100)
 
 
-## Operaciones con vectores:
 
-x <- c(1,5,2)
-y <- c(1,2,3)
+########################### Ejercicio 1 ##############################
 
-# adición
-x + y
+# Contruir una tabla de contingencia con la distribución educacional 
+# para cada categoría de pobreza
 
-# multiplicación/division por una contante (elemento-por-elemento)
-y/2
+prop.table(pov_educ, margin=2) # % columna (columnas suman a 100)
 
-# multiplicación/division por otro vector (elemento-por-elemento)
-x*y
-
-
-## Matrices: juntando vectores con igual dimensión
-
-# column-bind
-cbind(x,y)   # matriz 3 x 2
-
-# row-bind
-rbind(x,y)   # matriz 2 x 3
-
-
-## Matrices: función 'matrix'
-
-x <- 1:10
-
-matrix(x, nrow=2, ncol=5, byrow=TRUE)
-
-matrix(x, nrow=2, ncol=5, byrow=FALSE)
-
-
-## Strings (texto)
-
-mystr <- "texto"; mystr
-paste(mystr, "!!", sep="")
-
-
-
-## Factors
-
-x <- rep(1:3, 2); x # "replicate" secuencia 1:3 dos veces
-
-factor_x <- factor(x, levels=c(1, 2, 3), labels=c("A","B","C")); factor_x
-
-
-## Reordernar etiquetas de factores 
-  
-factor_x <- factor(x, levels=c(2, 1, 3), labels=c("B","C","A")); factor_x
-
-
-
-## Extraer valores y etiquetas de factores
-
-as.numeric(factor_x)
-
-as.character(factor_x)
-
-
-
-## Construir un data frame
-
-
-mydf <- data.frame(x=rep(c("A","B","C"),2),
-                   y=sample(1:10,size=6), 
-                   z=factor(sample(letters,size=6)))
-head(mydf)
-
-
-## Construir un data frame a partir de una matriz 
-
-# vectores
-v1 <- sample(1:100,10)
-v2 <- sample(letters,10)
-
-# matriz a partir de vectores
-mymatrix <- cbind(v1,v2)
-
-# transformar una matriz en una base de datos
-mydataframe <- as.data.frame(mymatrix) 
-
-
-## Dar nombre a columnas y filas
-
-# asigna nombre a columnas (en order)
-colnames(mydf) <- c("group_string","outcome_numeric","letters_factor") 
-names(mydf)
-
-
-# Asigna nombre a filas: rownames(mydf)  
-
-## Cargando datos
-setwd("ubicación de mi archivo")
-mydata <- read.csv('filename.csv', header=T)
-
-
-## Guardando datos
-setwd("ubicación donde quiero guarda mi archivo")
-write.csv(mydata, 'filename.csv')
-
-
-## Cargar y guardar data frames desde un paquete
-
-library("datasets")
-data(morley) # carga datos en la memoria
-speed_of_light <- morley # asigna datos a un objeto de R
-head(speed_of_light)
-
-
-## Listas
-mylist <- list(year=1879, name="Michelson Speed of Light Data", data=head(speed_of_light)); mylist
-
-## Acceder a elementos de una lista
-
-mylist[[1]]
-mylist$data[1:2,2:3]
-
-# Herramientas manejo bases de datos
-
-# Cargamos los datos de Chile
-library("carData")
-data("Chile") # datos "flotante"
-data_chile <- Chile; # crea dataframe
-rm(Chile) # remueve "flotante"
-head(data_chile) # muestra 6 primeras observaciones
-dim(data_chile)
-
-## Seleccionar filas y columnas
-data_chile[3,8]
-
-# todas las columnas de la fila 4
-head(data_chile[4,])
-
-# todas las filas de la columna 6
-head(data_chile[,6]) 
-
-
-## Más formas de seleccionar filas y columnas
-
-data_chile[-1,]                   # excluye primera fila
-data_chile[, -(2:4)]              # excluye columnas 2 a 4
-data_chile[, c("income","vote")]  # solo vars income and vote
-data_chile[c(1,5),'vote']         # variable voto para observaciones 1 y 5
-data_chile$vote                   # selecciona col vote
-
-
-## Filtro de datos
-jovenes_pinochetistas <- data_chile[data_chile$age <= 35 & data_chile$vote=="Y",]
-head(jovenes_pinochetistas,15)
-
-
-## Creación de nuevas variables y recodificación
-
-data_chile$year <- 1988
-data_chile$birthyear <- data_chile$year -  data_chile$age
-
-data_chile$age_group <- NA
-data_chile$age_group[data_chile$age <=35] <- "Young"
-data_chile$age_group[data_chile$age > 35] <- "Old"
-
-
-## Manipulación de valores perdidos
-
-
-x <- c(1, NA, 2, 7, 8)
-y <- c(NA, 1, 4, 7, 2)
-df <- cbind(x, y)
-
-is.na(x)  
-x[!is.na(x)]  
-df[complete.cases(df),] 
-
-  
-## Manipulación de valores perdidos
-dim(data_chile)
-
-# cuenta no NA para una variable
-sum(!is.na(data_chile$vote))
-
-# datos completos
-dim(data_chile[complete.cases(data_chile),])
-
-#Funciones basales
-
-## Resumen
-summary(data_chile[,c("age","income","vote")])
-
-## Estructura 
-str(data_chile)
-
-## Atributos
-attributes(data_chile[1:10,1:5])
-
-## Tablas de contingencia 
-mytable <- table(data_chile$sex, data_chile$vote)
-mytable
-
-prop.table(mytable)
-prop.table(mytable,margin=1)
-prop.table(mytable,margin=2)
+######################################################################
 
 
 ## Funciones básicas para vectores y variables
 
-mean(data_chile$income)   # promedio
-sd(data_chile$income)     # desviación estándar
-max(data_chile$income)    # máximo
-which.max(data_chile$income) # posición de valor máximo 
-min(data_chile$income)    # mínimo
-which.min(data_chile$income) # posición de valor mínimo 
-rank(data_chile$income)   # ranking de valores
-median(data_chile$income) # mediana
-range(data_chile$income)  # rango
-rev(data_chile$income)    # revertir elementos
-unique(data_chile$income) # lista de elementos únicos
-length(data_chile$income) # largo
+sum(subdata_casen$yautcor, na.rm = TRUE)   # suma
+mean(subdata_casen$yautcor, na.rm = TRUE)   # promedio
+sd(subdata_casen$yautcor)     # desviación estándar
+max(subdata_casen$yautcor,na.rm = TRUE)    # máximo
+which.max(subdata_casen$yautcor) # posición de valor máximo 
+min(subdata_casen$yautcor)    # mínimo
+which.min(subdata_casen$yautcor) # posición de valor mínimo 
+rank(subdata_casen$yautcor)   # ranking de valores
+median(subdata_casen$yautcor) # mediana
+range(subdata_casen$yautcor, na.rm = TRUE)  # rango
+unique(subdata_casen$sexo) # lista de elementos únicos
+length(subdata_casen$yautcor) # largo
+
+
+# Quantiles
+
+quantile(subdata_casen$yautcor, p=0.5, na.rm = TRUE) # median
+quantile(subdata_casen$yautcor, p=c(.2,.4,.6,.8), na.rm = TRUE) # calculando quintiles de ingreso
+quantile(subdata_casen$yautcor, p=seq(0,1,by=0.1), na.rm = TRUE) # deciles
+quantile(subdata_casen$yautcor, p=seq(0,1,by=0.05), na.rm = TRUE) # veintiles
+
+
+# Funciones de paquetes
+
+install.packages("ineq")
+library("ineq")
+?ineq
+??ineq
+
+?Gini
+Gini(subdata_casen$yautcor, corr = TRUE, na.rm = TRUE)
+
+# Funciones propias 
+
+qs <- quantile(subdata_casen$yautcor, p=c(.1,.9), na.rm = TRUE); qs
+qs[1]; qs[2]
+# función que calcula ratio 90-10 (ratio entre ingreso del decil 9 y el decil 1)
+
+
+
+
+########################### Ejercicio 2 ##############################
+
+# Contruir una función llamada "ratio9010" que calcule la razon entre
+# el percentil 90 y el percentil 10 de una variable x. Recuenda omitir
+# valors perdidos
+
+
+ratio9010 <- function(x){
+  qq <- quantile(x, p=c(.1,.9), na.rm = TRUE)
+  ratio <- qq[2]/qq[1]
+  names(ratio) <- "r9010"
+  return(ratio)
+} 
+
+ratio9010(subdata_casen$yautcor)
+ratio9010(subdata_casen$esc)
+
+
+######################################################################
+
+
+# Filtrar casos y aplicar nuestra función a un subconjunto de datos
+
+ratio9010(subdata_casen$yautcor[subdata_casen$comuna=="Iquique"])
+ratio9010(subdata_casen$yautcor[subdata_casen$comuna=="Vitacura"])
+
+Gini(subdata_casen$yautcor[subdata_casen$comuna=="Iquique"], corr = FALSE, na.rm = TRUE)
+Gini(subdata_casen$yautcor[subdata_casen$comuna=="Vitacura"], corr = FALSE, na.rm = TRUE)
+
 
 
 ## for loops
 
-for(i in 1:10){
-  root2 =  sqrt(i)
-  print(root2)
+# iteración: para cada valor de i calcula: i + (i-1), lo almacena en objeto x y lo imprime.
+# por ejemplo. Si i=5 entonces x= 5 + 4 = 9
+
+for (i in 1:10) {
+  x <- i + (i-1)
+  print(x)
 }
 
-mynumbers <- matrix(NA, nrow= 10,ncol = 2)
 
-for(i in 1:10){
-  root2 =  sqrt(i)
-  mynumbers[i,1] <- i
-  mynumbers[i,2] <- root2
-}
-print(mynumbers)
+# iteración: define un conjunto de comunas, calcula ratio 90-10 de ingresos para cada comuna y guarda resultado en un vector.
 
-list_words <- c("a","b","c","d")
+table(subdata_casen$comuna)
 
-z <- NULL
-for (i in list_words) {
-  x <- paste(i,"!!", sep="")
-  z <- c(z,x)
-}    
-print(z)
+comunas <- c("Arica", "Providencia", "Macul") # lista de comunas
+ratios <- rep(NA,length(comunas)) # crea vector vacio con el mismo largo que el numero de comunas. Aca guardaremos resultados
 
+pos=1 # este valor se usará para definir posición de cada resultado en vector "ratios"
 
-## Una aplicaciónes de loops al trabajo con bases de datos
+for (j in comunas) {
 
-incomes <- sort(unique(Chile$income))
-results <- NULL
-  
-for (i in incomes) {
-  subsample <- Chile[Chile$income==i,]
-  props <- prop.table(table(subsample$vote))["N"]
-  results <- c(results,props)
+  ratios[pos] <- ratio9010(subdata_casen$yautcor[subdata_casen$comuna==j])
+  pos = pos + 1
+
 }
 
-print(incomes)
-print(results) 
+ratios
+
+
+########################### Ejercicio 3 ##############################
+
+
+# Usando un loop calcula promedio de ingreso, ratio9010 y Gini para cada comuna y lo almacena en una matriz
+# pon comunas en las filas y las tres medidas (promedio, ratio9010 y Gini) en las columnas.
+# para obtener lista y numbero de comunas usa el siguiente código:
+
+comunas  <- unique(subdata_casen$comuna)
+ncomunas <- length(comunas)
+
+
+resultados <- matrix(NA, nrow = ncomunas, ncol = 3 ) 
+
+row=1
+for(i in comunas){
+  resultados[row,1] <- mean(subdata_casen$yautcor[subdata_casen$comuna==i], na.rm = T)
+  resultados[row,2] <- ratio9010(subdata_casen$yautcor[subdata_casen$comuna==i])
+  resultados[row,3] <- Gini(subdata_casen$yautcor[subdata_casen$comuna==i], corr = FALSE, na.rm = TRUE)
+  row = row + 1
+}
+
+######################################################################
+
+
+# agrega nombre filas y columnas y transforma 
+# matriz en base de datos
+
+
+colnames(resultados) <- c("promedio","r9010","gini")
+rownames(resultados) <- comunas
+resultados
+resultados <- as.data.frame(resultados)
 
 
 #Visualización
 
+x <- seq(1:100)
+y <- sin(x)
+plot(x,y, type="l")
+
+
 ## Scatterplots
-plot(log(incomes), results, 
-   xlab="log(ingresos)", 
-   ylab="% voto NO",
+
+plot(resultados$promedio, resultados$gini, 
+   xlab="Ingreso autonomo promedio en comuna", 
+   ylab="Indice de Gini",
    type="p",  
    pch=16, 
-   ylim = c(0.25,0.45), 
-   col="red")
+   col="blue")
 
-
-## Lineas
-plot(log(incomes), results, 
-     xlab="log(ingresos)", 
-     ylab="% voto NO", 
-     type="l", 
-     ylim = c(0.25,0.45), col="red")
-
-        
-## Lineas y puntos
-plot(log(incomes), results, 
-     xlab="log(ingresos)", 
-     ylab="% voto NO", 
-     type="l", 
-     ylim = c(0.25,0.45), col="red")
-
-points(log(incomes), results, 
-       col="blue", pch=16) 
-
-        
-## Histogramas
-par(mar=c(5,4,1,1), bg='white')
-hist(Chile$income, main="", 
-     xlab="Income",
-     col="orange")
-
-        
-## Bar plots
-barplot(table(Chile$education),
-        ylim = c(0,2000),
-        col="purple")
+abline(lm(resultados$gini ~ resultados$promedio))
 
