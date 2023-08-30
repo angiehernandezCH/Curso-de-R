@@ -62,8 +62,32 @@ Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El li
 
 
 ---
-## Grupos
+## Grupos Ayudantía
 
+| Nombre                 | Apellido(s)          | Dirección de correo                 | Ayudante  |
+|------------------------|----------------------|-------------------------------------|-----------|
+| Cristina Natalia Alicia | Arenas Cembrano      | cristina.arenas.cembrano@gmail.com  | Roberto   |
+| Consuelo Esperanza     | Avilés Urzúa         | consueloaviles.urzua@gmail.com      | Matías    |
+| Daleskha Paola         | Candel Sarmiento     | daleskhacs8@gmail.com               | Sebastián |
+| Angie                  | Carrasco Hernández   | angiehernandez@uc.cl                | Roberto   |
+| Emilio Alfredo         | Chahuán Espinoza     | emiliochahuan97@gmail.com           | Matías    |
+| Cristina Andrea        | Cousinard Zepeda     | cacousinard@uc.cl                   | Sebastián |
+| Isidora Fernanda Sofia | Delhin Brayovic      | isidora.delhin@gmail.com            | Roberto   |
+| Felipe Andrés          | González Jorquera    | felipegjorquera@gmail.com           | Matías    |
+| Karla                  | González Palominos   | kagonzalep@uahurtado.cl             | Sebastián |
+| Michael James          | Johnson Poblete      | micjamesjohnson@gmail.com           | Roberto   |
+| Verónica Francisca     | Krause Rodas         | franciscakrause@gmail.com           | Matías    |
+| Gabriela del Carmen    | Kreft Vega           | gabrielakreft@gmail.com             | Sebastián |
+| María Catalina         | Lyon Karstulovici    | catalina@fundacionkiri.cl           | Roberto   |
+| Daniel Ignacio         | Montabone Aravena    | daniel_montabone@outlook.cl         | Matías    |
+| Andres                 | Necochea Vega        | andres.necochea.v@gmail.com         | Sebastián |
+| Ximena del Carmen      | Riesco Muñoz         | xriescom@udd.cl                     | Roberto   |
+| Andrea                 | Sáez Speleta         | ass.personal@gmail.com              | Matías    |
+| Bianca Elizabeth       | Sánchez Garay        | bianca.garay@gmail.com              | Sebastián |
+| Ana Maria              | Surhoff Saavedra     | ana.surhoffs@gmail.com              | Roberto   |
+| Daniela Alessandra     | Tapia Segovia        | dltapia@uc.cl                       | Matías    |
+| Francisco Alejandro    | Varas Ganzó          | varasefrancisco@gmail.com           | Sebastián |
+| Victoria Eugenia       | Wilson Coddou        | vewilson@uc.cl                      | Roberto   |
 
 
 #### Lectura recomendada
