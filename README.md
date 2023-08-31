@@ -90,6 +90,15 @@ Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El li
 | Victoria Eugenia       | Wilson Coddou        | Roberto   |
 
 
+### Link `zoom` ayudantías
+
+| Ayudante              | Link |
+|-----------------------|------|
+| Matías Deneken        | https://puc.zoom.us/j/89204134826?pwd=clBJa0RsN0lxNkZqUFpYZGZkeHVrdz09 (Meeting ID: 892 0413 4826 / Passcode: 482023)|
+| Sebastián Urbina      | https://puc.zoom.us/j/82730319889 (ID de reunión: 827 3031 9889)|
+| Roberto Cantillan     | https://puc.zoom.us/j/89227943165 (Meeting ID: 892 2794 3165)|
+
+
 #### Lectura recomendada
 
 - **R for Data Science** (Hadley Wickham & Garrett Grolemund) [`[e-Book]`](https://r4ds.had.co.nz/)
