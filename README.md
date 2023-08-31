@@ -44,7 +44,7 @@ Nota: Todas las clases serán grabadas y estarán disponibles por 7 días. El li
 ---
 ## Cápsulas
 
-- Descargar e instalar `R`: [`[Cápsula]`](): 
+- Descargar e instalar `R`: [`[Cápsula]`](https://posit.co/download/rstudio-desktop/): 
 
 
 ---
